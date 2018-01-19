@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="6f1beb83-3d3a-406b-96c6-5f7d0ceb16e6" name="UseCase_Estoque" linkedPackageId="0babb8bd-b3b5-4d55-ad8c-5109dd3d9fe3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="6360970d-5b14-4a77-84cb-fd3094e361e0">
+      <profileInstance Id="a796f4a4-4f70-4fce-ba1d-da1a52f398c5" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="cb18539f-4a82-43bb-990f-0cd3678d9f1f">
+      <profileInstance Id="b7192658-7bf6-460e-bdc5-1b7ddff31a0b" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="46d6e746-aaa8-4229-a7f8-e9734ccf0cc8" name="Funcionario" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9dc3c719-45b0-4336-8f5f-4e8c91def649" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="d7796623-c3fa-4720-ab36-9a24863617c1" name="Estoquista" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="644e222f-3c88-4dfd-a708-b7d95650f31a" />
+        <generalsInternal>
+          <generalization Id="155e26dc-4719-4d78-b9ad-ce6472dd7498" isSubstitutable="false">
+            <actorMoniker Id="46d6e746-aaa8-4229-a7f8-e9734ccf0cc8" LastKnownName="Funcionario" />
+            <elementDefinition Id="54f0b3b6-7126-4957-ada9-a2f446ea7a06" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="159bfe05-5959-4fdd-991b-b1e13a1d2e8b" isDerived="false" sourceEndRoleName="Estoquista" targetEndRoleName="Dar baixa Estoque" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="ff21a9da-6606-4c27-84a4-f4c452f2f6b4" LastKnownName="Dar baixa Estoque" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ef958630-739f-470b-85a1-44f8ac0612bf" name="Estoquista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="f929adee-514f-4bb1-ac9e-be10b922028b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="dae8e9cd-e1d4-41fd-a19d-50c973f25726" name="Dar baixa Estoque" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="1c2f5ab9-8417-4a59-8162-82e33a1ced07" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ec7ee565-b68c-4af1-b927-3de7b17ba1ef" />
+          </association>
+          <association Id="60a51fb1-685b-4afe-ad0d-65f0d713f4bb" isDerived="false" sourceEndRoleName="Estoquista" targetEndRoleName="Dar Entrada no Estoque" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="15f90d74-5748-4de5-b380-ea37ec51ca46" LastKnownName="Dar Entrada no Estoque" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6ee54830-3b1b-4849-874b-554bd4f49387" name="Estoquista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d23791e7-91db-43cf-be32-7e8a3ffc17ac" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a0d683b0-012d-4e7e-a77c-56c89c6ff3f0" name="Dar Entrada no Estoque" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="596661c4-c30d-49f9-a12c-b1b995ccd013" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="218a8ae8-0cae-4115-8328-29e0c4a36ac2" />
+          </association>
+          <association Id="582cdf54-77be-498f-829e-6d782e2fdba2" isDerived="false" sourceEndRoleName="Estoquista" targetEndRoleName="Consultar Estoque" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="113a3557-238a-4394-b6a6-e2db8592e13c" LastKnownName="Consultar Estoque" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="048e44a6-fab5-43b8-859a-afe08848d320" name="Estoquista" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="822d0a11-3a3d-45a2-aa41-b8f1411452f9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d9f1bdff-9803-4374-bb1b-45b4a3364a43" name="Consultar Estoque" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f201de3b-c8e3-44fa-b127-7c402348663c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6df30252-d0e0-4c23-a0d9-169cdccc16bb" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="113a3557-238a-4394-b6a6-e2db8592e13c" name="Consultar Estoque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2fd0d7f4-b9a5-4bdd-a2d0-5d315ddc64a6" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="ff21a9da-6606-4c27-84a4-f4c452f2f6b4" name="Dar baixa Estoque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="708c6c65-7a63-4abc-bf2b-ecf2a6f9f261" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="15f90d74-5748-4de5-b380-ea37ec51ca46" name="Dar Entrada no Estoque" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a0558e1-1fef-472d-b1e9-e89fbb713f96" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="0babb8bd-b3b5-4d55-ad8c-5109dd3d9fe3" name="Modelagem_Pro-Estoque">
+    <elementDefinition Id="f5dbca63-f924-407d-88d3-ce9c78dd3281" />
+  </package>
+</useCaseModelRoot>
