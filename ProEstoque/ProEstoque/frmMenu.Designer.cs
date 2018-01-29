@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cADASTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +44,11 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sAIRLOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONFIGURAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENDASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -65,6 +70,26 @@
             this.panel1.Size = new System.Drawing.Size(200, 581);
             this.panel1.TabIndex = 0;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 100);
+            this.panel2.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(186, 38);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ProEstoque";
+            // 
             // button4
             // 
             this.button4.FlatAppearance.BorderSize = 0;
@@ -77,6 +102,19 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 106);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(194, 89);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Vendas";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -104,46 +142,16 @@
             this.button2.Text = "Estoque";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 106);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(194, 89);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Vendas";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 100);
-            this.panel2.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(186, 38);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ProEstoque";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Black;
             this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cADASTROSToolStripMenuItem,
-            this.mOVIMENTAÇÃOToolStripMenuItem});
+            this.vENDASToolStripMenuItem,
+            this.mOVIMENTAÇÃOToolStripMenuItem,
+            this.cONFIGURAÇÃOToolStripMenuItem,
+            this.sAIRLOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1179, 25);
@@ -166,19 +174,19 @@
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
             this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.usuáriosToolStripMenuItem.Text = "Clientes";
+            this.usuáriosToolStripMenuItem.Text = "CLIENTES";
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.produtosToolStripMenuItem.Text = "Produtos";
+            this.produtosToolStripMenuItem.Text = "PRODUTOS";
             // 
             // usuáriosToolStripMenuItem1
             // 
             this.usuáriosToolStripMenuItem1.Name = "usuáriosToolStripMenuItem1";
             this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.usuáriosToolStripMenuItem1.Text = "Usuários";
+            this.usuáriosToolStripMenuItem1.Text = "USUÁRIOS";
             this.usuáriosToolStripMenuItem1.Click += new System.EventHandler(this.usuáriosToolStripMenuItem1_Click);
             // 
             // mOVIMENTAÇÃOToolStripMenuItem
@@ -213,6 +221,44 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
+            // 
+            // sAIRLOGOUTToolStripMenuItem
+            // 
+            this.sAIRLOGOUTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lOGOUTToolStripMenuItem,
+            this.sAIRToolStripMenuItem});
+            this.sAIRLOGOUTToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.sAIRLOGOUTToolStripMenuItem.Name = "sAIRLOGOUTToolStripMenuItem";
+            this.sAIRLOGOUTToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
+            this.sAIRLOGOUTToolStripMenuItem.Text = "SAIR/LOGOUT";
+            // 
+            // sAIRToolStripMenuItem
+            // 
+            this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sAIRToolStripMenuItem.Text = "SAIR";
+            this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
+            // 
+            // lOGOUTToolStripMenuItem
+            // 
+            this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
+            this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
+            // 
+            // cONFIGURAÇÃOToolStripMenuItem
+            // 
+            this.cONFIGURAÇÃOToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cONFIGURAÇÃOToolStripMenuItem.Name = "cONFIGURAÇÃOToolStripMenuItem";
+            this.cONFIGURAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(128, 21);
+            this.cONFIGURAÇÃOToolStripMenuItem.Text = "CONFIGURAÇÃO";
+            // 
+            // vENDASToolStripMenuItem
+            // 
+            this.vENDASToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
+            this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
+            this.vENDASToolStripMenuItem.Text = "VENDAS";
             // 
             // frmMenu
             // 
@@ -258,6 +304,11 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
+        private System.Windows.Forms.ToolStripMenuItem sAIRLOGOUTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sAIRToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lOGOUTToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONFIGURAÇÃOToolStripMenuItem;
     }
 }
 
