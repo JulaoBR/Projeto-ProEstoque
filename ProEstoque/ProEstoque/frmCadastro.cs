@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace ProEstoque
 {
-    public partial class frmMenu : Form
+    public partial class frmCadastro : Form
     {
-        public frmMenu()
+        public frmCadastro()
         {
             InitializeComponent();
-        }
-
-        private void usuáriosToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            frmCadastro cad = new frmCadastro();
-            cad.ShowDialog();
         }
     }
 }

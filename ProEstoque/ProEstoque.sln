@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEstoque", "ProEstoque\ProEstoque.csproj", "{B0780CDF-09A9-4717-AF2F-23867C4034E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEstoque.VIEWS", "ProEstoque\ProEstoque.VIEWS.csproj", "{B0780CDF-09A9-4717-AF2F-23867C4034E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEstoque.MODEL", "ProEstoque.MODEL\ProEstoque.MODEL.csproj", "{88F74BE2-BF9C-43AD-B3CF-9068ADA8B628}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEstoque.CONTROL", "ProEstoque.CONTROL\ProEstoque.CONTROL.csproj", "{BE9948AE-8E7E-4842-9DA0-978304BC5ACE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B0780CDF-09A9-4717-AF2F-23867C4034E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0780CDF-09A9-4717-AF2F-23867C4034E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0780CDF-09A9-4717-AF2F-23867C4034E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F74BE2-BF9C-43AD-B3CF-9068ADA8B628}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F74BE2-BF9C-43AD-B3CF-9068ADA8B628}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F74BE2-BF9C-43AD-B3CF-9068ADA8B628}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F74BE2-BF9C-43AD-B3CF-9068ADA8B628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE9948AE-8E7E-4842-9DA0-978304BC5ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE9948AE-8E7E-4842-9DA0-978304BC5ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE9948AE-8E7E-4842-9DA0-978304BC5ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE9948AE-8E7E-4842-9DA0-978304BC5ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
