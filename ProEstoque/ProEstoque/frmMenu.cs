@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace ProEstoque
 {
-    public partial class Form1 : Form
+    public partial class frmMenu : Form
     {
-        public Form1()
+        public frmMenu()
         {
             InitializeComponent();
         }
+
+       
     }
 }
