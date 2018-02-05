@@ -9,3 +9,7 @@ https://pt.stackoverflow.com/questions/48899/backup-seguro-usando-mysql-e-c?rq=1
 https://www.devmedia.com.br/conectando-ao-mysql-em-aplicacoes-net/26114
 
 http://www.schultzgames.com/t5308-tutorial-c-net-visual-studio-conexao-com-banco-de-dados-mysql
+
+>> SISTEMA DE NOTA FISCAL
+http://www.unimake.com.br/uninfe/
+https://pluga.co/blog/financeiro/nfe-open-source/

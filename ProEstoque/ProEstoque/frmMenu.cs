@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProEstoque
@@ -43,6 +36,29 @@ namespace ProEstoque
             {
                 Application.Restart();
             }
+        }
+
+        private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadCliente cadCliente = new frmCadCliente();
+            cadCliente.ShowDialog();
+        }
+
+        private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadProduto cadProduto = new frmCadProduto();
+            cadProduto.ShowDialog();
+        }
+
+        private void mOVIMENTAÇÃOToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmMovimentacao movim = new frmMovimentacao();
+            movim.ShowDialog();
+        }
+
+        private void btnMovimentacao_Click(object sender, EventArgs e)
+        {
+            mOVIMENTAÇÃOToolStripMenuItem1_Click(sender, e);
         }
     }
 }
