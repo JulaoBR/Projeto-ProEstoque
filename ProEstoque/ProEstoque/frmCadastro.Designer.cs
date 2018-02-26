@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDataAtual = new System.Windows.Forms.DateTimePicker();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,14 +55,16 @@
             this.panel1.Size = new System.Drawing.Size(755, 536);
             this.panel1.TabIndex = 2;
             // 
-            // txtId
+            // panel3
             // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(38, 11);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(98, 22);
-            this.txtId.TabIndex = 7;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.txtDataAtual);
+            this.panel3.Controls.Add(this.txtId);
+            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(745, 47);
+            this.panel3.TabIndex = 8;
             // 
             // label2
             // 
@@ -81,6 +83,15 @@
             this.txtDataAtual.Name = "txtDataAtual";
             this.txtDataAtual.Size = new System.Drawing.Size(278, 22);
             this.txtDataAtual.TabIndex = 0;
+            // 
+            // txtId
+            // 
+            this.txtId.Enabled = false;
+            this.txtId.Location = new System.Drawing.Point(38, 11);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(98, 22);
+            this.txtId.TabIndex = 7;
+            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnNovo
             // 
@@ -136,19 +147,6 @@
             this.panel2.Size = new System.Drawing.Size(138, 560);
             this.panel2.TabIndex = 3;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 48);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "LISTAR";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
             this.button2.FlatAppearance.BorderSize = 0;
@@ -162,16 +160,18 @@
             this.button2.Text = "EXCLUIR";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // button1
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.txtDataAtual);
-            this.panel3.Controls.Add(this.txtId);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(745, 47);
-            this.panel3.TabIndex = 8;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 111);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 48);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "LISTAR";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // frmCadastro
             // 
@@ -186,9 +186,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCadastro";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,10 +200,10 @@
         protected System.Windows.Forms.Button btnSalvar;
         protected System.Windows.Forms.Button btnEditar;
         protected System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Button button1;
         protected System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel3;
+        protected System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.TextBox txtId;
+        public System.Windows.Forms.Label label2;
     }
 }

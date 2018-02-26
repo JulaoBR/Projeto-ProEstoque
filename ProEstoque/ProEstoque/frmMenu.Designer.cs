@@ -50,6 +50,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.vENDASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -117,6 +118,7 @@
             this.btnVendas.TabIndex = 3;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnCompras
             // 
@@ -195,6 +197,8 @@
             // 
             // vENDASToolStripMenuItem
             // 
+            this.vENDASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.vENDASToolStripMenuItem1});
             this.vENDASToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
             this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
@@ -273,6 +277,13 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
+            // vENDASToolStripMenuItem1
+            // 
+            this.vENDASToolStripMenuItem1.Name = "vENDASToolStripMenuItem1";
+            this.vENDASToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.vENDASToolStripMenuItem1.Text = "VENDAS";
+            this.vENDASToolStripMenuItem1.Click += new System.EventHandler(this.vENDASToolStripMenuItem1_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -323,6 +334,7 @@
         private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cONFIGURAÇÃOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mOVIMENTAÇÃOToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem1;
     }
 }
 

@@ -51,6 +51,8 @@
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnCadTipoProduto = new System.Windows.Forms.Button();
+            this.btnCadUniMedida = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -63,13 +65,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscaFornecedor = new System.Windows.Forms.Button();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox14 = new System.Windows.Forms.TextBox();
             this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -98,6 +99,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox1, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox2, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox3, 0);
@@ -196,6 +198,7 @@
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.Green;
+            this.textBox6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox6.Location = new System.Drawing.Point(248, 54);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(82, 23);
@@ -214,6 +217,7 @@
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.Red;
+            this.textBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox4.Location = new System.Drawing.Point(93, 54);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(82, 23);
@@ -221,6 +225,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Location = new System.Drawing.Point(5, 54);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(82, 23);
@@ -263,6 +268,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox9.Location = new System.Drawing.Point(96, 60);
             this.textBox9.Name = "textBox9";
             this.textBox9.ReadOnly = true;
@@ -271,6 +277,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox8.Location = new System.Drawing.Point(96, 31);
             this.textBox8.Name = "textBox8";
             this.textBox8.ReadOnly = true;
@@ -314,6 +321,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox11.Location = new System.Drawing.Point(90, 82);
             this.textBox11.Name = "textBox11";
             this.textBox11.ReadOnly = true;
@@ -322,6 +330,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox10.Location = new System.Drawing.Point(90, 39);
             this.textBox10.Name = "textBox10";
             this.textBox10.ReadOnly = true;
@@ -330,8 +339,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button5);
-            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Controls.Add(this.btnCadTipoProduto);
+            this.groupBox4.Controls.Add(this.btnCadUniMedida);
             this.groupBox4.Controls.Add(this.checkBox1);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.textBox12);
@@ -351,6 +360,28 @@
             this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados do Produto";
+            // 
+            // btnCadTipoProduto
+            // 
+            this.btnCadTipoProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadTipoProduto.Location = new System.Drawing.Point(607, 73);
+            this.btnCadTipoProduto.Name = "btnCadTipoProduto";
+            this.btnCadTipoProduto.Size = new System.Drawing.Size(69, 20);
+            this.btnCadTipoProduto.TabIndex = 23;
+            this.btnCadTipoProduto.Text = "+";
+            this.btnCadTipoProduto.UseVisualStyleBackColor = false;
+            this.btnCadTipoProduto.Click += new System.EventHandler(this.btnCadTipoProduto_Click);
+            // 
+            // btnCadUniMedida
+            // 
+            this.btnCadUniMedida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadUniMedida.Location = new System.Drawing.Point(300, 72);
+            this.btnCadUniMedida.Name = "btnCadUniMedida";
+            this.btnCadUniMedida.Size = new System.Drawing.Size(69, 20);
+            this.btnCadUniMedida.TabIndex = 22;
+            this.btnCadUniMedida.Text = "+";
+            this.btnCadUniMedida.UseVisualStyleBackColor = false;
+            this.btnCadUniMedida.Click += new System.EventHandler(this.btnCadUniMedida_Click);
             // 
             // checkBox1
             // 
@@ -375,6 +406,7 @@
             // 
             // textBox12
             // 
+            this.textBox12.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox12.Location = new System.Drawing.Point(6, 95);
             this.textBox12.Name = "textBox12";
             this.textBox12.Size = new System.Drawing.Size(130, 23);
@@ -447,17 +479,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox1.Enabled = false;
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Location = new System.Drawing.Point(7, 41);
             this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(418, 23);
             this.textBox1.TabIndex = 0;
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.btnBuscaFornecedor);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label16);
             this.groupBox5.Controls.Add(this.textBox14);
@@ -471,15 +502,16 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Fornecedor";
             // 
-            // button3
+            // btnBuscaFornecedor
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(113, 40);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "BUSCAR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnBuscaFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnBuscaFornecedor.Location = new System.Drawing.Point(113, 40);
+            this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
+            this.btnBuscaFornecedor.Size = new System.Drawing.Size(85, 23);
+            this.btnBuscaFornecedor.TabIndex = 14;
+            this.btnBuscaFornecedor.Text = "BUSCAR";
+            this.btnBuscaFornecedor.UseVisualStyleBackColor = false;
+            this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
             // 
             // label17
             // 
@@ -513,30 +545,11 @@
             // 
             // textBox13
             // 
+            this.textBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox13.Location = new System.Drawing.Point(9, 39);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(98, 23);
             this.textBox13.TabIndex = 11;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(300, 72);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 20);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button5.Location = new System.Drawing.Point(607, 73);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(69, 20);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "+";
-            this.button5.UseVisualStyleBackColor = false;
             // 
             // frmCadProduto
             // 
@@ -599,9 +612,10 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBuscaFornecedor;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnCadTipoProduto;
+        private System.Windows.Forms.Button btnCadUniMedida;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }

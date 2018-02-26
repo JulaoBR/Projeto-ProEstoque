@@ -60,5 +60,17 @@ namespace ProEstoque
         {
             mOVIMENTAÇÃOToolStripMenuItem1_Click(sender, e);
         }
+
+        private void vENDASToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmVenda venda = new frmVenda();
+            venda.ShowDialog();
+        }
+
+        private void btnVendas_Click(object sender, EventArgs e)
+        {
+            frmVenda venda = new frmVenda();
+            venda.ShowDialog();
+        }
     }
 }

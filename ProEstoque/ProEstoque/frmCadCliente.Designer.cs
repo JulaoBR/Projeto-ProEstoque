@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -45,6 +49,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnCadCidade = new System.Windows.Forms.Button();
+            this.btnCadEstado = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,12 +65,6 @@
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,6 +86,7 @@
             // 
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox1, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox2, 0);
             // 
@@ -124,6 +125,40 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Pessoais";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(334, 137);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 17);
+            this.label17.TabIndex = 17;
+            this.label17.Text = "Celular 2*:";
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(337, 157);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(130, 23);
+            this.textBox14.TabIndex = 16;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(169, 137);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(69, 17);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Celular 1*:";
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(170, 157);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(130, 23);
+            this.textBox13.TabIndex = 14;
             // 
             // label8
             // 
@@ -232,6 +267,7 @@
             // 
             // textBox2
             // 
+            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox2.Location = new System.Drawing.Point(488, 40);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(250, 23);
@@ -239,6 +275,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox1.Location = new System.Drawing.Point(6, 40);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(476, 23);
@@ -246,8 +283,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnCadCidade);
+            this.groupBox2.Controls.Add(this.btnCadEstado);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label13);
@@ -269,6 +306,28 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Endereço";
+            // 
+            // btnCadCidade
+            // 
+            this.btnCadCidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadCidade.Location = new System.Drawing.Point(309, 144);
+            this.btnCadCidade.Name = "btnCadCidade";
+            this.btnCadCidade.Size = new System.Drawing.Size(69, 20);
+            this.btnCadCidade.TabIndex = 22;
+            this.btnCadCidade.Text = "+";
+            this.btnCadCidade.UseVisualStyleBackColor = false;
+            this.btnCadCidade.Click += new System.EventHandler(this.btnCadCidade_Click);
+            // 
+            // btnCadEstado
+            // 
+            this.btnCadEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnCadEstado.Location = new System.Drawing.Point(64, 145);
+            this.btnCadEstado.Name = "btnCadEstado";
+            this.btnCadEstado.Size = new System.Drawing.Size(69, 20);
+            this.btnCadEstado.TabIndex = 21;
+            this.btnCadEstado.Text = "+";
+            this.btnCadEstado.UseVisualStyleBackColor = false;
+            this.btnCadEstado.Click += new System.EventHandler(this.btnCadEstado_Click);
             // 
             // label15
             // 
@@ -367,6 +426,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox11.Location = new System.Drawing.Point(6, 102);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(490, 23);
@@ -374,6 +434,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox10.Location = new System.Drawing.Point(581, 43);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(159, 23);
@@ -388,64 +449,11 @@
             // 
             // textBox8
             // 
+            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox8.Location = new System.Drawing.Point(6, 43);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(437, 23);
             this.textBox8.TabIndex = 7;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(170, 157);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(130, 23);
-            this.textBox13.TabIndex = 14;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(169, 137);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(69, 17);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "Celular 1*:";
-            // 
-            // textBox14
-            // 
-            this.textBox14.Location = new System.Drawing.Point(337, 157);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(130, 23);
-            this.textBox14.TabIndex = 16;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(334, 137);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 17);
-            this.label17.TabIndex = 17;
-            this.label17.Text = "Celular 2*:";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(64, 145);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 20);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(309, 144);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 20);
-            this.button4.TabIndex = 22;
-            this.button4.Text = "+";
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // frmCadCliente
             // 
@@ -499,7 +507,7 @@
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnCadCidade;
+        private System.Windows.Forms.Button btnCadEstado;
     }
 }

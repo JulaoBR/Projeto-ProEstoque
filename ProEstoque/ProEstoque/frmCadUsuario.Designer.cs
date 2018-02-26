@@ -66,6 +66,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Size = new System.Drawing.Size(760, 536);
+            this.panel1.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox1, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox2, 0);
             // 
@@ -79,6 +80,7 @@
             // 
             // txtNomeUsuario
             // 
+            this.txtNomeUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomeUsuario.Location = new System.Drawing.Point(19, 48);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(424, 23);

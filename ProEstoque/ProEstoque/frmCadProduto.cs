@@ -14,5 +14,23 @@ namespace ProEstoque
         {
             InitializeComponent();
         }
+
+        private void btnCadUniMedida_Click(object sender, EventArgs e)
+        {
+            frmCadMedida cadMedida = new frmCadMedida();
+            cadMedida.ShowDialog();
+        }
+
+        private void btnCadTipoProduto_Click(object sender, EventArgs e)
+        {
+            frmCadTipoProduto cadTipo = new frmCadTipoProduto();
+            cadTipo.ShowDialog();
+        }
+
+        private void btnBuscaFornecedor_Click(object sender, EventArgs e)
+        {
+            frmBuscaFornecedor buscaFornecedor = new frmBuscaFornecedor();
+            buscaFornecedor.ShowDialog();
+        }
     }
 }
