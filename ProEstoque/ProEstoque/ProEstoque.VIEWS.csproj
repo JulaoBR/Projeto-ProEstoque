@@ -214,6 +214,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProEstoque.CONTROL\ProEstoque.CONTROL.csproj">
+      <Project>{be9948ae-8e7e-4842-9da0-978304bc5ace}</Project>
+      <Name>ProEstoque.CONTROL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProEstoque.DAO\ProEstoque.DAO.csproj">
+      <Project>{33d72087-e095-4fe8-aa1a-a8dd71a0a3d5}</Project>
+      <Name>ProEstoque.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProEstoque.MODEL\ProEstoque.MODEL.csproj">
+      <Project>{88f74be2-bf9c-43ad-b3cf-9068ada8b628}</Project>
+      <Name>ProEstoque.MODEL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

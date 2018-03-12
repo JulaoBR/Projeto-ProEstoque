@@ -29,19 +29,22 @@
         private void InitializeComponent()
         {
             this.txtNomeUsuario = new System.Windows.Forms.TextBox();
-            this.txtLoginUsuario = new System.Windows.Forms.TextBox();
+            this.txtTelefoneUsuario = new System.Windows.Forms.TextBox();
             this.txtSenhaUsuario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbNivelAcesso = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtLoginUsuario = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -86,19 +89,19 @@
             this.txtNomeUsuario.Size = new System.Drawing.Size(424, 23);
             this.txtNomeUsuario.TabIndex = 1;
             // 
-            // txtLoginUsuario
+            // txtTelefoneUsuario
             // 
-            this.txtLoginUsuario.Location = new System.Drawing.Point(19, 89);
-            this.txtLoginUsuario.Name = "txtLoginUsuario";
-            this.txtLoginUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtLoginUsuario.TabIndex = 2;
+            this.txtTelefoneUsuario.Location = new System.Drawing.Point(18, 94);
+            this.txtTelefoneUsuario.Name = "txtTelefoneUsuario";
+            this.txtTelefoneUsuario.Size = new System.Drawing.Size(424, 23);
+            this.txtTelefoneUsuario.TabIndex = 2;
             // 
             // txtSenhaUsuario
             // 
-            this.txtSenhaUsuario.Location = new System.Drawing.Point(19, 130);
+            this.txtSenhaUsuario.Location = new System.Drawing.Point(19, 191);
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
             this.txtSenhaUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtSenhaUsuario.TabIndex = 3;
+            this.txtSenhaUsuario.TabIndex = 4;
             // 
             // label1
             // 
@@ -110,21 +113,11 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nome*:";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 73);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 17);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Login*:";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 114);
+            this.label3.Location = new System.Drawing.Point(19, 171);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 17);
             this.label3.TabIndex = 6;
@@ -173,19 +166,58 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.txtLoginUsuario);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtNomeUsuario);
-            this.groupBox1.Controls.Add(this.txtLoginUsuario);
             this.groupBox1.Controls.Add(this.txtSenhaUsuario);
+            this.groupBox1.Controls.Add(this.txtTelefoneUsuario);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(10, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 173);
+            this.groupBox1.Size = new System.Drawing.Size(738, 220);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Usuarios";
+            this.groupBox1.Controls.SetChildIndex(this.label3, 0);
+            this.groupBox1.Controls.SetChildIndex(this.label2, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtTelefoneUsuario, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtSenhaUsuario, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtNomeUsuario, 0);
+            this.groupBox1.Controls.SetChildIndex(this.label1, 0);
+            this.groupBox1.Controls.SetChildIndex(this.txtLoginUsuario, 0);
+            this.groupBox1.Controls.SetChildIndex(this.label6, 0);
+            this.groupBox1.Controls.SetChildIndex(this.label7, 0);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(19, 74);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 17);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Telefone*:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 125);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(49, 17);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Login*:";
+            // 
+            // txtLoginUsuario
+            // 
+            this.txtLoginUsuario.Location = new System.Drawing.Point(19, 145);
+            this.txtLoginUsuario.Name = "txtLoginUsuario";
+            this.txtLoginUsuario.Size = new System.Drawing.Size(424, 23);
+            this.txtLoginUsuario.TabIndex = 3;
             // 
             // groupBox2
             // 
@@ -195,9 +227,9 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 250);
+            this.groupBox2.Location = new System.Drawing.Point(10, 282);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(738, 100);
+            this.groupBox2.Size = new System.Drawing.Size(738, 115);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Configuração ";
@@ -219,6 +251,8 @@
             this.Name = "frmCadUsuario";
             this.Text = "CADASTRO DE USUÁRIOS";
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -228,10 +262,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSenhaUsuario;
-        private System.Windows.Forms.TextBox txtLoginUsuario;
+        private System.Windows.Forms.TextBox txtTelefoneUsuario;
         private System.Windows.Forms.TextBox txtNomeUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbNivelAcesso;
@@ -241,5 +274,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtLoginUsuario;
     }
 }

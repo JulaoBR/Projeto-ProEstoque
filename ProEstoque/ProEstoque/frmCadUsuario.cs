@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProEstoque.CONTROL;
+using ProEstoque.MODEL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +29,15 @@ namespace ProEstoque
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
+            UsuarioModel usuario = new UsuarioModel();
+            UsuarioControl control = new UsuarioControl();
 
+            usuario.usu_nome = txtNomeUsuario.Text;
+            usuario.usu_telefone = txtTelefoneUsuario.Text;
+            usuario.usu_login = txtLoginUsuario.Text;
+            usuario.usu_senha = txtSenhaUsuario.Text;
+
+            control.Inserir(usuario);
         }
 
     }
