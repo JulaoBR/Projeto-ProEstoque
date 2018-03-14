@@ -1,0 +1,28 @@
+>> SOBRE MODER DISERMER DO C#
+http://foxlearn.com/article/metro-modern-flat-ui-dashboard-winform-design-in-csharp-107.html
+
+>> C# e MYSQL
+https://pt.stackoverflow.com/questions/88655/acessar-mysql-com-c
+
+https://pt.stackoverflow.com/questions/48899/backup-seguro-usando-mysql-e-c?rq=1
+
+https://www.devmedia.com.br/conectando-ao-mysql-em-aplicacoes-net/26114
+
+http://www.schultzgames.com/t5308-tutorial-c-net-visual-studio-conexao-com-banco-de-dados-mysql
+
+>> SISTEMA DE NOTA FISCAL
+http://www.unimake.com.br/uninfe/
+https://pluga.co/blog/financeiro/nfe-open-source/
+
+>> REPORT VIEW
+http://www.andrealveslima.com.br/blog/index.php/2017/03/15/como-utilizar-o-report-viewer-no-visual-studio-2017/
+http://www.andrealveslima.com.br/blog/index.php/category/report-viewer/
+>> ATIVAR NO VS 2015
+http://www.andrealveslima.com.br/blog/index.php/2017/02/08/ativando-o-report-viewer-no-visual-studio-2015/
+http://www.andrealveslima.com.br/blog/index.php/2016/04/13/trabalhando-com-graficos-no-report-viewer/
+
+>>CRIAR INSTALADORES
+http://www.andrealveslima.com.br/blog/index.php/2014/11/27/criando-instaladores-para-aplicativos-net/
+
+>> CIDADES E ESTADOS
+http://samus.com.br/web/site/artigo-todas_as_cidades_do_brasil_atualizado_e_com_acentos
