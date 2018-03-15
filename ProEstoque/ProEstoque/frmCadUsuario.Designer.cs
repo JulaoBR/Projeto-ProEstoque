@@ -81,9 +81,14 @@
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(516, 75);
+            // 
             // txtNomeUsuario
             // 
             this.txtNomeUsuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomeUsuario.Location = new System.Drawing.Point(19, 48);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(424, 23);
@@ -91,6 +96,7 @@
             // 
             // txtTelefoneUsuario
             // 
+            this.txtTelefoneUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefoneUsuario.Location = new System.Drawing.Point(18, 94);
             this.txtTelefoneUsuario.Name = "txtTelefoneUsuario";
             this.txtTelefoneUsuario.Size = new System.Drawing.Size(424, 23);
@@ -98,6 +104,7 @@
             // 
             // txtSenhaUsuario
             // 
+            this.txtSenhaUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenhaUsuario.Location = new System.Drawing.Point(19, 191);
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
             this.txtSenhaUsuario.Size = new System.Drawing.Size(424, 23);
@@ -166,6 +173,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.txtLoginUsuario);
@@ -178,7 +186,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(10, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 220);
+            this.groupBox1.Size = new System.Drawing.Size(738, 268);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Usuarios";
@@ -214,6 +222,7 @@
             // 
             // txtLoginUsuario
             // 
+            this.txtLoginUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoginUsuario.Location = new System.Drawing.Point(19, 145);
             this.txtLoginUsuario.Name = "txtLoginUsuario";
             this.txtLoginUsuario.Size = new System.Drawing.Size(424, 23);
@@ -221,13 +230,14 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cbNivelAcesso);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(10, 282);
+            this.groupBox2.Location = new System.Drawing.Point(10, 345);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(738, 115);
             this.groupBox2.TabIndex = 12;

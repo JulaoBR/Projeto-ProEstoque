@@ -41,6 +41,7 @@
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vENDASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENDASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.cONFIGURAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +51,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.vENDASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -59,17 +59,17 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Gray;
+            this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnMovimentacao);
             this.panel1.Controls.Add(this.btnVendas);
             this.panel1.Controls.Add(this.btnCompras);
             this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 25);
+            this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 581);
+            this.panel1.Size = new System.Drawing.Size(200, 582);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -77,7 +77,7 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 481);
+            this.panel2.Location = new System.Drawing.Point(0, 482);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 0;
@@ -149,7 +149,7 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Silver;
-            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cADASTROSToolStripMenuItem,
             this.vENDASToolStripMenuItem,
@@ -158,7 +158,7 @@
             this.sAIRLOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1179, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1179, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -171,7 +171,7 @@
             this.usuáriosToolStripMenuItem1});
             this.cADASTROSToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cADASTROSToolStripMenuItem.Name = "cADASTROSToolStripMenuItem";
-            this.cADASTROSToolStripMenuItem.Size = new System.Drawing.Size(95, 21);
+            this.cADASTROSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
             this.cADASTROSToolStripMenuItem.Text = "CADASTROS";
             // 
             // usuáriosToolStripMenuItem
@@ -201,8 +201,15 @@
             this.vENDASToolStripMenuItem1});
             this.vENDASToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
-            this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(71, 21);
+            this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.vENDASToolStripMenuItem.Text = "VENDAS";
+            // 
+            // vENDASToolStripMenuItem1
+            // 
+            this.vENDASToolStripMenuItem1.Name = "vENDASToolStripMenuItem1";
+            this.vENDASToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.vENDASToolStripMenuItem1.Text = "VENDAS";
+            this.vENDASToolStripMenuItem1.Click += new System.EventHandler(this.vENDASToolStripMenuItem1_Click);
             // 
             // mOVIMENTAÇÃOToolStripMenuItem
             // 
@@ -210,13 +217,13 @@
             this.mOVIMENTAÇÃOToolStripMenuItem1});
             this.mOVIMENTAÇÃOToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.mOVIMENTAÇÃOToolStripMenuItem.Name = "mOVIMENTAÇÃOToolStripMenuItem";
-            this.mOVIMENTAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(127, 21);
+            this.mOVIMENTAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
             this.mOVIMENTAÇÃOToolStripMenuItem.Text = "MOVIMENTAÇÃO";
             // 
             // mOVIMENTAÇÃOToolStripMenuItem1
             // 
             this.mOVIMENTAÇÃOToolStripMenuItem1.Name = "mOVIMENTAÇÃOToolStripMenuItem1";
-            this.mOVIMENTAÇÃOToolStripMenuItem1.Size = new System.Drawing.Size(183, 22);
+            this.mOVIMENTAÇÃOToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
             this.mOVIMENTAÇÃOToolStripMenuItem1.Text = "MOVIMENTAÇÃO";
             this.mOVIMENTAÇÃOToolStripMenuItem1.Click += new System.EventHandler(this.mOVIMENTAÇÃOToolStripMenuItem1_Click);
             // 
@@ -224,7 +231,7 @@
             // 
             this.cONFIGURAÇÃOToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cONFIGURAÇÃOToolStripMenuItem.Name = "cONFIGURAÇÃOToolStripMenuItem";
-            this.cONFIGURAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(128, 21);
+            this.cONFIGURAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.cONFIGURAÇÃOToolStripMenuItem.Text = "CONFIGURAÇÃO";
             // 
             // sAIRLOGOUTToolStripMenuItem
@@ -234,20 +241,20 @@
             this.sAIRToolStripMenuItem});
             this.sAIRLOGOUTToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.sAIRLOGOUTToolStripMenuItem.Name = "sAIRLOGOUTToolStripMenuItem";
-            this.sAIRLOGOUTToolStripMenuItem.Size = new System.Drawing.Size(104, 21);
+            this.sAIRLOGOUTToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.sAIRLOGOUTToolStripMenuItem.Text = "SAIR/LOGOUT";
             // 
             // lOGOUTToolStripMenuItem
             // 
             this.lOGOUTToolStripMenuItem.Name = "lOGOUTToolStripMenuItem";
-            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.lOGOUTToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.lOGOUTToolStripMenuItem.Text = "LOGOUT";
             this.lOGOUTToolStripMenuItem.Click += new System.EventHandler(this.lOGOUTToolStripMenuItem_Click);
             // 
             // sAIRToolStripMenuItem
             // 
             this.sAIRToolStripMenuItem.Name = "sAIRToolStripMenuItem";
-            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+            this.sAIRToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.sAIRToolStripMenuItem.Text = "SAIR";
             this.sAIRToolStripMenuItem.Click += new System.EventHandler(this.sAIRToolStripMenuItem_Click);
             // 
@@ -276,13 +283,6 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
-            // 
-            // vENDASToolStripMenuItem1
-            // 
-            this.vENDASToolStripMenuItem1.Name = "vENDASToolStripMenuItem1";
-            this.vENDASToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.vENDASToolStripMenuItem1.Text = "VENDAS";
-            this.vENDASToolStripMenuItem1.Click += new System.EventHandler(this.vENDASToolStripMenuItem1_Click);
             // 
             // frmMenu
             // 

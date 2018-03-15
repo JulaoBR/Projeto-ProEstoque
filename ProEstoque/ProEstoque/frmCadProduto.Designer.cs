@@ -72,6 +72,7 @@
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -114,8 +115,13 @@
             // 
             this.button2.FlatAppearance.BorderSize = 0;
             // 
+            // txtId
+            // 
+            this.txtId.Size = new System.Drawing.Size(98, 21);
+            // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox1.Controls.Add(this.textBox7);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
@@ -225,6 +231,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
             this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox3.Location = new System.Drawing.Point(5, 54);
             this.textBox3.Name = "textBox3";
@@ -233,6 +240,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.textBox9);
@@ -268,6 +276,7 @@
             // 
             // textBox9
             // 
+            this.textBox9.BackColor = System.Drawing.Color.White;
             this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox9.Location = new System.Drawing.Point(96, 60);
             this.textBox9.Name = "textBox9";
@@ -277,6 +286,7 @@
             // 
             // textBox8
             // 
+            this.textBox8.BackColor = System.Drawing.Color.White;
             this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox8.Location = new System.Drawing.Point(96, 31);
             this.textBox8.Name = "textBox8";
@@ -286,6 +296,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.textBox11);
@@ -321,6 +332,7 @@
             // 
             // textBox11
             // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
             this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox11.Location = new System.Drawing.Point(90, 82);
             this.textBox11.Name = "textBox11";
@@ -330,6 +342,7 @@
             // 
             // textBox10
             // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
             this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox10.Location = new System.Drawing.Point(90, 39);
             this.textBox10.Name = "textBox10";
@@ -339,6 +352,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox4.Controls.Add(this.btnCadTipoProduto);
             this.groupBox4.Controls.Add(this.btnCadUniMedida);
             this.groupBox4.Controls.Add(this.checkBox1);
@@ -352,7 +366,6 @@
             this.groupBox4.Controls.Add(this.comboBox1);
             this.groupBox4.Controls.Add(this.textBox2);
             this.groupBox4.Controls.Add(this.textBox1);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(3, 56);
             this.groupBox4.Name = "groupBox4";
@@ -488,6 +501,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.groupBox5.Controls.Add(this.btnBuscaFornecedor);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.label16);
@@ -545,6 +559,7 @@
             // 
             // textBox13
             // 
+            this.textBox13.BackColor = System.Drawing.Color.White;
             this.textBox13.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.textBox13.Location = new System.Drawing.Point(9, 39);
             this.textBox13.Name = "textBox13";
@@ -558,6 +573,8 @@
             this.Name = "frmCadProduto";
             this.Text = "CADASTRO DE PRODUTO";
             this.panel1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
