@@ -83,7 +83,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(516, 75);
+            this.label2.Location = new System.Drawing.Point(507, 94);
             // 
             // txtNomeUsuario
             // 
