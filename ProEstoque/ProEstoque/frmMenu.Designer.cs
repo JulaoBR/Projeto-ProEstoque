@@ -40,6 +40,7 @@
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pEDIDOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENDASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENDASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,6 +52,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.mATÉRIAPRIMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -168,7 +170,8 @@
             this.cADASTROSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuáriosToolStripMenuItem,
             this.produtosToolStripMenuItem,
-            this.usuáriosToolStripMenuItem1});
+            this.usuáriosToolStripMenuItem1,
+            this.pEDIDOSToolStripMenuItem});
             this.cADASTROSToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.cADASTROSToolStripMenuItem.Name = "cADASTROSToolStripMenuItem";
             this.cADASTROSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
@@ -195,6 +198,13 @@
             this.usuáriosToolStripMenuItem1.Text = "USUÁRIOS";
             this.usuáriosToolStripMenuItem1.Click += new System.EventHandler(this.usuáriosToolStripMenuItem1_Click);
             // 
+            // pEDIDOSToolStripMenuItem
+            // 
+            this.pEDIDOSToolStripMenuItem.Name = "pEDIDOSToolStripMenuItem";
+            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.pEDIDOSToolStripMenuItem.Text = "PEDIDOS";
+            this.pEDIDOSToolStripMenuItem.Click += new System.EventHandler(this.pEDIDOSToolStripMenuItem_Click);
+            // 
             // vENDASToolStripMenuItem
             // 
             this.vENDASToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -214,7 +224,8 @@
             // mOVIMENTAÇÃOToolStripMenuItem
             // 
             this.mOVIMENTAÇÃOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mOVIMENTAÇÃOToolStripMenuItem1});
+            this.mOVIMENTAÇÃOToolStripMenuItem1,
+            this.mATÉRIAPRIMAToolStripMenuItem});
             this.mOVIMENTAÇÃOToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.mOVIMENTAÇÃOToolStripMenuItem.Name = "mOVIMENTAÇÃOToolStripMenuItem";
             this.mOVIMENTAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(132, 20);
@@ -223,8 +234,8 @@
             // mOVIMENTAÇÃOToolStripMenuItem1
             // 
             this.mOVIMENTAÇÃOToolStripMenuItem1.Name = "mOVIMENTAÇÃOToolStripMenuItem1";
-            this.mOVIMENTAÇÃOToolStripMenuItem1.Size = new System.Drawing.Size(188, 22);
-            this.mOVIMENTAÇÃOToolStripMenuItem1.Text = "MOVIMENTAÇÃO";
+            this.mOVIMENTAÇÃOToolStripMenuItem1.Size = new System.Drawing.Size(204, 22);
+            this.mOVIMENTAÇÃOToolStripMenuItem1.Text = "MATÉRIA ACABADA";
             this.mOVIMENTAÇÃOToolStripMenuItem1.Click += new System.EventHandler(this.mOVIMENTAÇÃOToolStripMenuItem1_Click);
             // 
             // cONFIGURAÇÃOToolStripMenuItem
@@ -284,6 +295,13 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
+            // mATÉRIAPRIMAToolStripMenuItem
+            // 
+            this.mATÉRIAPRIMAToolStripMenuItem.Name = "mATÉRIAPRIMAToolStripMenuItem";
+            this.mATÉRIAPRIMAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.mATÉRIAPRIMAToolStripMenuItem.Text = "MATÉRIA PRIMA";
+            this.mATÉRIAPRIMAToolStripMenuItem.Click += new System.EventHandler(this.mATÉRIAPRIMAToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -335,6 +353,8 @@
         private System.Windows.Forms.ToolStripMenuItem cONFIGURAÇÃOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mOVIMENTAÇÃOToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem pEDIDOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mATÉRIAPRIMAToolStripMenuItem;
     }
 }
 

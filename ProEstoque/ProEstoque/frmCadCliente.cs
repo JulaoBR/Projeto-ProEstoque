@@ -15,16 +15,5 @@ namespace ProEstoque
             InitializeComponent();
         }
 
-        private void btnCadEstado_Click(object sender, EventArgs e)
-        {
-            frmCadEstado cadEstado = new frmCadEstado();
-            cadEstado.ShowDialog();
-        }
-
-        private void btnCadCidade_Click(object sender, EventArgs e)
-        {
-            frmCadCidade cadCidade = new frmCadCidade();
-            cadCidade.ShowDialog();
-        }
     }
 }

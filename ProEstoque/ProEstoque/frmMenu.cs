@@ -72,5 +72,16 @@ namespace ProEstoque
             frmVenda venda = new frmVenda();
             venda.ShowDialog();
         }
+
+        private void pEDIDOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadPedido pedido = new frmCadPedido();
+            pedido.ShowDialog();
+        }
+
+        private void mATÉRIAPRIMAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

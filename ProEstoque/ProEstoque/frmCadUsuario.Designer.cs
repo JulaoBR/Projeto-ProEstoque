@@ -35,14 +35,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbNivelAcesso = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbAtualizarSenha = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtLoginUsuario = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -149,17 +148,17 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Nivel de acesso:";
             // 
-            // comboBox1
+            // cbAtualizarSenha
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbAtualizarSenha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbAtualizarSenha.FormattingEnabled = true;
+            this.cbAtualizarSenha.Items.AddRange(new object[] {
             "SIM",
             "NÃO"});
-            this.comboBox1.Location = new System.Drawing.Point(397, 51);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(272, 24);
-            this.comboBox1.TabIndex = 9;
+            this.cbAtualizarSenha.Location = new System.Drawing.Point(397, 51);
+            this.cbAtualizarSenha.Name = "cbAtualizarSenha";
+            this.cbAtualizarSenha.Size = new System.Drawing.Size(272, 24);
+            this.cbAtualizarSenha.TabIndex = 9;
             // 
             // label5
             // 
@@ -231,11 +230,10 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.cbNivelAcesso);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.cbAtualizarSenha);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(10, 345);
             this.groupBox2.Name = "groupBox2";
@@ -243,16 +241,6 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Configuração ";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(132, 29);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(69, 20);
-            this.button3.TabIndex = 22;
-            this.button3.Text = "+";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // frmCadUsuario
             // 
@@ -280,10 +268,9 @@
         private System.Windows.Forms.ComboBox cbNivelAcesso;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbAtualizarSenha;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtLoginUsuario;

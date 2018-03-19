@@ -30,23 +30,21 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtTelCel2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.txtTelCel1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.txtCnpj = new System.Windows.Forms.TextBox();
+            this.txtTelFixo = new System.Windows.Forms.TextBox();
+            this.txtNomeFantasia = new System.Windows.Forms.TextBox();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -56,13 +54,15 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.cbEstado = new System.Windows.Forms.ComboBox();
+            this.cbCidade = new System.Windows.Forms.ComboBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,24 +100,24 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.txtCpf);
             this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.textBox14);
+            this.groupBox1.Controls.Add(this.txtTelCel2);
             this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.textBox13);
+            this.groupBox1.Controls.Add(this.txtTelCel1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox7);
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtEmail);
+            this.groupBox1.Controls.Add(this.txtRg);
+            this.groupBox1.Controls.Add(this.txtCnpj);
+            this.groupBox1.Controls.Add(this.txtTelFixo);
+            this.groupBox1.Controls.Add(this.txtNomeFantasia);
+            this.groupBox1.Controls.Add(this.txtNomeCliente);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(4, 57);
             this.groupBox1.Name = "groupBox1";
@@ -136,13 +136,13 @@
             this.label17.TabIndex = 17;
             this.label17.Text = "Celular 2*:";
             // 
-            // textBox14
+            // txtTelCel2
             // 
-            this.textBox14.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(337, 157);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(130, 23);
-            this.textBox14.TabIndex = 16;
+            this.txtTelCel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelCel2.Location = new System.Drawing.Point(337, 157);
+            this.txtTelCel2.Name = "txtTelCel2";
+            this.txtTelCel2.Size = new System.Drawing.Size(130, 23);
+            this.txtTelCel2.TabIndex = 16;
             // 
             // label16
             // 
@@ -154,13 +154,13 @@
             this.label16.TabIndex = 15;
             this.label16.Text = "Celular 1*:";
             // 
-            // textBox13
+            // txtTelCel1
             // 
-            this.textBox13.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.Location = new System.Drawing.Point(170, 157);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(130, 23);
-            this.textBox13.TabIndex = 14;
+            this.txtTelCel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelCel1.Location = new System.Drawing.Point(170, 157);
+            this.txtTelCel1.Name = "txtTelCel1";
+            this.txtTelCel1.Size = new System.Drawing.Size(130, 23);
+            this.txtTelCel1.TabIndex = 14;
             // 
             // label8
             // 
@@ -176,7 +176,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(578, 79);
+            this.label7.Location = new System.Drawing.Point(599, 79);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(28, 16);
             this.label7.TabIndex = 12;
@@ -186,21 +186,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(384, 79);
+            this.label6.Location = new System.Drawing.Point(280, 80);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
+            this.label6.Size = new System.Drawing.Size(47, 16);
             this.label6.TabIndex = 11;
-            this.label6.Text = "CNJP/CPF*:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(503, 137);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Fax:";
+            this.label6.Text = "CNJP*:";
             // 
             // label4
             // 
@@ -232,63 +222,55 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Nome / Razão Social*:";
             // 
-            // textBox7
+            // txtEmail
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(6, 99);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(325, 23);
-            this.textBox7.TabIndex = 6;
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(6, 99);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(261, 23);
+            this.txtEmail.TabIndex = 6;
             // 
-            // textBox6
+            // txtRg
             // 
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(581, 99);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 23);
-            this.textBox6.TabIndex = 5;
+            this.txtRg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(602, 98);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(138, 23);
+            this.txtRg.TabIndex = 5;
             // 
-            // textBox5
+            // txtCnpj
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(387, 99);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 23);
-            this.textBox5.TabIndex = 4;
+            this.txtCnpj.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCnpj.Location = new System.Drawing.Point(283, 99);
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(150, 23);
+            this.txtCnpj.TabIndex = 4;
             // 
-            // textBox4
+            // txtTelFixo
             // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(506, 157);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(136, 23);
-            this.textBox4.TabIndex = 3;
+            this.txtTelFixo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelFixo.Location = new System.Drawing.Point(6, 157);
+            this.txtTelFixo.Name = "txtTelFixo";
+            this.txtTelFixo.Size = new System.Drawing.Size(130, 23);
+            this.txtTelFixo.TabIndex = 2;
             // 
-            // textBox3
+            // txtNomeFantasia
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(6, 157);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(130, 23);
-            this.textBox3.TabIndex = 2;
+            this.txtNomeFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeFantasia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeFantasia.Location = new System.Drawing.Point(488, 40);
+            this.txtNomeFantasia.Name = "txtNomeFantasia";
+            this.txtNomeFantasia.Size = new System.Drawing.Size(250, 23);
+            this.txtNomeFantasia.TabIndex = 1;
             // 
-            // textBox2
+            // txtNomeCliente
             // 
-            this.textBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(488, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(250, 23);
-            this.textBox2.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(6, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(476, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtNomeCliente.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeCliente.Location = new System.Drawing.Point(6, 40);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.Size = new System.Drawing.Size(476, 23);
+            this.txtNomeCliente.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -300,13 +282,13 @@
             this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.textBox10);
-            this.groupBox2.Controls.Add(this.textBox9);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.cbEstado);
+            this.groupBox2.Controls.Add(this.cbCidade);
+            this.groupBox2.Controls.Add(this.txtCep);
+            this.groupBox2.Controls.Add(this.txtBairro);
+            this.groupBox2.Controls.Add(this.txtComplemento);
+            this.groupBox2.Controls.Add(this.txtNumero);
+            this.groupBox2.Controls.Add(this.txtEndereco);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(4, 262);
             this.groupBox2.Name = "groupBox2";
@@ -385,66 +367,84 @@
             this.label9.TabIndex = 14;
             this.label9.Text = "Endereço:";
             // 
-            // comboBox2
+            // cbEstado
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(6, 167);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(231, 24);
-            this.comboBox2.TabIndex = 13;
+            this.cbEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstado.FormattingEnabled = true;
+            this.cbEstado.Location = new System.Drawing.Point(6, 167);
+            this.cbEstado.Name = "cbEstado";
+            this.cbEstado.Size = new System.Drawing.Size(231, 24);
+            this.cbEstado.TabIndex = 13;
             // 
-            // comboBox1
+            // cbCidade
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(251, 167);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(489, 24);
-            this.comboBox1.TabIndex = 12;
+            this.cbCidade.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCidade.FormattingEnabled = true;
+            this.cbCidade.Location = new System.Drawing.Point(251, 167);
+            this.cbCidade.Name = "cbCidade";
+            this.cbCidade.Size = new System.Drawing.Size(489, 24);
+            this.cbCidade.TabIndex = 12;
             // 
-            // textBox12
+            // txtCep
             // 
-            this.textBox12.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(518, 102);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(220, 23);
-            this.textBox12.TabIndex = 11;
+            this.txtCep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(518, 102);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(220, 23);
+            this.txtCep.TabIndex = 11;
             // 
-            // textBox11
+            // txtBairro
             // 
-            this.textBox11.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(6, 102);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(490, 23);
-            this.textBox11.TabIndex = 10;
+            this.txtBairro.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtBairro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(6, 102);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(490, 23);
+            this.txtBairro.TabIndex = 10;
             // 
-            // textBox10
+            // txtComplemento
             // 
-            this.textBox10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox10.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(581, 43);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(159, 23);
-            this.textBox10.TabIndex = 9;
+            this.txtComplemento.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(581, 43);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(159, 23);
+            this.txtComplemento.TabIndex = 9;
             // 
-            // textBox9
+            // txtNumero
             // 
-            this.textBox9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(462, 43);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(99, 23);
-            this.textBox9.TabIndex = 8;
+            this.txtNumero.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(462, 43);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(99, 23);
+            this.txtNumero.TabIndex = 8;
             // 
-            // textBox8
+            // txtEndereco
             // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(6, 43);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(437, 23);
-            this.textBox8.TabIndex = 7;
+            this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtEndereco.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(6, 43);
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(437, 23);
+            this.txtEndereco.TabIndex = 7;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(446, 99);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(150, 23);
+            this.txtCpf.TabIndex = 18;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(449, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(38, 16);
+            this.label18.TabIndex = 19;
+            this.label18.Text = "CPF*:";
             // 
             // frmCadCliente
             // 
@@ -467,21 +467,20 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtRg;
+        private System.Windows.Forms.TextBox txtCnpj;
+        private System.Windows.Forms.TextBox txtTelFixo;
+        private System.Windows.Forms.TextBox txtNomeFantasia;
+        private System.Windows.Forms.TextBox txtNomeCliente;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.ComboBox cbEstado;
+        private System.Windows.Forms.ComboBox cbCidade;
+        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -492,13 +491,14 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtTelCel2;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox13;
+        private System.Windows.Forms.TextBox txtTelCel1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txtCpf;
     }
 }
