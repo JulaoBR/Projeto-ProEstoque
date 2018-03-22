@@ -26,3 +26,6 @@ http://www.andrealveslima.com.br/blog/index.php/2014/11/27/criando-instaladores-
 
 >> CIDADES E ESTADOS
 http://samus.com.br/web/site/artigo-todas_as_cidades_do_brasil_atualizado_e_com_acentos
+
+>> BLOQUEIO DA APLICAÇÂO POR TIMER
+http://www.macoratti.net/14/02/c_lock1.htm

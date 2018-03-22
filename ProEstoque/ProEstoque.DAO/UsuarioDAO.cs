@@ -1,15 +1,11 @@
 ﻿using MySql.Data.MySqlClient;
 using ProEstoque.MODEL;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProEstoque.DAO
 {
-    public class UsuarioDAO
+    public class UsuarioDAO 
     {
         private MySqlConnection con = null;
 
@@ -41,6 +37,7 @@ namespace ProEstoque.DAO
                 Conexao.fechar();
             }
         }
+       
 
         //METODO DE UPDATE 
         public void Update(UsuarioModel usuario)
@@ -63,7 +60,7 @@ namespace ProEstoque.DAO
             }
             finally
             {
-                con.Close();
+                Conexao.fechar();
             }
         }
 
@@ -84,7 +81,7 @@ namespace ProEstoque.DAO
             }
             finally
             {
-                con.Close();
+                Conexao.fechar();
             }
         }
 
@@ -116,6 +113,10 @@ namespace ProEstoque.DAO
             {
                 throw ex;
             }
+            finally
+            {
+                Conexao.fechar();
+            }
         }
 
         //METODO DE BUSCA GERAL
@@ -135,6 +136,36 @@ namespace ProEstoque.DAO
             catch (Exception ex)
             {
                 throw ex;
+            }
+            finally
+            {
+                Conexao.fechar();
+            }
+        }
+
+        //METODO PARA VALIDAR O USUARIO NA HORA DO LOGIN
+        public bool ValidaUsuario(string usuario, string senha)
+        {
+            try
+            {
+                int retorno = -1;
+                MySqlConnection con = Conexao.conectar();
+                String sql = "SELECT COUNT(*) FROM usuario WHERE usu_login=@Login AND usu_senha=@Senha";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@Login", usuario);
+                cmd.Parameters.AddWithValue("@Senha", senha);
+
+                retorno = Convert.ToInt32(cmd.ExecuteScalar());
+
+                return retorno > 0;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Conexao.fechar();
             }
         }
     }

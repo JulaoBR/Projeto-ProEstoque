@@ -1,12 +1,8 @@
 ﻿using ProEstoque.CONTROL;
 using ProEstoque.MODEL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
+
 
 namespace ProEstoque
 {
@@ -29,15 +25,22 @@ namespace ProEstoque
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            UsuarioModel usuario = new UsuarioModel();
-            UsuarioControl control = new UsuarioControl();
+            try
+            {
+                UsuarioModel usuario = new UsuarioModel();
+                UsuarioControl control = new UsuarioControl();
 
-            usuario.usu_nome = txtNomeUsuario.Text;
-            usuario.usu_telefone = txtTelefoneUsuario.Text;
-            usuario.usu_login = txtLoginUsuario.Text;
-            usuario.usu_senha = txtSenhaUsuario.Text;
+                usuario.usu_nome = txtNomeUsuario.Text;
+                usuario.usu_telefone = txtTelefoneUsuario.Text;
+                usuario.usu_login = txtLoginUsuario.Text;
+                usuario.usu_senha = txtSenhaUsuario.Text;
 
-            control.Inserir(usuario);
+                control.Inserir(usuario);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(Convert.ToString(ex),"Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }         
         }
 
     }

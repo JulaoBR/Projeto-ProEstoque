@@ -83,5 +83,11 @@ namespace ProEstoque
         {
 
         }
+
+        private void cONFIGURAÇÕESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConfiguracaoADM confg = new frmConfiguracaoADM();
+            confg.ShowDialog();
+        }
     }
 }

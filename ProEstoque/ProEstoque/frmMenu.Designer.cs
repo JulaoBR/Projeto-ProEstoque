@@ -45,6 +45,7 @@
             this.vENDASToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mATÉRIAPRIMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONFIGURAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRLOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +53,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.mATÉRIAPRIMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDMINISTRADORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONFIGURAÇÕESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -157,6 +159,7 @@
             this.vENDASToolStripMenuItem,
             this.mOVIMENTAÇÃOToolStripMenuItem,
             this.cONFIGURAÇÃOToolStripMenuItem,
+            this.aDMINISTRADORToolStripMenuItem,
             this.sAIRLOGOUTToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -238,6 +241,13 @@
             this.mOVIMENTAÇÃOToolStripMenuItem1.Text = "MATÉRIA ACABADA";
             this.mOVIMENTAÇÃOToolStripMenuItem1.Click += new System.EventHandler(this.mOVIMENTAÇÃOToolStripMenuItem1_Click);
             // 
+            // mATÉRIAPRIMAToolStripMenuItem
+            // 
+            this.mATÉRIAPRIMAToolStripMenuItem.Name = "mATÉRIAPRIMAToolStripMenuItem";
+            this.mATÉRIAPRIMAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
+            this.mATÉRIAPRIMAToolStripMenuItem.Text = "MATÉRIA PRIMA";
+            this.mATÉRIAPRIMAToolStripMenuItem.Click += new System.EventHandler(this.mATÉRIAPRIMAToolStripMenuItem_Click);
+            // 
             // cONFIGURAÇÃOToolStripMenuItem
             // 
             this.cONFIGURAÇÃOToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
@@ -295,12 +305,20 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
-            // mATÉRIAPRIMAToolStripMenuItem
+            // aDMINISTRADORToolStripMenuItem
             // 
-            this.mATÉRIAPRIMAToolStripMenuItem.Name = "mATÉRIAPRIMAToolStripMenuItem";
-            this.mATÉRIAPRIMAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.mATÉRIAPRIMAToolStripMenuItem.Text = "MATÉRIA PRIMA";
-            this.mATÉRIAPRIMAToolStripMenuItem.Click += new System.EventHandler(this.mATÉRIAPRIMAToolStripMenuItem_Click);
+            this.aDMINISTRADORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cONFIGURAÇÕESToolStripMenuItem});
+            this.aDMINISTRADORToolStripMenuItem.Name = "aDMINISTRADORToolStripMenuItem";
+            this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
+            this.aDMINISTRADORToolStripMenuItem.Text = "ADMINISTRADOR";
+            // 
+            // cONFIGURAÇÕESToolStripMenuItem
+            // 
+            this.cONFIGURAÇÕESToolStripMenuItem.Name = "cONFIGURAÇÕESToolStripMenuItem";
+            this.cONFIGURAÇÕESToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cONFIGURAÇÕESToolStripMenuItem.Text = "CONFIGURAÇÕES";
+            this.cONFIGURAÇÕESToolStripMenuItem.Click += new System.EventHandler(this.cONFIGURAÇÕESToolStripMenuItem_Click);
             // 
             // frmMenu
             // 
@@ -355,6 +373,8 @@
         private System.Windows.Forms.ToolStripMenuItem vENDASToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pEDIDOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mATÉRIAPRIMAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aDMINISTRADORToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONFIGURAÇÕESToolStripMenuItem;
     }
 }
 

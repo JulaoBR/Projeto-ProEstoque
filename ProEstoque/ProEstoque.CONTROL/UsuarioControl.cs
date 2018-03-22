@@ -18,8 +18,15 @@ namespace ProEstoque.CONTROL
         public void Inserir(UsuarioModel usuario)
         {
             UsuarioDAO dao = new UsuarioDAO();
-
+ 
             dao.Insert(usuario);
+        }
+
+        public bool ValidaUsuario(string txtLogin, string txtSenha)
+        {
+            UsuarioDAO dao = new UsuarioDAO();
+
+            return dao.ValidaUsuario(txtLogin, txtSenha);
         }
     }
 }
