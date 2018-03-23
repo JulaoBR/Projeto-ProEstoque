@@ -66,7 +66,7 @@
             // 
             // txtLogin
             // 
-            this.txtLogin.Location = new System.Drawing.Point(233, 122);
+            this.txtLogin.Location = new System.Drawing.Point(233, 113);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(221, 20);
             this.txtLogin.TabIndex = 0;

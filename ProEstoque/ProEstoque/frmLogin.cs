@@ -18,8 +18,10 @@ namespace ProEstoque
             InitializeComponent();
         }
 
+        //EVENTO CLICK DO BOTAO DE CANCELAR
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            //FECHA A APLICACAO
             Application.Exit();
         }
 
@@ -29,6 +31,7 @@ namespace ProEstoque
             //VERIFICA SE FOI DIGITADO ALGO NOS CAMPOS
             if (txtLogin.Text == "" || txtSenha.Text == "" )
             {
+                //EXIBE MENSAGEM CASO O USUARIO NAO DIGITE O LOGIN E SENHA
                 MessageBox.Show("Digite o LOGIN e SENHA");
                 LimpaCampo();
                 return;
@@ -37,23 +40,27 @@ namespace ProEstoque
             //VERIFICA SE EXISTE O USUARIO CADASTRADO NO BANCO DE DADOS
             if (control.ValidaUsuario(txtLogin.Text, txtSenha.Text))
             {
-                frmMenu menu = new frmMenu();
+                //CHAMA A TELA DE MENU
+                frmMenu menu = new frmMenu(txtLogin.Text, txtSenha.Text);
                 menu.Show();
+                //ESCONDE A TELA DE LOGIN
                 this.Hide();
             }
             else
             {
+                //EXIBE MENSAGEM CASO O LOGIN/SENHA FOR INCORRETOS
                 MessageBox.Show("Login/Senha incorretos!");
                 LimpaCampo();
                 return;
             }
         }
 
+        //METODO DE LIMPAR OS CAMPOS 
         private void LimpaCampo()
         {
             txtLogin.Clear();
             txtSenha.Clear();
-
+            //FOCALIZA O CURSOR NO CAMPO DE LOGIN
             txtLogin.Focus();
         }
     }

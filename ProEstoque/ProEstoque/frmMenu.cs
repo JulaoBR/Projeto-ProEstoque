@@ -5,9 +5,20 @@ namespace ProEstoque
 {
     public partial class frmMenu : Form
     {
-        public frmMenu()
+        //ATRIBUTOS DE LOGIN E SENHA DE QUEM ESTA LOGADO
+        private string login, senha;
+
+        public frmMenu(string login, string senha)
         {
             InitializeComponent();
+            this.login = login;
+            this.senha = senha;
+        }
+
+        //EVENTO DE LOAD DA TELA DE MENU
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void usuáriosToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -22,7 +33,8 @@ namespace ProEstoque
             DialogResult result = MessageBox.Show("Deseja realmente encerrar a aplicação?",
                "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
-            {               
+            {     
+                //FECHA A APLICACAO  
                 Application.Exit();
             }
         }
@@ -89,5 +101,7 @@ namespace ProEstoque
             frmConfiguracaoADM confg = new frmConfiguracaoADM();
             confg.ShowDialog();
         }
+
+
     }
 }

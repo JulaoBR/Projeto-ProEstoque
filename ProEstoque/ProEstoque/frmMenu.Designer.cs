@@ -47,14 +47,14 @@
             this.mOVIMENTAÇÃOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mATÉRIAPRIMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONFIGURAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDMINISTRADORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONFIGURAÇÕESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRLOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lOGOUTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sAIRToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.aDMINISTRADORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cONFIGURAÇÕESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -255,6 +255,21 @@
             this.cONFIGURAÇÃOToolStripMenuItem.Size = new System.Drawing.Size(129, 20);
             this.cONFIGURAÇÃOToolStripMenuItem.Text = "CONFIGURAÇÃO";
             // 
+            // aDMINISTRADORToolStripMenuItem
+            // 
+            this.aDMINISTRADORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cONFIGURAÇÕESToolStripMenuItem});
+            this.aDMINISTRADORToolStripMenuItem.Name = "aDMINISTRADORToolStripMenuItem";
+            this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
+            this.aDMINISTRADORToolStripMenuItem.Text = "ADMINISTRADOR";
+            // 
+            // cONFIGURAÇÕESToolStripMenuItem
+            // 
+            this.cONFIGURAÇÕESToolStripMenuItem.Name = "cONFIGURAÇÕESToolStripMenuItem";
+            this.cONFIGURAÇÕESToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.cONFIGURAÇÕESToolStripMenuItem.Text = "CONFIGURAÇÕES";
+            this.cONFIGURAÇÕESToolStripMenuItem.Click += new System.EventHandler(this.cONFIGURAÇÕESToolStripMenuItem_Click);
+            // 
             // sAIRLOGOUTToolStripMenuItem
             // 
             this.sAIRLOGOUTToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -305,21 +320,6 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
-            // aDMINISTRADORToolStripMenuItem
-            // 
-            this.aDMINISTRADORToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cONFIGURAÇÕESToolStripMenuItem});
-            this.aDMINISTRADORToolStripMenuItem.Name = "aDMINISTRADORToolStripMenuItem";
-            this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
-            this.aDMINISTRADORToolStripMenuItem.Text = "ADMINISTRADOR";
-            // 
-            // cONFIGURAÇÕESToolStripMenuItem
-            // 
-            this.cONFIGURAÇÕESToolStripMenuItem.Name = "cONFIGURAÇÕESToolStripMenuItem";
-            this.cONFIGURAÇÕESToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.cONFIGURAÇÕESToolStripMenuItem.Text = "CONFIGURAÇÕES";
-            this.cONFIGURAÇÕESToolStripMenuItem.Click += new System.EventHandler(this.cONFIGURAÇÕESToolStripMenuItem_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -334,6 +334,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
