@@ -16,5 +16,17 @@ namespace ProEstoque
         {
             InitializeComponent();
         }
+
+        private void btnBuscaFornecedor_Click(object sender, EventArgs e)
+        {
+            frmBuscaFornecedor fornecedor = new frmBuscaFornecedor();
+            fornecedor.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmBuscaProduto produto = new frmBuscaProduto();
+            produto.ShowDialog();
+        }
     }
 }

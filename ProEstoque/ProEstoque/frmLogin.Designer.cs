@@ -70,6 +70,7 @@
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(221, 20);
             this.txtLogin.TabIndex = 0;
+            this.txtLogin.Text = "julio";
             // 
             // txtSenha
             // 
@@ -77,6 +78,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(221, 20);
             this.txtSenha.TabIndex = 1;
+            this.txtSenha.Text = "123456";
             this.txtSenha.UseSystemPasswordChar = true;
             // 
             // panel1

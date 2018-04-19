@@ -33,7 +33,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMovimentacao = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.btnCompras = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cADASTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +66,6 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnMovimentacao);
             this.panel1.Controls.Add(this.btnVendas);
-            this.panel1.Controls.Add(this.btnCompras);
             this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
@@ -102,7 +100,7 @@
             this.btnMovimentacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovimentacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMovimentacao.ForeColor = System.Drawing.Color.White;
-            this.btnMovimentacao.Location = new System.Drawing.Point(3, 288);
+            this.btnMovimentacao.Location = new System.Drawing.Point(6, 193);
             this.btnMovimentacao.Name = "btnMovimentacao";
             this.btnMovimentacao.Size = new System.Drawing.Size(194, 89);
             this.btnMovimentacao.TabIndex = 6;
@@ -124,19 +122,6 @@
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
-            // btnCompras
-            // 
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Location = new System.Drawing.Point(6, 193);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(194, 89);
-            this.btnCompras.TabIndex = 5;
-            this.btnCompras.Text = "Compras";
-            this.btnCompras.UseVisualStyleBackColor = true;
-            // 
             // btnEstoque
             // 
             this.btnEstoque.FlatAppearance.BorderSize = 0;
@@ -149,6 +134,7 @@
             this.btnEstoque.TabIndex = 4;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // menuStrip1
             // 
@@ -353,7 +339,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMovimentacao;
-        private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.MenuStrip menuStrip1;

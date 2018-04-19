@@ -52,6 +52,12 @@
     <Compile Include="frmBusca.Designer.cs">
       <DependentUpon>frmBusca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscaEstoque.Designer.cs">
+      <DependentUpon>frmBuscaEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,12 @@
     <Compile Include="frmMovimentacao.Designer.cs">
       <DependentUpon>frmMovimentacao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMovimentacaoPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovimentacaoPedidos.Designer.cs">
+      <DependentUpon>frmMovimentacaoPedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmBusca.resx">
       <DependentUpon>frmBusca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscaEstoque.resx">
+      <DependentUpon>frmBuscaEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBuscaFornecedor.resx">
       <DependentUpon>frmBuscaFornecedor.cs</DependentUpon>
@@ -188,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMovimentacao.resx">
       <DependentUpon>frmMovimentacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovimentacaoPedidos.resx">
+      <DependentUpon>frmMovimentacaoPedidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVenda.resx">
       <DependentUpon>frmVenda.cs</DependentUpon>

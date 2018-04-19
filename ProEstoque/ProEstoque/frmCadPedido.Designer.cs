@@ -135,6 +135,7 @@
             this.btnBuscaFornecedor.TabIndex = 24;
             this.btnBuscaFornecedor.Text = "BUSCAR";
             this.btnBuscaFornecedor.UseVisualStyleBackColor = false;
+            this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
             // 
             // label1
             // 
@@ -299,6 +300,7 @@
             this.button3.TabIndex = 25;
             this.button3.Text = "BUSCAR";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 

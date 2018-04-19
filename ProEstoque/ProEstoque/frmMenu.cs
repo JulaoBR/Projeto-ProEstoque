@@ -93,7 +93,14 @@ namespace ProEstoque
 
         private void mATÉRIAPRIMAToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmMovimentacaoPedidos pedidos = new frmMovimentacaoPedidos();
+            pedidos.ShowDialog();
+        }
 
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            frmBuscaEstoque estoque = new frmBuscaEstoque();
+            estoque.ShowDialog();
         }
 
         private void cONFIGURAÇÕESToolStripMenuItem_Click(object sender, EventArgs e)
