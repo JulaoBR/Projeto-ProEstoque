@@ -34,7 +34,7 @@
             // frmBuscaEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.ClientSize = new System.Drawing.Size(1163, 567);
+            this.ClientSize = new System.Drawing.Size(1158, 593);
             this.Name = "frmBuscaEstoque";
             this.Text = "BUSCA DE ESTOQUE";
             this.panel1.ResumeLayout(false);

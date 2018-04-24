@@ -440,7 +440,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 560);
             this.Name = "frmCadPedido";
-            this.Text = "frmCadPedido";
+            this.Text = "CADASTRO DE PEDIDOS";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

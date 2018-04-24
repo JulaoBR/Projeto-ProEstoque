@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace ProEstoque
 {
-    public partial class frmVenda : Form
+    public partial class frmControleTroca : Form
     {
-        public frmVenda()
+        public frmControleTroca()
         {
             InitializeComponent();
         }
 
-        private void btnBuscaCliente_Click(object sender, EventArgs e)
+        private void btnPesquisaCliente_Click(object sender, EventArgs e)
         {
             frmBuscaFornecedor fornecedor = new frmBuscaFornecedor();
             fornecedor.ShowDialog();
         }
 
-        private void btnBuscaProduto_Click(object sender, EventArgs e)
+        private void btnPesquisaProduto_Click(object sender, EventArgs e)
         {
             frmBuscaProduto produto = new frmBuscaProduto();
             produto.ShowDialog();

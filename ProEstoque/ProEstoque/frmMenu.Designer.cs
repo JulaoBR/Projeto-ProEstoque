@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnMovimentacao = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
@@ -54,6 +55,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.rELATÓRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONTROLETROCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tROCADESCARTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -77,12 +81,23 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 482);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 100);
             this.panel2.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(144, 63);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 17);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "V.0.0.1";
             // 
             // label1
             // 
@@ -144,6 +159,8 @@
             this.cADASTROSToolStripMenuItem,
             this.vENDASToolStripMenuItem,
             this.mOVIMENTAÇÃOToolStripMenuItem,
+            this.rELATÓRIOSToolStripMenuItem,
+            this.cONTROLETROCAToolStripMenuItem,
             this.cONFIGURAÇÃOToolStripMenuItem,
             this.aDMINISTRADORToolStripMenuItem,
             this.sAIRLOGOUTToolStripMenuItem});
@@ -306,6 +323,27 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
+            // rELATÓRIOSToolStripMenuItem
+            // 
+            this.rELATÓRIOSToolStripMenuItem.Name = "rELATÓRIOSToolStripMenuItem";
+            this.rELATÓRIOSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.rELATÓRIOSToolStripMenuItem.Text = "RELATÓRIOS";
+            // 
+            // cONTROLETROCAToolStripMenuItem
+            // 
+            this.cONTROLETROCAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tROCADESCARTEToolStripMenuItem});
+            this.cONTROLETROCAToolStripMenuItem.Name = "cONTROLETROCAToolStripMenuItem";
+            this.cONTROLETROCAToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.cONTROLETROCAToolStripMenuItem.Text = "CONTROLE TROCA";
+            // 
+            // tROCADESCARTEToolStripMenuItem
+            // 
+            this.tROCADESCARTEToolStripMenuItem.Name = "tROCADESCARTEToolStripMenuItem";
+            this.tROCADESCARTEToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tROCADESCARTEToolStripMenuItem.Text = "TROCA/DESCARTE";
+            this.tROCADESCARTEToolStripMenuItem.Click += new System.EventHandler(this.tROCADESCARTEToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -361,6 +399,10 @@
         private System.Windows.Forms.ToolStripMenuItem mATÉRIAPRIMAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aDMINISTRADORToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cONFIGURAÇÕESToolStripMenuItem;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem rELATÓRIOSToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cONTROLETROCAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tROCADESCARTEToolStripMenuItem;
     }
 }
 

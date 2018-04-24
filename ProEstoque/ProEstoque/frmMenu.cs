@@ -103,6 +103,12 @@ namespace ProEstoque
             estoque.ShowDialog();
         }
 
+        private void tROCADESCARTEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmControleTroca troca = new frmControleTroca();
+            troca.ShowDialog();
+        }
+
         private void cONFIGURAÇÕESToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConfiguracaoADM confg = new frmConfiguracaoADM();

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtComprador = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -44,6 +44,22 @@
             this.txtApelido = new System.Windows.Forms.TextBox();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnAddLote = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtLote = new System.Windows.Forms.TextBox();
+            this.txtQtdLote = new System.Windows.Forms.TextBox();
+            this.txtQtdTotal = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEstoqueAtual = new System.Windows.Forms.TextBox();
+            this.txtProduto = new System.Windows.Forms.TextBox();
+            this.gridLoteProduto = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscaCliente = new System.Windows.Forms.Button();
@@ -53,44 +69,26 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtPedido = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtComprador = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.gridLoteProduto = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtProduto = new System.Windows.Forms.TextBox();
-            this.txtEstoqueAtual = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtQtdTotal = new System.Windows.Forms.TextBox();
-            this.txtQtdLote = new System.Windows.Forms.TextBox();
-            this.txtLote = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.btnAddLote = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnAjuste = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnAddProduto = new System.Windows.Forms.Button();
             this.gridProduto = new System.Windows.Forms.DataGridView();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
             this.gridLoteDisponivel = new System.Windows.Forms.DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddProduto = new System.Windows.Forms.Button();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnAjuste = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLoteProduto)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLoteProduto)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridProduto)).BeginInit();
             this.panel2.SuspendLayout();
@@ -121,6 +119,27 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados do cliente";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 166);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 16);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Comprador:";
+            // 
+            // txtComprador
+            // 
+            this.txtComprador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtComprador.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComprador.Location = new System.Drawing.Point(86, 163);
+            this.txtComprador.Name = "txtComprador";
+            this.txtComprador.ReadOnly = true;
+            this.txtComprador.Size = new System.Drawing.Size(318, 21);
+            this.txtComprador.TabIndex = 22;
+            this.txtComprador.TabStop = false;
             // 
             // label15
             // 
@@ -265,6 +284,173 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Dados do produto:";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Silver;
+            this.groupBox3.Controls.Add(this.btnAddLote);
+            this.groupBox3.Controls.Add(this.label16);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.label11);
+            this.groupBox3.Controls.Add(this.txtLote);
+            this.groupBox3.Controls.Add(this.txtQtdLote);
+            this.groupBox3.Controls.Add(this.txtQtdTotal);
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(9, 75);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(304, 130);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Dados do Lote";
+            // 
+            // btnAddLote
+            // 
+            this.btnAddLote.FlatAppearance.BorderSize = 0;
+            this.btnAddLote.Location = new System.Drawing.Point(240, 50);
+            this.btnAddLote.Name = "btnAddLote";
+            this.btnAddLote.Size = new System.Drawing.Size(58, 59);
+            this.btnAddLote.TabIndex = 6;
+            this.btnAddLote.Text = "ADD";
+            this.btnAddLote.UseVisualStyleBackColor = true;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(124, 89);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(12, 16);
+            this.label16.TabIndex = 33;
+            this.label16.Text = "-";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(140, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 17);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Lote*:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(119, 17);
+            this.label12.TabIndex = 31;
+            this.label12.Text = "Quantidade Lote*:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(6, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(127, 17);
+            this.label11.TabIndex = 28;
+            this.label11.Text = "Quantidade TOTAL*:";
+            // 
+            // txtLote
+            // 
+            this.txtLote.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLote.Location = new System.Drawing.Point(142, 86);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(90, 22);
+            this.txtLote.TabIndex = 5;
+            // 
+            // txtQtdLote
+            // 
+            this.txtQtdLote.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtdLote.Location = new System.Drawing.Point(6, 86);
+            this.txtQtdLote.Name = "txtQtdLote";
+            this.txtQtdLote.Size = new System.Drawing.Size(112, 22);
+            this.txtQtdLote.TabIndex = 4;
+            // 
+            // txtQtdTotal
+            // 
+            this.txtQtdTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtQtdTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtdTotal.Location = new System.Drawing.Point(6, 37);
+            this.txtQtdTotal.Name = "txtQtdTotal";
+            this.txtQtdTotal.Size = new System.Drawing.Size(174, 22);
+            this.txtQtdTotal.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(366, 17);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 17);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Estoque Atual:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 18);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Produto:";
+            // 
+            // txtEstoqueAtual
+            // 
+            this.txtEstoqueAtual.BackColor = System.Drawing.Color.Green;
+            this.txtEstoqueAtual.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstoqueAtual.ForeColor = System.Drawing.Color.White;
+            this.txtEstoqueAtual.Location = new System.Drawing.Point(369, 37);
+            this.txtEstoqueAtual.Name = "txtEstoqueAtual";
+            this.txtEstoqueAtual.ReadOnly = true;
+            this.txtEstoqueAtual.Size = new System.Drawing.Size(89, 26);
+            this.txtEstoqueAtual.TabIndex = 2;
+            this.txtEstoqueAtual.TabStop = false;
+            this.txtEstoqueAtual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtProduto
+            // 
+            this.txtProduto.BackColor = System.Drawing.Color.Blue;
+            this.txtProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtProduto.ForeColor = System.Drawing.Color.White;
+            this.txtProduto.Location = new System.Drawing.Point(7, 37);
+            this.txtProduto.Name = "txtProduto";
+            this.txtProduto.ReadOnly = true;
+            this.txtProduto.Size = new System.Drawing.Size(356, 26);
+            this.txtProduto.TabIndex = 1;
+            this.txtProduto.TabStop = false;
+            // 
+            // gridLoteProduto
+            // 
+            this.gridLoteProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridLoteProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.gridLoteProduto.Location = new System.Drawing.Point(325, 75);
+            this.gridLoteProduto.Name = "gridLoteProduto";
+            this.gridLoteProduto.RowHeadersVisible = false;
+            this.gridLoteProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gridLoteProduto.Size = new System.Drawing.Size(133, 130);
+            this.gridLoteProduto.TabIndex = 0;
+            this.gridLoteProduto.TabStop = false;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "LOTE";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "QTD";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
             // txtCodCliente
             // 
             this.txtCodCliente.BackColor = System.Drawing.Color.White;
@@ -296,6 +482,7 @@
             this.btnBuscaCliente.TabStop = false;
             this.btnBuscaCliente.Text = "BUSCAR";
             this.btnBuscaCliente.UseVisualStyleBackColor = false;
+            this.btnBuscaCliente.Click += new System.EventHandler(this.btnBuscaCliente_Click);
             // 
             // dateTimePicker1
             // 
@@ -327,6 +514,7 @@
             this.btnBuscaProduto.TabStop = false;
             this.btnBuscaProduto.Text = "BUSCAR";
             this.btnBuscaProduto.UseVisualStyleBackColor = false;
+            this.btnBuscaProduto.Click += new System.EventHandler(this.btnBuscaProduto_Click);
             // 
             // label6
             // 
@@ -359,194 +547,6 @@
             this.label7.TabIndex = 33;
             this.label7.Text = "Nº Pedido*:";
             // 
-            // txtComprador
-            // 
-            this.txtComprador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.txtComprador.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComprador.Location = new System.Drawing.Point(86, 163);
-            this.txtComprador.Name = "txtComprador";
-            this.txtComprador.ReadOnly = true;
-            this.txtComprador.Size = new System.Drawing.Size(318, 21);
-            this.txtComprador.TabIndex = 22;
-            this.txtComprador.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 166);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 16);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Comprador:";
-            // 
-            // gridLoteProduto
-            // 
-            this.gridLoteProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridLoteProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.gridLoteProduto.Location = new System.Drawing.Point(325, 75);
-            this.gridLoteProduto.Name = "gridLoteProduto";
-            this.gridLoteProduto.RowHeadersVisible = false;
-            this.gridLoteProduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridLoteProduto.Size = new System.Drawing.Size(133, 130);
-            this.gridLoteProduto.TabIndex = 0;
-            this.gridLoteProduto.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "LOTE";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "QTD";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // txtProduto
-            // 
-            this.txtProduto.BackColor = System.Drawing.Color.Blue;
-            this.txtProduto.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProduto.ForeColor = System.Drawing.Color.White;
-            this.txtProduto.Location = new System.Drawing.Point(7, 37);
-            this.txtProduto.Name = "txtProduto";
-            this.txtProduto.ReadOnly = true;
-            this.txtProduto.Size = new System.Drawing.Size(356, 26);
-            this.txtProduto.TabIndex = 1;
-            this.txtProduto.TabStop = false;
-            // 
-            // txtEstoqueAtual
-            // 
-            this.txtEstoqueAtual.BackColor = System.Drawing.Color.Green;
-            this.txtEstoqueAtual.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEstoqueAtual.ForeColor = System.Drawing.Color.White;
-            this.txtEstoqueAtual.Location = new System.Drawing.Point(369, 37);
-            this.txtEstoqueAtual.Name = "txtEstoqueAtual";
-            this.txtEstoqueAtual.ReadOnly = true;
-            this.txtEstoqueAtual.Size = new System.Drawing.Size(89, 26);
-            this.txtEstoqueAtual.TabIndex = 2;
-            this.txtEstoqueAtual.TabStop = false;
-            this.txtEstoqueAtual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Produto:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(366, 17);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Estoque Atual:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Silver;
-            this.groupBox3.Controls.Add(this.btnAddLote);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.txtLote);
-            this.groupBox3.Controls.Add(this.txtQtdLote);
-            this.groupBox3.Controls.Add(this.txtQtdTotal);
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(9, 75);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(304, 130);
-            this.groupBox3.TabIndex = 27;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Dados do Lote";
-            // 
-            // txtQtdTotal
-            // 
-            this.txtQtdTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.txtQtdTotal.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtdTotal.Location = new System.Drawing.Point(6, 37);
-            this.txtQtdTotal.Name = "txtQtdTotal";
-            this.txtQtdTotal.Size = new System.Drawing.Size(174, 22);
-            this.txtQtdTotal.TabIndex = 3;
-            // 
-            // txtQtdLote
-            // 
-            this.txtQtdLote.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtdLote.Location = new System.Drawing.Point(6, 86);
-            this.txtQtdLote.Name = "txtQtdLote";
-            this.txtQtdLote.Size = new System.Drawing.Size(112, 22);
-            this.txtQtdLote.TabIndex = 4;
-            // 
-            // txtLote
-            // 
-            this.txtLote.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLote.Location = new System.Drawing.Point(142, 86);
-            this.txtLote.Name = "txtLote";
-            this.txtLote.Size = new System.Drawing.Size(90, 22);
-            this.txtLote.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(6, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(127, 17);
-            this.label11.TabIndex = 28;
-            this.label11.Text = "Quantidade TOTAL*:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 66);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(119, 17);
-            this.label12.TabIndex = 31;
-            this.label12.Text = "Quantidade Lote*:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(140, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 17);
-            this.label13.TabIndex = 32;
-            this.label13.Text = "Lote*:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(124, 89);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(12, 16);
-            this.label16.TabIndex = 33;
-            this.label16.Text = "-";
-            // 
-            // btnAddLote
-            // 
-            this.btnAddLote.FlatAppearance.BorderSize = 0;
-            this.btnAddLote.Location = new System.Drawing.Point(240, 50);
-            this.btnAddLote.Name = "btnAddLote";
-            this.btnAddLote.Size = new System.Drawing.Size(58, 59);
-            this.btnAddLote.TabIndex = 6;
-            this.btnAddLote.Text = "ADD";
-            this.btnAddLote.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -560,16 +560,63 @@
             this.panel1.Size = new System.Drawing.Size(147, 300);
             this.panel1.TabIndex = 34;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(3, 242);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(137, 40);
+            this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
+            // btnAjuste
+            // 
+            this.btnAjuste.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAjuste.Location = new System.Drawing.Point(3, 184);
+            this.btnAjuste.Name = "btnAjuste";
+            this.btnAjuste.Size = new System.Drawing.Size(137, 40);
+            this.btnAjuste.TabIndex = 3;
+            this.btnAjuste.TabStop = false;
+            this.btnAjuste.Text = "AJUSTES";
+            this.btnAjuste.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(2, 129);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(137, 40);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabStop = false;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(3, 71);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(137, 40);
+            this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            // 
+            // btnAddProduto
+            // 
+            this.btnAddProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduto.Location = new System.Drawing.Point(3, 14);
+            this.btnAddProduto.Name = "btnAddProduto";
+            this.btnAddProduto.Size = new System.Drawing.Size(137, 40);
+            this.btnAddProduto.TabIndex = 0;
+            this.btnAddProduto.TabStop = false;
+            this.btnAddProduto.Text = "ADICIONAR";
+            this.btnAddProduto.UseVisualStyleBackColor = true;
+            // 
             // gridProduto
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.gridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column3,
@@ -625,26 +672,8 @@
             this.panel2.Size = new System.Drawing.Size(176, 549);
             this.panel2.TabIndex = 36;
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(32, 4);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(117, 16);
-            this.label17.TabIndex = 37;
-            this.label17.Text = "Lotes Disponiveis";
-            // 
             // gridLoteDisponivel
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridLoteDisponivel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridLoteDisponivel.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridLoteDisponivel.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -673,60 +702,15 @@
             this.Column8.ReadOnly = true;
             this.Column8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // btnAddProduto
+            // label17
             // 
-            this.btnAddProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduto.Location = new System.Drawing.Point(3, 14);
-            this.btnAddProduto.Name = "btnAddProduto";
-            this.btnAddProduto.Size = new System.Drawing.Size(137, 40);
-            this.btnAddProduto.TabIndex = 0;
-            this.btnAddProduto.TabStop = false;
-            this.btnAddProduto.Text = "ADICIONAR";
-            this.btnAddProduto.UseVisualStyleBackColor = true;
-            // 
-            // btnSalvar
-            // 
-            this.btnSalvar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(3, 71);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(137, 40);
-            this.btnSalvar.TabIndex = 1;
-            this.btnSalvar.TabStop = false;
-            this.btnSalvar.Text = "SALVAR";
-            this.btnSalvar.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(2, 129);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(137, 40);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.TabStop = false;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            // 
-            // btnAjuste
-            // 
-            this.btnAjuste.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAjuste.Location = new System.Drawing.Point(3, 184);
-            this.btnAjuste.Name = "btnAjuste";
-            this.btnAjuste.Size = new System.Drawing.Size(137, 40);
-            this.btnAjuste.TabIndex = 3;
-            this.btnAjuste.TabStop = false;
-            this.btnAjuste.Text = "AJUSTES";
-            this.btnAjuste.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(3, 242);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(137, 40);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.TabStop = false;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(32, 4);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(117, 16);
+            this.label17.TabIndex = 37;
+            this.label17.Text = "Lotes Disponiveis";
             // 
             // frmVenda
             // 
@@ -757,9 +741,9 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridLoteProduto)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLoteProduto)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridProduto)).EndInit();
             this.panel2.ResumeLayout(false);
