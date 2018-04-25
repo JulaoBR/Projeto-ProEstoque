@@ -376,6 +376,24 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="1422" ColName="cliente_fornecedor_cli_cod_original" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1421" ColName="cliente_fornecedor_cid_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1416" ColName="cliente_fornecedor_est_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="1375" ColName="cli_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
@@ -440,6 +458,9 @@
 <INDEX ID="1376" IndexName="pedido_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1327">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1375" LengthParam="0" />
+<INDEXCOLUMN idColumn="1416" LengthParam="0" />
+<INDEXCOLUMN idColumn="1421" LengthParam="0" />
+<INDEXCOLUMN idColumn="1422" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -732,6 +753,24 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="1417" ColName="cliente_fornecedor_est_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1424" ColName="cliente_fornecedor_cli_cod_original" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1423" ColName="cliente_fornecedor_cid_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 <COLUMN ID="1222" ColName="mot_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
@@ -765,6 +804,9 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1117" LengthParam="0" />
 <INDEXCOLUMN idColumn="1377" LengthParam="0" />
+<INDEXCOLUMN idColumn="1417" LengthParam="0" />
+<INDEXCOLUMN idColumn="1424" LengthParam="0" />
+<INDEXCOLUMN idColumn="1423" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="1221" IndexName="troca_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1219">
@@ -775,6 +817,9 @@
 <INDEX ID="1378" IndexName="troca_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1227">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1377" LengthParam="0" />
+<INDEXCOLUMN idColumn="1417" LengthParam="0" />
+<INDEXCOLUMN idColumn="1423" LengthParam="0" />
+<INDEXCOLUMN idColumn="1424" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -880,6 +925,24 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
+<COLUMN ID="1418" ColName="cliente_fornecedor_est_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1426" ColName="cliente_fornecedor_cli_cod_original" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1425" ColName="cliente_fornecedor_cid_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
 </COLUMNS>
 <RELATIONS_END>
 <RELATION_END ID="1260" />
@@ -890,6 +953,9 @@
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1269" LengthParam="0" />
 <INDEXCOLUMN idColumn="1379" LengthParam="0" />
+<INDEXCOLUMN idColumn="1418" LengthParam="0" />
+<INDEXCOLUMN idColumn="1426" LengthParam="0" />
+<INDEXCOLUMN idColumn="1425" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="1263" IndexName="produto_has_cliente_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1260">
@@ -900,6 +966,9 @@
 <INDEX ID="1380" IndexName="produto_cliente_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1261">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1379" LengthParam="0" />
+<INDEXCOLUMN idColumn="1418" LengthParam="0" />
+<INDEXCOLUMN idColumn="1425" LengthParam="0" />
+<INDEXCOLUMN idColumn="1426" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -960,7 +1029,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="1010" Tablename="cliente_fornecedor" PrevTableName="Table_01" XPos="1252" YPos="1008" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" >
+<TABLE ID="1010" Tablename="cliente_fornecedor" PrevTableName="Table_01" XPos="1261" YPos="967" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="2" >
 <COLUMNS>
 <COLUMN ID="1012" ColName="cli_cod" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -968,7 +1037,19 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="1394" ColName="cli_cod_original" PrevColName="" Pos="8" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<COLUMN ID="1415" ColName="est_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1419" ColName="cid_cod" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="1394" ColName="cli_cod_original" PrevColName="" Pos="8" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1016,10 +1097,67 @@
 <RELATION_START ID="1261" />
 <RELATION_START ID="1327" />
 </RELATIONS_START>
+<RELATIONS_END>
+<RELATION_END ID="1403" />
+<RELATION_END ID="1406" />
+</RELATIONS_END>
 <INDICES>
 <INDEX ID="1013" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="1012" LengthParam="0" />
+<INDEXCOLUMN idColumn="1415" LengthParam="0" />
+<INDEXCOLUMN idColumn="1419" LengthParam="0" />
+<INDEXCOLUMN idColumn="1394" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1405" IndexName="cliente_fornecedor_FKIndex1" IndexKind="1" FKRefDef_Obj_id="1403">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1415" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+<INDEX ID="1411" IndexName="cliente_fornecedor_FKIndex2" IndexKind="1" FKRefDef_Obj_id="1406">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1419" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1395" Tablename="estado" PrevTableName="Table_16" XPos="1708" YPos="1033" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" >
+<COLUMNS>
+<COLUMN ID="1397" ColName="est_cod" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1403" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1398" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1397" LengthParam="0" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDICES>
+</TABLE>
+<TABLE ID="1399" Tablename="cidade" PrevTableName="Table_17" XPos="1708" YPos="1125" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" >
+<COLUMNS>
+<COLUMN ID="1401" ColName="cid_cod" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="1" />
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+</COLUMNS>
+<RELATIONS_START>
+<RELATION_START ID="1406" />
+</RELATIONS_START>
+<INDICES>
+<INDEX ID="1402" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN idColumn="1401" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1039,9 +1177,11 @@
 <RELATION ID="1307" RelationName="Rel_27" Kind="1" SrcTable="1069" DestTable="1086" FKFields="pro_cod=pro_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1309" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="31" />
 <RELATION ID="1314" RelationName="Rel_28" Kind="0" SrcTable="1031" DestTable="1123" FKFields="usu_cod=usu_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1316" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
 <RELATION ID="1339" RelationName="Rel_32" Kind="5" SrcTable="1043" DestTable="1058" FKFields="ins_cod=ins_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1341" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="34" />
-<RELATION ID="1227" RelationName="Rel_16" Kind="0" SrcTable="1010" DestTable="1115" FKFields="cli_cod=cli_cod\n" FKFieldsComments="\n" relDirection="1" MidOffset="69" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1378" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
-<RELATION ID="1261" RelationName="Rel_22" Kind="1" SrcTable="1010" DestTable="1259" FKFields="cli_cod=cli_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1380" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
-<RELATION ID="1327" RelationName="Rel_30" Kind="2" SrcTable="1010" DestTable="1058" FKFields="cli_cod=cli_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="-227" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1376" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="1227" RelationName="Rel_16" Kind="0" SrcTable="1010" DestTable="1115" FKFields="cli_cod=cli_cod\nest_cod=cliente_fornecedor_est_cod\ncid_cod=cliente_fornecedor_cid_cod\ncli_cod_original=cliente_fornecedor_cli_cod_original\n" FKFieldsComments="\n\n\n\n" relDirection="1" MidOffset="69" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1378" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
+<RELATION ID="1261" RelationName="Rel_22" Kind="1" SrcTable="1010" DestTable="1259" FKFields="cli_cod=cli_cod\nest_cod=cliente_fornecedor_est_cod\ncid_cod=cliente_fornecedor_cid_cod\ncli_cod_original=cliente_fornecedor_cli_cod_original\n" FKFieldsComments="\n\n\n\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1380" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
+<RELATION ID="1327" RelationName="Rel_30" Kind="2" SrcTable="1010" DestTable="1058" FKFields="cli_cod=cli_cod\nest_cod=cliente_fornecedor_est_cod\ncid_cod=cliente_fornecedor_cid_cod\ncli_cod_original=cliente_fornecedor_cli_cod_original\n" FKFieldsComments="\n\n\n\n" relDirection="4" MidOffset="-222" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1376" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="33" />
+<RELATION ID="1403" RelationName="Rel_17" Kind="0" SrcTable="1395" DestTable="1010" FKFields="est_cod=est_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1405" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
+<RELATION ID="1406" RelationName="Rel_18" Kind="0" SrcTable="1399" DestTable="1010" FKFields="cid_cod=cid_cod\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=3\nOnUpdate=3\n" Comments="" FKRefDefIndex_Obj_id="1411" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="36" />
 </RELATIONS>
 <NOTES>
 </NOTES>

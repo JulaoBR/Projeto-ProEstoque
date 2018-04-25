@@ -41,6 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="TipoProdutoControl.cs" />
+    <Compile Include="UnidadeMedidaControl.cs" />
     <Compile Include="UsuarioControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
