@@ -13,6 +13,18 @@ namespace ProEstoque
         }
 
 
+        private void rbNovoCadastro_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rbEditar_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
         //========== UNIDADE MEDIDA ============================================================
 
         //METODO DO BOTÂO DE SALVAR
@@ -45,9 +57,25 @@ namespace ProEstoque
         }
 
         //METODO DO BOTAO DE EXCLUIR
-        private void btnExcluirUnidadeMedida_Click(object sender, EventArgs e)
+        private void btnListaUnidadeMedida_Click(object sender, EventArgs e)
         {
-            
+            UnidadeMedidaControl control = new UnidadeMedidaControl();
+            UnidadeMedidaModel model = new UnidadeMedidaModel();
+            //CHAMA A LISTA DE UNIDADE DE MEDIDA = CODIGO 1
+            frmListaCadastrosAdm lista = new frmListaCadastrosAdm(1);
+            lista.ShowDialog();
+
+            if (lista.codigo != 0)
+            {
+                model = control.SelectByID(lista.codigo);
+
+                txtCodUnidadeMedida.Text = Convert.ToString(model.uni_cod);
+                txtDescUnidadeMedida.Text = model.uni_descricao;
+            }
+            else
+            {
+                LimpaCampoUnidadeMedida();
+            }
         }
 
         //METODO DE LIMPA OS CAMPOS DA UNIDADE DE MEDIDA
@@ -55,7 +83,6 @@ namespace ProEstoque
         {
             txtCodUnidadeMedida.Clear();
             txtDescUnidadeMedida.Clear();
-
             txtDescUnidadeMedida.Focus();
         }
 
@@ -74,7 +101,10 @@ namespace ProEstoque
 
                 tipo.tipo_descricao = txtDescTipo.Text;
 
-                control.Inserir(tipo);
+                if (!control.Inserir(tipo))
+                {
+                    MessageBox.Show("Verifique os campos digitados", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
             }catch(Exception ex)
             {
@@ -102,6 +132,15 @@ namespace ProEstoque
 
             txtDescTipo.Focus();
         }
+
+        //METODO DO BOTAO LISTA TIPO DE PRODUTO = CODIGO 2
+        private void btnListaTipoProduto_Click(object sender, EventArgs e)
+        {
+            frmListaCadastrosAdm lista = new frmListaCadastrosAdm(2);
+            lista.ShowDialog();
+        }
+
+
 
         //======================================================================================
         //======================================================================================

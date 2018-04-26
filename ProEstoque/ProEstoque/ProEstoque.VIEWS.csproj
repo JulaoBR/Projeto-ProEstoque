@@ -77,23 +77,11 @@
     <Compile Include="frmCadastro.Designer.cs">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmCadastro2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadastro2.Designer.cs">
-      <DependentUpon>frmCadastro2.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCadCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCadCliente.Designer.cs">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadMedida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadMedida.Designer.cs">
-      <DependentUpon>frmCadMedida.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadPedido.cs">
       <SubType>Form</SubType>
@@ -106,12 +94,6 @@
     </Compile>
     <Compile Include="frmCadProduto.Designer.cs">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCadTipoProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCadTipoProduto.Designer.cs">
-      <DependentUpon>frmCadTipoProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadUsuario.cs">
       <SubType>Form</SubType>
@@ -130,6 +112,12 @@
     </Compile>
     <Compile Include="frmControleTroca.Designer.cs">
       <DependentUpon>frmControleTroca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCadastrosAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCadastrosAdm.Designer.cs">
+      <DependentUpon>frmListaCadastrosAdm.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -178,23 +166,14 @@
     <EmbeddedResource Include="frmCadastro.resx">
       <DependentUpon>frmCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmCadastro2.resx">
-      <DependentUpon>frmCadastro2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCadCliente.resx">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCadMedida.resx">
-      <DependentUpon>frmCadMedida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadPedido.resx">
       <DependentUpon>frmCadPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadProduto.resx">
       <DependentUpon>frmCadProduto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCadTipoProduto.resx">
-      <DependentUpon>frmCadTipoProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadUsuario.resx">
       <DependentUpon>frmCadUsuario.cs</DependentUpon>
@@ -204,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmControleTroca.resx">
       <DependentUpon>frmControleTroca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCadastrosAdm.resx">
+      <DependentUpon>frmListaCadastrosAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
