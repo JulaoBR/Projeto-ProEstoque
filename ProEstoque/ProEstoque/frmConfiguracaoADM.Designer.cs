@@ -125,6 +125,7 @@
             this.btnExcluirUnidadeMedida.TabIndex = 4;
             this.btnExcluirUnidadeMedida.Text = "EXCLUIR";
             this.btnExcluirUnidadeMedida.UseVisualStyleBackColor = true;
+            this.btnExcluirUnidadeMedida.Click += new System.EventHandler(this.btnExcluirUnidadeMedida_Click);
             // 
             // btnSalvaUnidadeMedida
             // 

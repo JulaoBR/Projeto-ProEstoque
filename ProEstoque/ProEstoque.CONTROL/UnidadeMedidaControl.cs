@@ -1,5 +1,6 @@
 ﻿using ProEstoque.DAO;
 using ProEstoque.MODEL;
+using System;
 using System.Data;
 
 namespace ProEstoque.CONTROL
@@ -30,10 +31,24 @@ namespace ProEstoque.CONTROL
             }
         }
 
+        public bool Update(UnidadeMedidaModel unidade)
+        {
+            UnidadeMedidaDAO dao = new UnidadeMedidaDAO();
+
+            if (unidade.uni_cod != 0 || unidade.uni_descricao != string.Empty)
+            {
+                dao.Update(unidade);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
         public DataTable Select()
         {
-
             UnidadeMedidaDAO dao = new UnidadeMedidaDAO();
             return dao.Select();
         }
@@ -43,6 +58,21 @@ namespace ProEstoque.CONTROL
         {
             UnidadeMedidaDAO dao = new UnidadeMedidaDAO();
             return dao.SelectByID(id);
+        }
+
+        public bool Excluir(string codigo)
+        {
+            UnidadeMedidaDAO dao = new UnidadeMedidaDAO();
+
+            if (codigo != string.Empty )
+            {
+                dao.Delete(Convert.ToInt32(codigo));
+                return true;
+            }
+            else
+            {
+                return false;
+            }            
         }
     }
 }

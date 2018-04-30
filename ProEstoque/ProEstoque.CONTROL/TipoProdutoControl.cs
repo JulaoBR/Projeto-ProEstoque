@@ -32,10 +32,32 @@ namespace ProEstoque.CONTROL
             }           
         }
 
+        public bool Update(TipoProdutoModel tipo)
+        {
+            TipoProdutoDAO dao = new TipoProdutoDAO();
+
+            if (tipo.tipo_cod != 0 || tipo.tipo_descricao != string.Empty)
+            {
+                dao.Update(tipo);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public DataTable Select()
         {
             TipoProdutoDAO dao = new TipoProdutoDAO();
             return dao.Select();
+        }
+
+        //RETORNA UM OBJETO DO TIPO UNIDADE DE MEDIDA
+        public TipoProdutoModel SelectByID(int id)
+        {
+            TipoProdutoDAO dao = new TipoProdutoDAO();
+            return dao.SelectByID(id);
         }
     }
 }

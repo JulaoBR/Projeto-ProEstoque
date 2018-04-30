@@ -59,14 +59,14 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE DELETE
-        public void Delete(UnidadeMedidaModel unidade)
+        public void Delete(int unidade)
         {
             try
             {
                 String sql = "DELETE FROM unidade_medida WHERE uni_cod = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", unidade.uni_cod);
+                cmd.Parameters.AddWithValue("@id", unidade);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
