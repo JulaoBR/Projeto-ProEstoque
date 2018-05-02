@@ -193,7 +193,23 @@ namespace ProEstoque
         //METODO DO BOTAO EXCLUIR
         private void btnExcluirTipo_Click(object sender, EventArgs e)
         {
-
+            TipoProdutoControl control = new TipoProdutoControl();
+            try
+            {
+                if (control.Excluir(txtCodTipo.Text))
+                {
+                    LimpaCampoTipoProduto();
+                    MessageBox.Show("Item excluido com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro na exclusão do item", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         //METODO DE LIMPA OS CAMPOS DO TIPO DE PRODUTO
@@ -230,6 +246,38 @@ namespace ProEstoque
             }
         }
 
+
+        //======================================================================================
+        //======================================================================================
+
+        //=========== MOTIVOS DE TROCAS ========================================================
+
+        private void btnSalvarMotivo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExcluirMotivo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListarMotivo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LimpaCampoMotivo()
+        {
+            txtDescTipo.Clear();
+            txtDescMotivo.Clear();
+            txtCodMotivo.Focus();
+
+            rbEditar.Checked = false;
+            rbNovoCadastro.Checked = false;
+
+            seletor = -1;
+        }
 
         //======================================================================================
         //======================================================================================

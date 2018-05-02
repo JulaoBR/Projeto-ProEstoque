@@ -59,5 +59,20 @@ namespace ProEstoque.CONTROL
             TipoProdutoDAO dao = new TipoProdutoDAO();
             return dao.SelectByID(id);
         }
+
+        public bool Excluir(string codigo)
+        {
+             TipoProdutoDAO dao = new TipoProdutoDAO();
+
+            if (codigo != string.Empty)
+            {
+                dao.Delete(Convert.ToInt32(codigo));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

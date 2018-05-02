@@ -50,9 +50,17 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.rbNovoCadastro = new System.Windows.Forms.RadioButton();
             this.rbEditar = new System.Windows.Forms.RadioButton();
+            this.btnListarMotivo = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnExcluirMotivo = new System.Windows.Forms.Button();
+            this.btnSalvarMotivo = new System.Windows.Forms.Button();
+            this.txtDescMotivo = new System.Windows.Forms.TextBox();
+            this.txtCodMotivo = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -90,7 +98,7 @@
             // btnListaUnidadeMedida
             // 
             this.btnListaUnidadeMedida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaUnidadeMedida.Location = new System.Drawing.Point(667, 370);
+            this.btnListaUnidadeMedida.Location = new System.Drawing.Point(666, 370);
             this.btnListaUnidadeMedida.Name = "btnListaUnidadeMedida";
             this.btnListaUnidadeMedida.Size = new System.Drawing.Size(75, 31);
             this.btnListaUnidadeMedida.TabIndex = 7;
@@ -119,7 +127,7 @@
             // btnExcluirUnidadeMedida
             // 
             this.btnExcluirUnidadeMedida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluirUnidadeMedida.Location = new System.Drawing.Point(586, 370);
+            this.btnExcluirUnidadeMedida.Location = new System.Drawing.Point(585, 370);
             this.btnExcluirUnidadeMedida.Name = "btnExcluirUnidadeMedida";
             this.btnExcluirUnidadeMedida.Size = new System.Drawing.Size(75, 31);
             this.btnExcluirUnidadeMedida.TabIndex = 4;
@@ -130,7 +138,7 @@
             // btnSalvaUnidadeMedida
             // 
             this.btnSalvaUnidadeMedida.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvaUnidadeMedida.Location = new System.Drawing.Point(505, 370);
+            this.btnSalvaUnidadeMedida.Location = new System.Drawing.Point(504, 370);
             this.btnSalvaUnidadeMedida.Name = "btnSalvaUnidadeMedida";
             this.btnSalvaUnidadeMedida.Size = new System.Drawing.Size(75, 31);
             this.btnSalvaUnidadeMedida.TabIndex = 3;
@@ -187,7 +195,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 54);
+            this.label3.Location = new System.Drawing.Point(7, 53);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(212, 17);
             this.label3.TabIndex = 13;
@@ -196,7 +204,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 3);
+            this.label4.Location = new System.Drawing.Point(7, 2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(62, 17);
             this.label4.TabIndex = 12;
@@ -213,7 +221,7 @@
             // 
             // txtCodTipo
             // 
-            this.txtCodTipo.Location = new System.Drawing.Point(5, 23);
+            this.txtCodTipo.Location = new System.Drawing.Point(6, 22);
             this.txtCodTipo.Name = "txtCodTipo";
             this.txtCodTipo.ReadOnly = true;
             this.txtCodTipo.Size = new System.Drawing.Size(100, 23);
@@ -263,12 +271,20 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.BackColor = System.Drawing.Color.LightGray;
+            this.tabPage5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage5.Controls.Add(this.btnListarMotivo);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.btnExcluirMotivo);
+            this.tabPage5.Controls.Add(this.btnSalvarMotivo);
+            this.tabPage5.Controls.Add(this.txtDescMotivo);
+            this.tabPage5.Controls.Add(this.txtCodMotivo);
             this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(752, 411);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "CAD MOTIVOS DE TROCA";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // rbNovoCadastro
             // 
@@ -296,6 +312,74 @@
             this.rbEditar.UseVisualStyleBackColor = true;
             this.rbEditar.CheckedChanged += new System.EventHandler(this.rbEditar_CheckedChanged);
             // 
+            // btnListarMotivo
+            // 
+            this.btnListarMotivo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarMotivo.Location = new System.Drawing.Point(666, 370);
+            this.btnListarMotivo.Name = "btnListarMotivo";
+            this.btnListarMotivo.Size = new System.Drawing.Size(75, 31);
+            this.btnListarMotivo.TabIndex = 14;
+            this.btnListarMotivo.Text = "LISTAR";
+            this.btnListarMotivo.UseVisualStyleBackColor = true;
+            this.btnListarMotivo.Click += new System.EventHandler(this.btnListarMotivo_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(238, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Descrição da unidade de medida*:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 2);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(62, 17);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Código:";
+            // 
+            // btnExcluirMotivo
+            // 
+            this.btnExcluirMotivo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluirMotivo.Location = new System.Drawing.Point(585, 370);
+            this.btnExcluirMotivo.Name = "btnExcluirMotivo";
+            this.btnExcluirMotivo.Size = new System.Drawing.Size(75, 31);
+            this.btnExcluirMotivo.TabIndex = 11;
+            this.btnExcluirMotivo.Text = "EXCLUIR";
+            this.btnExcluirMotivo.UseVisualStyleBackColor = true;
+            this.btnExcluirMotivo.Click += new System.EventHandler(this.btnExcluirMotivo_Click);
+            // 
+            // btnSalvarMotivo
+            // 
+            this.btnSalvarMotivo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvarMotivo.Location = new System.Drawing.Point(504, 370);
+            this.btnSalvarMotivo.Name = "btnSalvarMotivo";
+            this.btnSalvarMotivo.Size = new System.Drawing.Size(75, 31);
+            this.btnSalvarMotivo.TabIndex = 10;
+            this.btnSalvarMotivo.Text = "SALVAR";
+            this.btnSalvarMotivo.UseVisualStyleBackColor = true;
+            this.btnSalvarMotivo.Click += new System.EventHandler(this.btnSalvarMotivo_Click);
+            // 
+            // txtDescMotivo
+            // 
+            this.txtDescMotivo.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDescMotivo.Location = new System.Drawing.Point(5, 74);
+            this.txtDescMotivo.MaxLength = 100;
+            this.txtDescMotivo.Name = "txtDescMotivo";
+            this.txtDescMotivo.Size = new System.Drawing.Size(736, 23);
+            this.txtDescMotivo.TabIndex = 9;
+            // 
+            // txtCodMotivo
+            // 
+            this.txtCodMotivo.Location = new System.Drawing.Point(6, 22);
+            this.txtCodMotivo.Name = "txtCodMotivo";
+            this.txtCodMotivo.ReadOnly = true;
+            this.txtCodMotivo.Size = new System.Drawing.Size(100, 23);
+            this.txtCodMotivo.TabIndex = 8;
+            // 
             // frmConfiguracaoADM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +397,8 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,5 +428,12 @@
         private System.Windows.Forms.Button btnListaTipoProduto;
         private System.Windows.Forms.RadioButton rbNovoCadastro;
         private System.Windows.Forms.RadioButton rbEditar;
+        private System.Windows.Forms.Button btnListarMotivo;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnExcluirMotivo;
+        private System.Windows.Forms.Button btnSalvarMotivo;
+        private System.Windows.Forms.TextBox txtDescMotivo;
+        private System.Windows.Forms.TextBox txtCodMotivo;
     }
 }

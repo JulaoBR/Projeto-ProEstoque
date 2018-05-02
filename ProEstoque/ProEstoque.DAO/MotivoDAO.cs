@@ -3,27 +3,26 @@ using ProEstoque.MODEL;
 using System;
 using System.Data;
 
-
 namespace ProEstoque.DAO
 {
-    public class TipoProdutoDAO
+    public class MotivoDAO
     {
         private MySqlConnection con = null;
 
-        public TipoProdutoDAO()
+        public MotivoDAO()
         {
 
         }
 
         //METODO DE INSERT
-        public void Insert(TipoProdutoModel tipo)
+        public void Insert(MotivoModel motivo)
         {
             try
             {
-                String sql = "INSERT INTO tipo_produto (tipo_descricao) VALUES (@descricao)";
+                String sql = "INSERT INTO motivo (mot_descricao) VALUES (@descricao)";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@descricao", tipo.tipo_descricao);
+                cmd.Parameters.AddWithValue("@descricao", motivo.mot_descricao);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -36,16 +35,17 @@ namespace ProEstoque.DAO
             }
         }
 
+
         //METODO DE UPDATE 
-        public void Update(TipoProdutoModel tipo)
+        public void Update(MotivoModel motivo)
         {
             try
             {
-                String sql = "UPDATE tipo_produto SET tipo_descricao = @descricao WHERE tipo_cod = @id ";
+                String sql = "UPDATE motivo SET mot_descricao = @descricao WHERE mot_cod = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", tipo.tipo_cod);
-                cmd.Parameters.AddWithValue("@descricao", tipo.tipo_descricao);
+                cmd.Parameters.AddWithValue("@id", motivo.mot_cod);
+                cmd.Parameters.AddWithValue("@descricao", motivo.mot_descricao);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -59,14 +59,14 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE DELETE
-        public void Delete(int tipo)
+        public void Delete(int unidade)
         {
             try
             {
-                String sql = "DELETE FROM tipo_produto WHERE tipo_cod = @id ";
+                String sql = "DELETE FROM motivo WHERE mot_cod = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", tipo);
+                cmd.Parameters.AddWithValue("@id", unidade);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -80,25 +80,25 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA POR ID
-        public TipoProdutoModel SelectByID(int id)
+        public MotivoModel SelectByID(int id)
         {
             try
             {
-                String sql = "SELECT * FROM tipo_produto WHERE tipo_cod = @id";
+                String sql = "SELECT mot_cod, mot_descricao FROM motivo WHERE mot_cod = @id";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", id);
                 MySqlDataReader dr;
 
-                TipoProdutoModel tipo = new TipoProdutoModel();
+                MotivoModel motivo = new MotivoModel();
                 dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
                 while (dr.Read())
                 {
-                    tipo.tipo_cod = Convert.ToInt32(dr["tipo_cod"]);
-                    tipo.tipo_descricao = dr["tipo_descricao"].ToString();
+                    motivo.mot_cod = Convert.ToInt32(dr["mot_cod"]);
+                    motivo.mot_descricao = dr["mot_descricao"].ToString();
                 }
-                return tipo;
+                return motivo;
             }
             catch (Exception ex)
             {
@@ -115,7 +115,7 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "SELECT tipo_cod, tipo_descricao FROM tipo_produto";
+                String sql = "SELECT mot_cod, mot_descricao FROM motivo";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
@@ -135,4 +135,3 @@ namespace ProEstoque.DAO
         }
     }
 }
-
