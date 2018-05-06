@@ -29,7 +29,6 @@ namespace ProEstoque
         }
 
 
-
         //========== UNIDADE MEDIDA ============================================================
 
         //METODO DO BOTÂO DE SALVAR
@@ -254,17 +253,83 @@ namespace ProEstoque
 
         private void btnSalvarMotivo_Click(object sender, EventArgs e)
         {
+            try
+            {
+                MotivoControl control = new MotivoControl();
+                MotivoModel tipo = new MotivoModel();
 
+                tipo.mot_descricao = txtDescMotivo.Text;
+
+                switch (seletor)
+                {
+                    case 0:
+                        if (!control.Inserir(tipo))
+                            MessageBox.Show("Verifique os campos digitados", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                    case 1:
+
+                        if (txtCodTipo.Text != string.Empty)
+                            tipo.mot_cod = Convert.ToInt32(txtCodMotivo.Text);
+
+                        if (!control.Update(tipo))
+                            MessageBox.Show("Verifique os campos digitados", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                    default:
+                        MessageBox.Show("Selecione a opção NOVO CADASTRO ou EDITAR", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        break;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            finally
+            {
+                //CHAMA METODO PARA LIMPAR OS CAMPOS
+                LimpaCampoMotivo();
+            }
         }
 
         private void btnExcluirMotivo_Click(object sender, EventArgs e)
         {
-
+            MotivoControl control = new MotivoControl();
+            try
+            {
+                if (control.Excluir(txtCodMotivo.Text))
+                {
+                    LimpaCampoMotivo();
+                    MessageBox.Show("Item excluido com sucesso", "Informação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Erro na exclusão do item", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnListarMotivo_Click(object sender, EventArgs e)
         {
+            MotivoControl control = new MotivoControl();
+            MotivoModel model = new MotivoModel();
+            frmListaCadastrosAdm lista = new frmListaCadastrosAdm(3);
+            lista.ShowDialog();
 
+            if (lista.codigo != 0)
+            {
+                model = control.SelectByID(lista.codigo);
+
+                txtCodMotivo.Text = Convert.ToString(model.mot_cod);
+                txtDescMotivo.Text = model.mot_descricao;
+            }
+            else
+            {
+                LimpaCampoMotivo();
+            }
         }
 
         private void LimpaCampoMotivo()

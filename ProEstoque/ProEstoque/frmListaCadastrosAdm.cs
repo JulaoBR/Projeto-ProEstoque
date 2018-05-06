@@ -30,20 +30,20 @@ namespace ProEstoque
         {   
             try
             {
-                UnidadeMedidaControl unidade = new UnidadeMedidaControl();
-                TipoProdutoControl tipo = new TipoProdutoControl();
-
                 //VERIFICA A OPCAO PARA CARREGAMENTO DOS DADOS
                 switch (opcao)
                 {
                     case 1:
+                        UnidadeMedidaControl unidade = new UnidadeMedidaControl();
                         PreencheGrid(unidade.Select());
                         break;
                     case 2:
+                        TipoProdutoControl tipo = new TipoProdutoControl();
                         PreencheGrid(tipo.Select());
                         break;
                     case 3:
-
+                        MotivoControl motivo = new MotivoControl();
+                        PreencheGrid(motivo.Select());
                         break;
                     default:
                         break;
