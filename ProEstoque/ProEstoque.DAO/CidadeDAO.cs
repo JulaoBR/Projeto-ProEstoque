@@ -50,10 +50,11 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "SELECT cid_cod, cid_nome FROM cidade WHARE cid_uf = '"+ est_cod +"'";
+                String sql = "SELECT cid_cod, cid_nome FROM cidade WHERE cid_uf = @id";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataAdapter da = new MySqlDataAdapter();
+                cmd.Parameters.AddWithValue("@id", est_cod);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();
                 da.Fill(dt);

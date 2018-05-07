@@ -33,38 +33,38 @@
             this.btnBuscaFornecedor = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNomeFantasia = new System.Windows.Forms.TextBox();
+            this.txtNomeCliente = new System.Windows.Forms.TextBox();
+            this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.gridProduto = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBuscaProduto = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.cbUnidadeMedida = new System.Windows.Forms.ComboBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbTipoPedido = new System.Windows.Forms.ComboBox();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.txtDtEntregaPrevista = new System.Windows.Forms.TextBox();
+            this.txtDtPedido = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProduto)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,9 +105,9 @@
             this.groupBox1.Controls.Add(this.btnBuscaFornecedor);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtNomeFantasia);
+            this.groupBox1.Controls.Add(this.txtNomeCliente);
+            this.groupBox1.Controls.Add(this.txtCodCliente);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(3, 57);
             this.groupBox1.Name = "groupBox1";
@@ -157,33 +157,33 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Nome Fantasia / Apelido:";
             // 
-            // textBox3
+            // txtNomeFantasia
             // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(475, 93);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(258, 23);
-            this.textBox3.TabIndex = 9;
+            this.txtNomeFantasia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNomeFantasia.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNomeFantasia.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeFantasia.Location = new System.Drawing.Point(475, 93);
+            this.txtNomeFantasia.Name = "txtNomeFantasia";
+            this.txtNomeFantasia.ReadOnly = true;
+            this.txtNomeFantasia.Size = new System.Drawing.Size(258, 23);
+            this.txtNomeFantasia.TabIndex = 9;
             // 
-            // textBox2
+            // txtNomeCliente
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox2.Location = new System.Drawing.Point(7, 93);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(450, 23);
-            this.textBox2.TabIndex = 1;
+            this.txtNomeCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNomeCliente.Location = new System.Drawing.Point(7, 93);
+            this.txtNomeCliente.Name = "txtNomeCliente";
+            this.txtNomeCliente.ReadOnly = true;
+            this.txtNomeCliente.Size = new System.Drawing.Size(450, 23);
+            this.txtNomeCliente.TabIndex = 1;
             // 
-            // textBox1
+            // txtCodCliente
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 0;
+            this.txtCodCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodCliente.Location = new System.Drawing.Point(9, 40);
+            this.txtCodCliente.Name = "txtCodCliente";
+            this.txtCodCliente.Size = new System.Drawing.Size(100, 23);
+            this.txtCodCliente.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -191,14 +191,14 @@
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnAdicionar);
+            this.groupBox2.Controls.Add(this.txtQuantidade);
+            this.groupBox2.Controls.Add(this.gridProduto);
+            this.groupBox2.Controls.Add(this.btnBuscaProduto);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.comboBox2);
-            this.groupBox2.Controls.Add(this.textBox8);
-            this.groupBox2.Controls.Add(this.textBox6);
+            this.groupBox2.Controls.Add(this.cbUnidadeMedida);
+            this.groupBox2.Controls.Add(this.txtNomeProduto);
+            this.groupBox2.Controls.Add(this.txtCodProduto);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(5, 298);
             this.groupBox2.Name = "groupBox2";
@@ -237,36 +237,36 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Produto:";
             // 
-            // button4
+            // btnAdicionar
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button4.Location = new System.Drawing.Point(635, 84);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(96, 23);
-            this.button4.TabIndex = 30;
-            this.button4.Text = "ADICIONAR";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnAdicionar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnAdicionar.Location = new System.Drawing.Point(635, 84);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(96, 23);
+            this.btnAdicionar.TabIndex = 30;
+            this.btnAdicionar.Text = "ADICIONAR";
+            this.btnAdicionar.UseVisualStyleBackColor = false;
             // 
-            // textBox4
+            // txtQuantidade
             // 
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox4.Location = new System.Drawing.Point(461, 84);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(124, 23);
-            this.textBox4.TabIndex = 29;
+            this.txtQuantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtQuantidade.Location = new System.Drawing.Point(461, 84);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(124, 23);
+            this.txtQuantidade.TabIndex = 29;
             // 
-            // dataGridView1
+            // gridProduto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(7, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(724, 107);
-            this.dataGridView1.TabIndex = 28;
+            this.gridProduto.Location = new System.Drawing.Point(7, 118);
+            this.gridProduto.Name = "gridProduto";
+            this.gridProduto.RowHeadersVisible = false;
+            this.gridProduto.Size = new System.Drawing.Size(724, 107);
+            this.gridProduto.TabIndex = 28;
             // 
             // Column1
             // 
@@ -291,16 +291,16 @@
             this.Column3.ReadOnly = true;
             this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // button3
+            // btnBuscaProduto
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(113, 37);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 23);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "BUSCAR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBuscaProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnBuscaProduto.Location = new System.Drawing.Point(113, 37);
+            this.btnBuscaProduto.Name = "btnBuscaProduto";
+            this.btnBuscaProduto.Size = new System.Drawing.Size(85, 23);
+            this.btnBuscaProduto.TabIndex = 25;
+            this.btnBuscaProduto.Text = "BUSCAR";
+            this.btnBuscaProduto.UseVisualStyleBackColor = false;
+            this.btnBuscaProduto.Click += new System.EventHandler(this.button3_Click);
             // 
             // label5
             // 
@@ -312,31 +312,31 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Unidade de Medida:";
             // 
-            // comboBox2
+            // cbUnidadeMedida
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(491, 37);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(240, 24);
-            this.comboBox2.TabIndex = 26;
+            this.cbUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbUnidadeMedida.FormattingEnabled = true;
+            this.cbUnidadeMedida.Location = new System.Drawing.Point(491, 37);
+            this.cbUnidadeMedida.Name = "cbUnidadeMedida";
+            this.cbUnidadeMedida.Size = new System.Drawing.Size(240, 24);
+            this.cbUnidadeMedida.TabIndex = 26;
             // 
-            // textBox8
+            // txtNomeProduto
             // 
-            this.textBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox8.Location = new System.Drawing.Point(9, 84);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.ReadOnly = true;
-            this.textBox8.Size = new System.Drawing.Size(438, 23);
-            this.textBox8.TabIndex = 25;
+            this.txtNomeProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNomeProduto.Location = new System.Drawing.Point(9, 84);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.ReadOnly = true;
+            this.txtNomeProduto.Size = new System.Drawing.Size(438, 23);
+            this.txtNomeProduto.TabIndex = 25;
             // 
-            // textBox6
+            // txtCodProduto
             // 
-            this.textBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(7, 37);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 23);
-            this.textBox6.TabIndex = 24;
+            this.txtCodProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodProduto.Location = new System.Drawing.Point(7, 37);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(100, 23);
+            this.txtCodProduto.TabIndex = 24;
             // 
             // groupBox3
             // 
@@ -345,10 +345,10 @@
             this.groupBox3.Controls.Add(this.label11);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Controls.Add(this.comboBox1);
-            this.groupBox3.Controls.Add(this.textBox9);
-            this.groupBox3.Controls.Add(this.textBox7);
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.cbTipoPedido);
+            this.groupBox3.Controls.Add(this.txtObservacao);
+            this.groupBox3.Controls.Add(this.txtDtEntregaPrevista);
+            this.groupBox3.Controls.Add(this.txtDtPedido);
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(5, 185);
             this.groupBox3.Name = "groupBox3";
@@ -397,42 +397,42 @@
             this.label9.TabIndex = 34;
             this.label9.Text = "Data do pedido*:";
             // 
-            // comboBox1
+            // cbTipoPedido
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTipoPedido.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoPedido.FormattingEnabled = true;
+            this.cbTipoPedido.Items.AddRange(new object[] {
             "PEDIDO DE PRODUÇÃO",
             "PEDIDO DE COMPRA"});
-            this.comboBox1.Location = new System.Drawing.Point(354, 32);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 34;
+            this.cbTipoPedido.Location = new System.Drawing.Point(354, 32);
+            this.cbTipoPedido.Name = "cbTipoPedido";
+            this.cbTipoPedido.Size = new System.Drawing.Size(200, 24);
+            this.cbTipoPedido.TabIndex = 34;
             // 
-            // textBox9
+            // txtObservacao
             // 
-            this.textBox9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(9, 78);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(722, 23);
-            this.textBox9.TabIndex = 36;
+            this.txtObservacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtObservacao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObservacao.Location = new System.Drawing.Point(9, 78);
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(722, 23);
+            this.txtObservacao.TabIndex = 36;
             // 
-            // textBox7
+            // txtDtEntregaPrevista
             // 
-            this.textBox7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(186, 33);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(139, 23);
-            this.textBox7.TabIndex = 35;
+            this.txtDtEntregaPrevista.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDtEntregaPrevista.Location = new System.Drawing.Point(186, 33);
+            this.txtDtEntregaPrevista.Name = "txtDtEntregaPrevista";
+            this.txtDtEntregaPrevista.Size = new System.Drawing.Size(139, 23);
+            this.txtDtEntregaPrevista.TabIndex = 35;
             // 
-            // textBox5
+            // txtDtPedido
             // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(9, 33);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(139, 23);
-            this.textBox5.TabIndex = 34;
+            this.txtDtPedido.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDtPedido.Location = new System.Drawing.Point(9, 33);
+            this.txtDtPedido.Name = "txtDtPedido";
+            this.txtDtPedido.Size = new System.Drawing.Size(139, 23);
+            this.txtDtPedido.TabIndex = 34;
             // 
             // frmCadPedido
             // 
@@ -441,6 +441,7 @@
             this.ClientSize = new System.Drawing.Size(911, 560);
             this.Name = "frmCadPedido";
             this.Text = "CADASTRO DE PEDIDOS";
+            this.Load += new System.EventHandler(this.frmCadPedido_Load);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -448,7 +449,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridProduto)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -458,33 +459,33 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNomeCliente;
+        private System.Windows.Forms.TextBox txtCodCliente;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtNomeFantasia;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtNomeProduto;
+        private System.Windows.Forms.TextBox txtCodProduto;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cbUnidadeMedida;
+        private System.Windows.Forms.Button btnBuscaProduto;
         private System.Windows.Forms.Button btnBuscaFornecedor;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbTipoPedido;
+        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.TextBox txtDtEntregaPrevista;
+        private System.Windows.Forms.TextBox txtDtPedido;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;

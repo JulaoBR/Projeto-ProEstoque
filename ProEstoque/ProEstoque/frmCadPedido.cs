@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProEstoque.CONTROL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,28 @@ namespace ProEstoque
         {
             frmBuscaProduto produto = new frmBuscaProduto();
             produto.ShowDialog();
+        }
+
+        private void frmCadPedido_Load(object sender, EventArgs e)
+        {
+            CarregaUnidadeMedida();
+        }
+
+        private void CarregaUnidadeMedida()
+        {
+            try
+            {
+                UnidadeMedidaControl control = new UnidadeMedidaControl();
+
+                cbUnidadeMedida.DataSource = control.Select();
+                cbUnidadeMedida.DisplayMember = "uni_descricao";
+                cbUnidadeMedida.ValueMember = "uni_cod";
+                cbUnidadeMedida.SelectedIndex = -1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

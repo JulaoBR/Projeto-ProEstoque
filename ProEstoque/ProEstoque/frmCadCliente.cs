@@ -1,10 +1,5 @@
 ﻿using ProEstoque.CONTROL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ProEstoque
@@ -30,7 +25,7 @@ namespace ProEstoque
                 cbEstado.DataSource = control.Select();
                 cbEstado.DisplayMember = "est_nome";
                 cbEstado.ValueMember = "est_cod";
-                cbEstado.SelectedIndex = -1;
+                cbEstado.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -44,9 +39,9 @@ namespace ProEstoque
             {
                 CidadeControl control = new CidadeControl();
 
-                if(cbEstado.ValueMember != null)
+                if(cbEstado.SelectedValue != null && cbEstado.ValueMember != "")
                 {
-                    cbCidade.DataSource = control.Select(Convert.ToInt32(cbEstado.ValueMember));
+                    cbCidade.DataSource = control.Select(Convert.ToInt32(cbEstado.SelectedValue));
                     cbCidade.DisplayMember = "cid_nome";
                     cbCidade.ValueMember = "cid_cod";
                 }              

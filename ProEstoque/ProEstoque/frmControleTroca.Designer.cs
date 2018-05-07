@@ -43,6 +43,8 @@
             this.txtCodCliente = new System.Windows.Forms.TextBox();
             this.btnPesquisaCliente = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -72,8 +74,6 @@
             this.dataAtual = new System.Windows.Forms.DateTimePicker();
             this.rbDevolucao = new System.Windows.Forms.RadioButton();
             this.rbDescarte = new System.Windows.Forms.RadioButton();
-            this.txtObservacao = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -285,6 +285,24 @@
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Produto";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(6, 175);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(86, 17);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Observação:";
+            // 
+            // txtObservacao
+            // 
+            this.txtObservacao.Location = new System.Drawing.Point(9, 195);
+            this.txtObservacao.Multiline = true;
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(710, 55);
+            this.txtObservacao.TabIndex = 30;
             // 
             // btnAdicionar
             // 
@@ -550,24 +568,6 @@
             this.rbDescarte.Text = "DESCARTE";
             this.rbDescarte.UseVisualStyleBackColor = true;
             // 
-            // txtObservacao
-            // 
-            this.txtObservacao.Location = new System.Drawing.Point(9, 195);
-            this.txtObservacao.Multiline = true;
-            this.txtObservacao.Name = "txtObservacao";
-            this.txtObservacao.Size = new System.Drawing.Size(710, 55);
-            this.txtObservacao.TabIndex = 30;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(6, 175);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(86, 17);
-            this.label15.TabIndex = 31;
-            this.label15.Text = "Observação:";
-            // 
             // frmControleTroca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,6 +579,7 @@
             this.Name = "frmControleTroca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CONTROLE DE TROCA/DESCARTE";
+            this.Load += new System.EventHandler(this.frmControleTroca_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
