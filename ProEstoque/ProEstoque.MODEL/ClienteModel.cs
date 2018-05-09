@@ -26,5 +26,6 @@ namespace ProEstoque.MODEL
         public int cli_numero { get; set; }
         public string cli_cep { get; set; }
         public string cli_tipo_pessoa { get; set; }
+        public DateTime cli_data_cadastro { get; set; }
     }
 }

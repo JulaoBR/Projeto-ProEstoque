@@ -37,8 +37,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,8 +137,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnCancelar);
+            this.panel2.Controls.Add(this.btnExcluir);
+            this.panel2.Controls.Add(this.btnListar);
             this.panel2.Controls.Add(this.btnSalvar);
             this.panel2.Controls.Add(this.btnNovo);
             this.panel2.Controls.Add(this.btnEditar);
@@ -148,31 +150,44 @@
             this.panel2.Size = new System.Drawing.Size(138, 560);
             this.panel2.TabIndex = 3;
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 48);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "EXCLUIR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.ForeColor = System.Drawing.Color.White;
+            this.btnExcluir.Location = new System.Drawing.Point(3, 165);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(132, 48);
+            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnListar
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 111);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 48);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "LISTAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnListar.FlatAppearance.BorderSize = 0;
+            this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.Color.White;
+            this.btnListar.Location = new System.Drawing.Point(3, 111);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(132, 48);
+            this.btnListar.TabIndex = 3;
+            this.btnListar.Text = "LISTAR";
+            this.btnListar.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(3, 219);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(132, 48);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // frmCadastro
             // 
@@ -196,15 +211,16 @@
 
         #endregion
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DateTimePicker txtDataAtual;
         protected System.Windows.Forms.Button btnNovo;
         protected System.Windows.Forms.Button btnSalvar;
         protected System.Windows.Forms.Button btnEditar;
         protected System.Windows.Forms.Panel panel1;
-        protected System.Windows.Forms.Button button1;
-        protected System.Windows.Forms.Button button2;
+        protected System.Windows.Forms.Button btnListar;
+        protected System.Windows.Forms.Button btnExcluir;
         protected System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtId;
         public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.DateTimePicker txtDataAtual;
+        protected System.Windows.Forms.Button btnCancelar;
     }
 }

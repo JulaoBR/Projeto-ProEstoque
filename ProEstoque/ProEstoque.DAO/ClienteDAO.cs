@@ -19,7 +19,7 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "INSERT INTO cliente (cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa) VALUES (@nome, @telefone, @login, @senha)";
+                String sql = "INSERT INTO cliente (cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa, cli_data_cadastro) VALUES (@codOriginal, @estCod, @cidCod, @nomeSocial, @nomeFantasia, @endereco, @bairro, @numero, @cep, @tipoPessoa, @dtCadastro)";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@codOriginal", modelo.cli_cod_original);
@@ -31,7 +31,8 @@ namespace ProEstoque.DAO
                 cmd.Parameters.AddWithValue("@bairro", modelo.cli_bairro);
                 cmd.Parameters.AddWithValue("@numero", modelo.cli_numero);
                 cmd.Parameters.AddWithValue("@cep", modelo.cli_cep);
-                cmd.Parameters.AddWithValue("@tipoPessia", modelo.cli_tipo_pessoa);
+                cmd.Parameters.AddWithValue("@tipoPessoa", modelo.cli_tipo_pessoa);
+                cmd.Parameters.AddWithValue("@dtCadastro", modelo.cli_data_cadastro);
 
                 cmd.ExecuteNonQuery();
             }
@@ -163,23 +164,21 @@ namespace ProEstoque.DAO
         }
 
         //METODO PARA VALIDAR 
-        public bool ValidaUsuario(int cli_cod_original, string cli_nome_fantasia)
+        public object ValidaUsuario(int cli_cod_original)
         {
             try
             {
-                int retorno = -1;
                 MySqlConnection con = Conexao.conectar();
-                String sql = "SELECT COUNT(*) FROM cliente WHERE cli_cod_original=@codOriginal AND cli_nome_fantasia=@nomeFantasia";
+                String sql = "SELECT cli_cod_original FROM cliente WHERE cli_cod_original=@codOriginal";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@codOriginal", cli_cod_original);
-                cmd.Parameters.AddWithValue("@nomeFantasia", cli_nome_fantasia);
 
-                retorno = Convert.ToInt32(cmd.ExecuteScalar());
+                return cmd.ExecuteScalar();
 
-                return retorno > 0;
             }
             catch (Exception ex)
             {
+                return null;
                 throw ex;
             }
             finally

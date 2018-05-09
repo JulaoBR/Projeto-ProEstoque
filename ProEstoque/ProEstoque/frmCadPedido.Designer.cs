@@ -71,14 +71,20 @@
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.TabStop = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // panel1
             // 
@@ -90,13 +96,31 @@
             this.panel1.Controls.SetChildIndex(this.panel3, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox3, 0);
             // 
-            // button1
+            // btnListar
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
+            this.btnListar.FlatAppearance.BorderSize = 0;
+            this.btnListar.TabStop = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // button2
+            // btnExcluir
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.TabStop = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.TabStop = false;
+            // 
+            // txtDataAtual
+            // 
+            this.txtDataAtual.TabStop = false;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // groupBox1
             // 
@@ -133,6 +157,7 @@
             this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
             this.btnBuscaFornecedor.Size = new System.Drawing.Size(85, 23);
             this.btnBuscaFornecedor.TabIndex = 24;
+            this.btnBuscaFornecedor.TabStop = false;
             this.btnBuscaFornecedor.Text = "BUSCAR";
             this.btnBuscaFornecedor.UseVisualStyleBackColor = false;
             this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
@@ -167,6 +192,7 @@
             this.txtNomeFantasia.ReadOnly = true;
             this.txtNomeFantasia.Size = new System.Drawing.Size(258, 23);
             this.txtNomeFantasia.TabIndex = 9;
+            this.txtNomeFantasia.TabStop = false;
             // 
             // txtNomeCliente
             // 
@@ -176,6 +202,7 @@
             this.txtNomeCliente.ReadOnly = true;
             this.txtNomeCliente.Size = new System.Drawing.Size(450, 23);
             this.txtNomeCliente.TabIndex = 1;
+            this.txtNomeCliente.TabStop = false;
             // 
             // txtCodCliente
             // 
@@ -184,6 +211,7 @@
             this.txtCodCliente.Name = "txtCodCliente";
             this.txtCodCliente.Size = new System.Drawing.Size(100, 23);
             this.txtCodCliente.TabIndex = 0;
+            this.txtCodCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodCliente_KeyPress);
             // 
             // groupBox2
             // 
@@ -243,9 +271,11 @@
             this.btnAdicionar.Location = new System.Drawing.Point(635, 84);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(96, 23);
-            this.btnAdicionar.TabIndex = 30;
+            this.btnAdicionar.TabIndex = 8;
+            this.btnAdicionar.TabStop = false;
             this.btnAdicionar.Text = "ADICIONAR";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // txtQuantidade
             // 
@@ -253,7 +283,8 @@
             this.txtQuantidade.Location = new System.Drawing.Point(461, 84);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(124, 23);
-            this.txtQuantidade.TabIndex = 29;
+            this.txtQuantidade.TabIndex = 7;
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
             // gridProduto
             // 
@@ -267,6 +298,7 @@
             this.gridProduto.RowHeadersVisible = false;
             this.gridProduto.Size = new System.Drawing.Size(724, 107);
             this.gridProduto.TabIndex = 28;
+            this.gridProduto.TabStop = false;
             // 
             // Column1
             // 
@@ -298,6 +330,7 @@
             this.btnBuscaProduto.Name = "btnBuscaProduto";
             this.btnBuscaProduto.Size = new System.Drawing.Size(85, 23);
             this.btnBuscaProduto.TabIndex = 25;
+            this.btnBuscaProduto.TabStop = false;
             this.btnBuscaProduto.Text = "BUSCAR";
             this.btnBuscaProduto.UseVisualStyleBackColor = false;
             this.btnBuscaProduto.Click += new System.EventHandler(this.button3_Click);
@@ -319,7 +352,7 @@
             this.cbUnidadeMedida.Location = new System.Drawing.Point(491, 37);
             this.cbUnidadeMedida.Name = "cbUnidadeMedida";
             this.cbUnidadeMedida.Size = new System.Drawing.Size(240, 24);
-            this.cbUnidadeMedida.TabIndex = 26;
+            this.cbUnidadeMedida.TabIndex = 6;
             // 
             // txtNomeProduto
             // 
@@ -329,6 +362,7 @@
             this.txtNomeProduto.ReadOnly = true;
             this.txtNomeProduto.Size = new System.Drawing.Size(438, 23);
             this.txtNomeProduto.TabIndex = 25;
+            this.txtNomeProduto.TabStop = false;
             // 
             // txtCodProduto
             // 
@@ -336,7 +370,8 @@
             this.txtCodProduto.Location = new System.Drawing.Point(7, 37);
             this.txtCodProduto.Name = "txtCodProduto";
             this.txtCodProduto.Size = new System.Drawing.Size(100, 23);
-            this.txtCodProduto.TabIndex = 24;
+            this.txtCodProduto.TabIndex = 5;
+            this.txtCodProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProduto_KeyPress);
             // 
             // groupBox3
             // 
@@ -407,7 +442,7 @@
             this.cbTipoPedido.Location = new System.Drawing.Point(354, 32);
             this.cbTipoPedido.Name = "cbTipoPedido";
             this.cbTipoPedido.Size = new System.Drawing.Size(200, 24);
-            this.cbTipoPedido.TabIndex = 34;
+            this.cbTipoPedido.TabIndex = 3;
             // 
             // txtObservacao
             // 
@@ -416,7 +451,7 @@
             this.txtObservacao.Location = new System.Drawing.Point(9, 78);
             this.txtObservacao.Name = "txtObservacao";
             this.txtObservacao.Size = new System.Drawing.Size(722, 23);
-            this.txtObservacao.TabIndex = 36;
+            this.txtObservacao.TabIndex = 4;
             // 
             // txtDtEntregaPrevista
             // 
@@ -424,7 +459,7 @@
             this.txtDtEntregaPrevista.Location = new System.Drawing.Point(186, 33);
             this.txtDtEntregaPrevista.Name = "txtDtEntregaPrevista";
             this.txtDtEntregaPrevista.Size = new System.Drawing.Size(139, 23);
-            this.txtDtEntregaPrevista.TabIndex = 35;
+            this.txtDtEntregaPrevista.TabIndex = 2;
             // 
             // txtDtPedido
             // 
@@ -432,16 +467,18 @@
             this.txtDtPedido.Location = new System.Drawing.Point(9, 33);
             this.txtDtPedido.Name = "txtDtPedido";
             this.txtDtPedido.Size = new System.Drawing.Size(139, 23);
-            this.txtDtPedido.TabIndex = 34;
+            this.txtDtPedido.TabIndex = 1;
             // 
             // frmCadPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(911, 560);
+            this.KeyPreview = true;
             this.Name = "frmCadPedido";
             this.Text = "CADASTRO DE PEDIDOS";
             this.Load += new System.EventHandler(this.frmCadPedido_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCadPedido_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

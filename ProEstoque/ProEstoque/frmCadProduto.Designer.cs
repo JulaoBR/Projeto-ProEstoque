@@ -99,12 +99,12 @@
             // 
             // button1
             // 
-            this.button1.FlatAppearance.BorderSize = 0;
+            this.btnListar.FlatAppearance.BorderSize = 0;
             // 
             // button2
             // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 

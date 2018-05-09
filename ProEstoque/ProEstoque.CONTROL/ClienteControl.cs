@@ -1,11 +1,7 @@
 ﻿using ProEstoque.DAO;
 using ProEstoque.MODEL;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProEstoque.CONTROL
 {
@@ -23,13 +19,9 @@ namespace ProEstoque.CONTROL
             ClienteDAO dao = new ClienteDAO();
             try
             {
-                if (dao.ValidaUsuario(modelo.cli_cod_original, modelo.cli_nome_fantasia))
-                    //RETORNO DE 0 OBJETO JA EXISTE
-                    return 0;
-
-                if (modelo != null)
+                if (modelo.cli_cod_original == 0 || modelo.cli_nome_social == "" ||modelo.cli_nome_fantasia == "")
                     //RETORNO DE 1 OBJETO NAO COMPLETO
-                    return 1;
+                    return 0;
 
                 dao.Insert(modelo);
                 //RETORNO DE 2 OK
@@ -42,11 +34,11 @@ namespace ProEstoque.CONTROL
             }                                  
         }
 
-        public bool Update(ClienteModel modelo)
+        public int Update(ClienteModel modelo)
         {
             ClienteDAO dao = new ClienteDAO();
 
-            return false;
+            return 0;
         }
 
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
@@ -76,6 +68,16 @@ namespace ProEstoque.CONTROL
             {
                 return false;
             }
+        }
+
+        public bool ValidarUsuario(int codigo)
+        {
+            ClienteDAO dao = new ClienteDAO();
+            if (dao.ValidaUsuario(codigo) != null)
+                //RETORNO DE 0 OBJETO JA EXISTE
+                return true;
+
+            return false;
         }
     }
 }
