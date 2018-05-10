@@ -92,6 +92,8 @@ namespace ProEstoque
         {
             controle_opcao = 0;
 
+            txtCodCliente.Focus();
+
             btnNovo.Enabled = false;
             btnEditar.Enabled = false;
 

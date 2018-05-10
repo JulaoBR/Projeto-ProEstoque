@@ -38,15 +38,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtNomeFantasia = new System.Windows.Forms.TextBox();
+            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtCodFornecedor = new System.Windows.Forms.TextBox();
+            this.dataAtual = new System.Windows.Forms.DateTimePicker();
             this.btnBuscaProduto = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.rbEntrada = new System.Windows.Forms.RadioButton();
+            this.rbSaida = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -55,14 +55,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtObservacao = new System.Windows.Forms.TextBox();
+            this.txtDataVencimento = new System.Windows.Forms.TextBox();
+            this.txtLote = new System.Windows.Forms.TextBox();
+            this.txtDataFabricacao = new System.Windows.Forms.TextBox();
+            this.txtQuantidade = new System.Windows.Forms.TextBox();
+            this.txtEstoqueAtual = new System.Windows.Forms.TextBox();
+            this.txtDescricaoProduto = new System.Windows.Forms.TextBox();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,8 +93,10 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(154, 63);
             this.btnSalvar.TabIndex = 1;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
@@ -107,8 +109,10 @@
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(154, 63);
             this.btnEditar.TabIndex = 2;
+            this.btnEditar.TabStop = false;
             this.btnEditar.Text = "EDITAR";
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
@@ -121,8 +125,10 @@
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(154, 63);
             this.btnExcluir.TabIndex = 3;
+            this.btnExcluir.TabStop = false;
             this.btnExcluir.Text = "EXCLUIR";
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // btnCancelar
             // 
@@ -135,8 +141,10 @@
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(154, 63);
             this.btnCancelar.TabIndex = 4;
+            this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // panel1
             // 
@@ -146,11 +154,11 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.textBox10);
+            this.panel1.Controls.Add(this.txtNomeFantasia);
+            this.panel1.Controls.Add(this.txtRazaoSocial);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox9);
-            this.panel1.Controls.Add(this.dateTimePicker1);
+            this.panel1.Controls.Add(this.txtCodFornecedor);
+            this.panel1.Controls.Add(this.dataAtual);
             this.panel1.Controls.Add(this.btnBuscaProduto);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label8);
@@ -161,14 +169,14 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtObservacao);
+            this.panel1.Controls.Add(this.txtDataVencimento);
+            this.panel1.Controls.Add(this.txtLote);
+            this.panel1.Controls.Add(this.txtDataFabricacao);
+            this.panel1.Controls.Add(this.txtQuantidade);
+            this.panel1.Controls.Add(this.txtEstoqueAtual);
+            this.panel1.Controls.Add(this.txtDescricaoProduto);
+            this.panel1.Controls.Add(this.txtCodProduto);
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(168, 13);
             this.panel1.Name = "panel1";
@@ -183,6 +191,7 @@
             this.btnBuscaFornecedor.Name = "btnBuscaFornecedor";
             this.btnBuscaFornecedor.Size = new System.Drawing.Size(85, 23);
             this.btnBuscaFornecedor.TabIndex = 27;
+            this.btnBuscaFornecedor.TabStop = false;
             this.btnBuscaFornecedor.Text = "BUSCAR";
             this.btnBuscaFornecedor.UseVisualStyleBackColor = false;
             this.btnBuscaFornecedor.Click += new System.EventHandler(this.btnBuscaFornecedor_Click);
@@ -217,25 +226,27 @@
             this.label10.TabIndex = 24;
             this.label10.Text = "Código Fornecedor*:";
             // 
-            // textBox11
+            // txtNomeFantasia
             // 
-            this.textBox11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox11.Enabled = false;
-            this.textBox11.Location = new System.Drawing.Point(451, 177);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.ReadOnly = true;
-            this.textBox11.Size = new System.Drawing.Size(269, 22);
-            this.textBox11.TabIndex = 23;
+            this.txtNomeFantasia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtNomeFantasia.Enabled = false;
+            this.txtNomeFantasia.Location = new System.Drawing.Point(451, 177);
+            this.txtNomeFantasia.Name = "txtNomeFantasia";
+            this.txtNomeFantasia.ReadOnly = true;
+            this.txtNomeFantasia.Size = new System.Drawing.Size(269, 22);
+            this.txtNomeFantasia.TabIndex = 23;
+            this.txtNomeFantasia.TabStop = false;
             // 
-            // textBox10
+            // txtRazaoSocial
             // 
-            this.textBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.textBox10.Enabled = false;
-            this.textBox10.Location = new System.Drawing.Point(28, 177);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.ReadOnly = true;
-            this.textBox10.Size = new System.Drawing.Size(417, 22);
-            this.textBox10.TabIndex = 22;
+            this.txtRazaoSocial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.txtRazaoSocial.Enabled = false;
+            this.txtRazaoSocial.Location = new System.Drawing.Point(28, 177);
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.ReadOnly = true;
+            this.txtRazaoSocial.Size = new System.Drawing.Size(417, 22);
+            this.txtRazaoSocial.TabIndex = 22;
+            this.txtRazaoSocial.TabStop = false;
             // 
             // label9
             // 
@@ -247,19 +258,22 @@
             this.label9.TabIndex = 21;
             this.label9.Text = "Data da manutenção*:";
             // 
-            // textBox9
+            // txtCodFornecedor
             // 
-            this.textBox9.Location = new System.Drawing.Point(28, 126);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(86, 22);
-            this.textBox9.TabIndex = 20;
+            this.txtCodFornecedor.Location = new System.Drawing.Point(28, 126);
+            this.txtCodFornecedor.Name = "txtCodFornecedor";
+            this.txtCodFornecedor.Size = new System.Drawing.Size(86, 22);
+            this.txtCodFornecedor.TabIndex = 1;
+            this.txtCodFornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFornecedor_KeyPress);
+            this.txtCodFornecedor.Leave += new System.EventHandler(this.txtCodFornecedor_Leave);
             // 
-            // dateTimePicker1
+            // dataAtual
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(446, 28);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(274, 22);
-            this.dateTimePicker1.TabIndex = 19;
+            this.dataAtual.Location = new System.Drawing.Point(446, 28);
+            this.dataAtual.Name = "dataAtual";
+            this.dataAtual.Size = new System.Drawing.Size(274, 22);
+            this.dataAtual.TabIndex = 19;
+            this.dataAtual.TabStop = false;
             // 
             // btnBuscaProduto
             // 
@@ -269,6 +283,7 @@
             this.btnBuscaProduto.Name = "btnBuscaProduto";
             this.btnBuscaProduto.Size = new System.Drawing.Size(85, 23);
             this.btnBuscaProduto.TabIndex = 18;
+            this.btnBuscaProduto.TabStop = false;
             this.btnBuscaProduto.Text = "BUSCAR";
             this.btnBuscaProduto.UseVisualStyleBackColor = false;
             this.btnBuscaProduto.Click += new System.EventHandler(this.btnBuscaProduto_Click);
@@ -276,8 +291,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.rbEntrada);
+            this.groupBox1.Controls.Add(this.rbSaida);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Location = new System.Drawing.Point(502, 214);
             this.groupBox1.Name = "groupBox1";
@@ -286,27 +301,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Selecionar operação:";
             // 
-            // radioButton1
+            // rbEntrada
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(41, 57);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(80, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ENTRADA";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbEntrada.AutoSize = true;
+            this.rbEntrada.Location = new System.Drawing.Point(41, 57);
+            this.rbEntrada.Name = "rbEntrada";
+            this.rbEntrada.Size = new System.Drawing.Size(80, 20);
+            this.rbEntrada.TabIndex = 0;
+            this.rbEntrada.Text = "ENTRADA";
+            this.rbEntrada.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbSaida
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(41, 30);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(62, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "SAIDA";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbSaida.AutoSize = true;
+            this.rbSaida.Location = new System.Drawing.Point(41, 30);
+            this.rbSaida.Name = "rbSaida";
+            this.rbSaida.Size = new System.Drawing.Size(62, 20);
+            this.rbSaida.TabIndex = 1;
+            this.rbSaida.Text = "SAIDA";
+            this.rbSaida.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -388,70 +401,79 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "Código Produto*:";
             // 
-            // textBox8
+            // txtObservacao
             // 
-            this.textBox8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox8.Location = new System.Drawing.Point(25, 324);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(692, 22);
-            this.textBox8.TabIndex = 8;
+            this.txtObservacao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtObservacao.Location = new System.Drawing.Point(25, 324);
+            this.txtObservacao.Name = "txtObservacao";
+            this.txtObservacao.Size = new System.Drawing.Size(692, 22);
+            this.txtObservacao.TabIndex = 5;
             // 
-            // textBox7
+            // txtDataVencimento
             // 
-            this.textBox7.Location = new System.Drawing.Point(215, 280);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(165, 22);
-            this.textBox7.TabIndex = 6;
+            this.txtDataVencimento.Location = new System.Drawing.Point(215, 280);
+            this.txtDataVencimento.Name = "txtDataVencimento";
+            this.txtDataVencimento.ReadOnly = true;
+            this.txtDataVencimento.Size = new System.Drawing.Size(165, 22);
+            this.txtDataVencimento.TabIndex = 6;
+            this.txtDataVencimento.TabStop = false;
             // 
-            // textBox6
+            // txtLote
             // 
-            this.textBox6.Location = new System.Drawing.Point(25, 280);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 22);
-            this.textBox6.TabIndex = 5;
+            this.txtLote.Location = new System.Drawing.Point(25, 280);
+            this.txtLote.Name = "txtLote";
+            this.txtLote.Size = new System.Drawing.Size(132, 22);
+            this.txtLote.TabIndex = 4;
             // 
-            // textBox5
+            // txtDataFabricacao
             // 
-            this.textBox5.Location = new System.Drawing.Point(215, 233);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(165, 22);
-            this.textBox5.TabIndex = 4;
+            this.txtDataFabricacao.Location = new System.Drawing.Point(215, 233);
+            this.txtDataFabricacao.Name = "txtDataFabricacao";
+            this.txtDataFabricacao.Size = new System.Drawing.Size(165, 22);
+            this.txtDataFabricacao.TabIndex = 3;
+            this.txtDataFabricacao.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDataFabricacao_KeyPress);
+            this.txtDataFabricacao.Leave += new System.EventHandler(this.txtDataFabricacao_Leave);
             // 
-            // textBox4
+            // txtQuantidade
             // 
-            this.textBox4.Location = new System.Drawing.Point(25, 233);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(132, 22);
-            this.textBox4.TabIndex = 3;
+            this.txtQuantidade.Location = new System.Drawing.Point(25, 233);
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(132, 22);
+            this.txtQuantidade.TabIndex = 2;
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
             // 
-            // textBox3
+            // txtEstoqueAtual
             // 
-            this.textBox3.BackColor = System.Drawing.Color.ForestGreen;
-            this.textBox3.Enabled = false;
-            this.textBox3.ForeColor = System.Drawing.Color.White;
-            this.textBox3.Location = new System.Drawing.Point(585, 81);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(132, 22);
-            this.textBox3.TabIndex = 2;
+            this.txtEstoqueAtual.BackColor = System.Drawing.Color.ForestGreen;
+            this.txtEstoqueAtual.Enabled = false;
+            this.txtEstoqueAtual.ForeColor = System.Drawing.Color.White;
+            this.txtEstoqueAtual.Location = new System.Drawing.Point(585, 81);
+            this.txtEstoqueAtual.Name = "txtEstoqueAtual";
+            this.txtEstoqueAtual.ReadOnly = true;
+            this.txtEstoqueAtual.Size = new System.Drawing.Size(132, 22);
+            this.txtEstoqueAtual.TabIndex = 2;
+            this.txtEstoqueAtual.TabStop = false;
             // 
-            // textBox2
+            // txtDescricaoProduto
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.textBox2.Enabled = false;
-            this.textBox2.ForeColor = System.Drawing.Color.White;
-            this.textBox2.Location = new System.Drawing.Point(25, 81);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(518, 22);
-            this.textBox2.TabIndex = 1;
+            this.txtDescricaoProduto.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtDescricaoProduto.Enabled = false;
+            this.txtDescricaoProduto.ForeColor = System.Drawing.Color.White;
+            this.txtDescricaoProduto.Location = new System.Drawing.Point(25, 81);
+            this.txtDescricaoProduto.Name = "txtDescricaoProduto";
+            this.txtDescricaoProduto.ReadOnly = true;
+            this.txtDescricaoProduto.Size = new System.Drawing.Size(518, 22);
+            this.txtDescricaoProduto.TabIndex = 1;
+            this.txtDescricaoProduto.TabStop = false;
             // 
-            // textBox1
+            // txtCodProduto
             // 
-            this.textBox1.Location = new System.Drawing.Point(27, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(84, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtCodProduto.Location = new System.Drawing.Point(27, 30);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(84, 22);
+            this.txtCodProduto.TabIndex = 0;
+            this.txtCodProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProduto_KeyPress);
+            this.txtCodProduto.Leave += new System.EventHandler(this.txtCodProduto_Leave);
             // 
             // frmMovimentacao
             // 
@@ -462,10 +484,13 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMovimentacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MOVIMENTAÇÃO DE ESTOQUE";
+            this.Load += new System.EventHandler(this.frmMovimentacao_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMovimentacao_KeyDown);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -483,16 +508,16 @@
         protected System.Windows.Forms.Button btnExcluir;
         protected System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtObservacao;
+        private System.Windows.Forms.RadioButton rbSaida;
+        private System.Windows.Forms.RadioButton rbEntrada;
+        private System.Windows.Forms.TextBox txtDataVencimento;
+        private System.Windows.Forms.TextBox txtLote;
+        private System.Windows.Forms.TextBox txtDataFabricacao;
+        private System.Windows.Forms.TextBox txtQuantidade;
+        private System.Windows.Forms.TextBox txtEstoqueAtual;
+        private System.Windows.Forms.TextBox txtDescricaoProduto;
+        private System.Windows.Forms.TextBox txtCodProduto;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -503,14 +528,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscaProduto;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dataAtual;
         private System.Windows.Forms.Button btnBuscaFornecedor;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtNomeFantasia;
+        private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtCodFornecedor;
     }
 }

@@ -1,16 +1,14 @@
 ﻿using ProEstoque.CONTROL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ProEstoque
 {
     public partial class frmCadProduto : ProEstoque.frmCadastro
     {
+        // 0 = NOVO - 1 = EDITAR
+        private int controle_opcao = -1;
+
         public frmCadProduto()
         {
             InitializeComponent();
@@ -26,6 +24,7 @@ namespace ProEstoque
         {
             CarregaUnidadeMedida();
             CarregaTipoProduto();
+            LimpaCampo();
         }
 
         private void CarregaTipoProduto()
@@ -71,6 +70,140 @@ namespace ProEstoque
             {
 
             }
+        }
+
+        private void txtPrazoValidade_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodFornecedor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodigoBarra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEstMinimo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtEstMaximo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPesoBruto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtPesoLiquido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void frmCadProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.SelectNextControl(this.ActiveControl, !e.Shift, true, true, true);
+            }
+        }
+
+        private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            controle_opcao = 0;
+
+            btnNovo.Enabled = false;
+            btnEditar.Enabled = false;
+
+            groupBox2.Enabled = true;
+            groupBox3.Enabled = true;
+            groupBox4.Enabled = true;
+            groupBox5.Enabled = true;
+
+            txtNomeProduto.Focus();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            controle_opcao = 1;
+
+            btnNovo.Enabled = false;
+            btnEditar.Enabled = false;
+
+            groupBox2.Enabled = true;
+            groupBox3.Enabled = true;
+            groupBox4.Enabled = true;
+            groupBox5.Enabled = true;
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpaCampo();
+        }
+
+        private void LimpaCampo()
+        {
+            controle_opcao = -1;
+
+            groupBox2.Enabled = false;
+            groupBox3.Enabled = false;
+            groupBox4.Enabled = false;
+            groupBox5.Enabled = false;
+
+            btnNovo.Enabled = true;
+            btnEditar.Enabled = true;
+
+            txtCodFornecedor.Clear();
+            txtNomeFornecedor.Clear();
+            txtCodigoBarra.Clear();
+            txtNomeProduto.Clear();
+            txtPrazoValidade.Clear();
+            txtPesoBruto.Clear();
+            txtPesoLiquido.Clear();
+            txtEstMaximo.Clear();
+            txtEstMinimo.Clear();
+            txtId.Clear();
+
+            cbTipoProduto.SelectedIndex = -1;
+            cbUnidadeMedida.SelectedIndex = -1;
         }
     }
 }

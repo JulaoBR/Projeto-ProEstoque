@@ -46,7 +46,7 @@
             // 
             // btnLimpar
             // 
-            this.btnLimpar.Location = new System.Drawing.Point(1043, 57);
+            this.btnLimpar.Location = new System.Drawing.Point(1047, 6);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(98, 38);
             this.btnLimpar.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(1043, 3);
+            this.btnBuscar.Location = new System.Drawing.Point(1047, 57);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(98, 38);
             this.btnBuscar.TabIndex = 0;

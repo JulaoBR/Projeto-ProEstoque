@@ -38,12 +38,12 @@
             this.cbAtualizarSenha = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtLoginUsuario = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -53,16 +53,19 @@
             // btnNovo
             // 
             this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.TabStop = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnSalvar
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 0;
+            this.btnSalvar.TabStop = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.TabStop = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // panel1
@@ -74,17 +77,31 @@
             this.panel1.Controls.SetChildIndex(this.groupBox1, 0);
             this.panel1.Controls.SetChildIndex(this.groupBox2, 0);
             // 
-            // button1
+            // btnListar
             // 
             this.btnListar.FlatAppearance.BorderSize = 0;
+            this.btnListar.TabStop = false;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // button2
+            // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.TabStop = false;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(45, 11);
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(507, 94);
+            this.label2.Location = new System.Drawing.Point(640, 64);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.TabStop = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtNomeUsuario
             // 
@@ -94,7 +111,7 @@
             this.txtNomeUsuario.MaxLength = 50;
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtNomeUsuario.TabIndex = 1;
+            this.txtNomeUsuario.TabIndex = 0;
             // 
             // txtTelefoneUsuario
             // 
@@ -103,7 +120,7 @@
             this.txtTelefoneUsuario.MaxLength = 20;
             this.txtTelefoneUsuario.Name = "txtTelefoneUsuario";
             this.txtTelefoneUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtTelefoneUsuario.TabIndex = 2;
+            this.txtTelefoneUsuario.TabIndex = 1;
             // 
             // txtSenhaUsuario
             // 
@@ -112,7 +129,7 @@
             this.txtSenhaUsuario.MaxLength = 20;
             this.txtSenhaUsuario.Name = "txtSenhaUsuario";
             this.txtSenhaUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtSenhaUsuario.TabIndex = 4;
+            this.txtSenhaUsuario.TabIndex = 3;
             // 
             // label1
             // 
@@ -141,7 +158,7 @@
             this.cbNivelAcesso.Location = new System.Drawing.Point(19, 51);
             this.cbNivelAcesso.Name = "cbNivelAcesso";
             this.cbNivelAcesso.Size = new System.Drawing.Size(272, 24);
-            this.cbNivelAcesso.TabIndex = 7;
+            this.cbNivelAcesso.TabIndex = 4;
             // 
             // label4
             // 
@@ -163,7 +180,7 @@
             this.cbAtualizarSenha.Location = new System.Drawing.Point(397, 51);
             this.cbAtualizarSenha.Name = "cbAtualizarSenha";
             this.cbAtualizarSenha.Size = new System.Drawing.Size(272, 24);
-            this.cbAtualizarSenha.TabIndex = 9;
+            this.cbAtualizarSenha.TabIndex = 5;
             // 
             // label5
             // 
@@ -190,10 +207,10 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(10, 56);
+            this.groupBox1.Location = new System.Drawing.Point(10, 65);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(738, 268);
-            this.groupBox1.TabIndex = 11;
+            this.groupBox1.Size = new System.Drawing.Size(738, 259);
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Usuarios";
             this.groupBox1.Controls.SetChildIndex(this.label3, 0);
@@ -207,6 +224,26 @@
             this.groupBox1.Controls.SetChildIndex(this.label7, 0);
             this.groupBox1.Controls.SetChildIndex(this.label8, 0);
             this.groupBox1.Controls.SetChildIndex(this.label9, 0);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(297, 172);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(146, 16);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "Maximo de 20 caracteres";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(297, 126);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(146, 16);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Maximo de 20 caracteres";
             // 
             // label7
             // 
@@ -235,7 +272,7 @@
             this.txtLoginUsuario.MaxLength = 20;
             this.txtLoginUsuario.Name = "txtLoginUsuario";
             this.txtLoginUsuario.Size = new System.Drawing.Size(424, 23);
-            this.txtLoginUsuario.TabIndex = 3;
+            this.txtLoginUsuario.TabIndex = 2;
             // 
             // groupBox2
             // 
@@ -248,36 +285,19 @@
             this.groupBox2.Location = new System.Drawing.Point(10, 345);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(738, 115);
-            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Configuração ";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(297, 126);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Maximo de 20 caracteres";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(297, 172);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 16);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "Maximo de 20 caracteres";
             // 
             // frmCadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(911, 560);
+            this.KeyPreview = true;
             this.Name = "frmCadUsuario";
             this.Text = "CADASTRO DE USUÁRIOS";
+            this.Load += new System.EventHandler(this.frmCadUsuario_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmCadUsuario_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

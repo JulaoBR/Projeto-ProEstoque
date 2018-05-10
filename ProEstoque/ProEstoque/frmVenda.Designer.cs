@@ -312,6 +312,7 @@
             this.btnAddLote.TabIndex = 6;
             this.btnAddLote.Text = "ADD";
             this.btnAddLote.UseVisualStyleBackColor = true;
+            this.btnAddLote.Click += new System.EventHandler(this.btnAddLote_Click);
             // 
             // label16
             // 
@@ -368,6 +369,7 @@
             this.txtQtdLote.Name = "txtQtdLote";
             this.txtQtdLote.Size = new System.Drawing.Size(112, 22);
             this.txtQtdLote.TabIndex = 4;
+            this.txtQtdLote.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtdLote_KeyPress);
             // 
             // txtQtdTotal
             // 
@@ -377,6 +379,7 @@
             this.txtQtdTotal.Name = "txtQtdTotal";
             this.txtQtdTotal.Size = new System.Drawing.Size(174, 22);
             this.txtQtdTotal.TabIndex = 3;
+            this.txtQtdTotal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQtdTotal_KeyPress);
             // 
             // label10
             // 
@@ -460,6 +463,8 @@
             this.txtCodCliente.Size = new System.Drawing.Size(81, 23);
             this.txtCodCliente.TabIndex = 1;
             this.txtCodCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodCliente_KeyPress);
+            this.txtCodCliente.Layout += new System.Windows.Forms.LayoutEventHandler(this.txtCodCliente_Layout);
             // 
             // label2
             // 
@@ -502,6 +507,8 @@
             this.txtCodProduto.Size = new System.Drawing.Size(81, 23);
             this.txtCodProduto.TabIndex = 2;
             this.txtCodProduto.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtCodProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodProduto_KeyPress);
+            this.txtCodProduto.Leave += new System.EventHandler(this.txtCodProduto_Leave);
             // 
             // btnBuscaProduto
             // 
@@ -536,6 +543,8 @@
             this.txtPedido.Size = new System.Drawing.Size(104, 23);
             this.txtPedido.TabIndex = 0;
             this.txtPedido.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPedido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPedido_KeyPress);
+            this.txtPedido.Leave += new System.EventHandler(this.txtPedido_Leave);
             // 
             // label7
             // 
@@ -570,6 +579,7 @@
             this.btnCancelar.TabStop = false;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAjuste
             // 
@@ -581,6 +591,7 @@
             this.btnAjuste.TabStop = false;
             this.btnAjuste.Text = "AJUSTES";
             this.btnAjuste.UseVisualStyleBackColor = true;
+            this.btnAjuste.Click += new System.EventHandler(this.btnAjuste_Click);
             // 
             // btnBuscar
             // 
@@ -592,6 +603,7 @@
             this.btnBuscar.TabStop = false;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnSalvar
             // 
@@ -603,6 +615,7 @@
             this.btnSalvar.TabStop = false;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAddProduto
             // 
@@ -614,6 +627,7 @@
             this.btnAddProduto.TabStop = false;
             this.btnAddProduto.Text = "ADICIONAR";
             this.btnAddProduto.UseVisualStyleBackColor = true;
+            this.btnAddProduto.Click += new System.EventHandler(this.btnAddProduto_Click);
             // 
             // gridProduto
             // 
@@ -733,10 +747,13 @@
             this.Controls.Add(this.txtCodCliente);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VENDAS";
+            this.Load += new System.EventHandler(this.frmVenda_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmVenda_KeyDown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

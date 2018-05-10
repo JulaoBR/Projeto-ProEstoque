@@ -37,9 +37,9 @@
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -150,6 +150,19 @@
             this.panel2.Size = new System.Drawing.Size(138, 560);
             this.panel2.TabIndex = 3;
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(3, 219);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(132, 48);
+            this.btnCancelar.TabIndex = 5;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // btnExcluir
             // 
             this.btnExcluir.FlatAppearance.BorderSize = 0;
@@ -175,19 +188,6 @@
             this.btnListar.TabIndex = 3;
             this.btnListar.Text = "LISTAR";
             this.btnListar.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.FlatAppearance.BorderSize = 0;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(3, 219);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(132, 48);
-            this.btnCancelar.TabIndex = 5;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // frmCadastro
             // 
@@ -217,10 +217,10 @@
         protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Button btnListar;
         protected System.Windows.Forms.Button btnExcluir;
-        protected System.Windows.Forms.Panel panel3;
         public System.Windows.Forms.TextBox txtId;
         public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DateTimePicker txtDataAtual;
         protected System.Windows.Forms.Button btnCancelar;
+        public System.Windows.Forms.Panel panel3;
     }
 }

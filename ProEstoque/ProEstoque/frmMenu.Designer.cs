@@ -34,7 +34,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnMovimentacao = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.btnEstoque = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cADASTROSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,6 +45,9 @@
             this.mOVIMENTAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mOVIMENTAÇÃOToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mATÉRIAPRIMAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rELATÓRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cONTROLETROCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tROCADESCARTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONFIGURAÇÃOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aDMINISTRADORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cONFIGURAÇÕESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,9 +57,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.rELATÓRIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cONTROLETROCAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tROCADESCARTEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -70,7 +69,6 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.btnMovimentacao);
             this.panel1.Controls.Add(this.btnVendas);
-            this.panel1.Controls.Add(this.btnEstoque);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
@@ -115,11 +113,11 @@
             this.btnMovimentacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMovimentacao.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMovimentacao.ForeColor = System.Drawing.Color.White;
-            this.btnMovimentacao.Location = new System.Drawing.Point(6, 193);
+            this.btnMovimentacao.Location = new System.Drawing.Point(6, 98);
             this.btnMovimentacao.Name = "btnMovimentacao";
             this.btnMovimentacao.Size = new System.Drawing.Size(194, 89);
             this.btnMovimentacao.TabIndex = 6;
-            this.btnMovimentacao.Text = "Movimentação";
+            this.btnMovimentacao.Text = "MOVIMENTAÇÃO MAT ACABADA";
             this.btnMovimentacao.UseVisualStyleBackColor = true;
             this.btnMovimentacao.Click += new System.EventHandler(this.btnMovimentacao_Click);
             // 
@@ -133,23 +131,9 @@
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(194, 89);
             this.btnVendas.TabIndex = 3;
-            this.btnVendas.Text = "Vendas";
+            this.btnVendas.Text = "LANÇAMENTO DE PEDIDO";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
-            // 
-            // btnEstoque
-            // 
-            this.btnEstoque.FlatAppearance.BorderSize = 0;
-            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnEstoque.Location = new System.Drawing.Point(3, 98);
-            this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(194, 89);
-            this.btnEstoque.TabIndex = 4;
-            this.btnEstoque.Text = "Estoque";
-            this.btnEstoque.UseVisualStyleBackColor = true;
-            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // menuStrip1
             // 
@@ -186,28 +170,28 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuáriosToolStripMenuItem.Text = "CLIENTES";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.produtosToolStripMenuItem.Text = "PRODUTOS";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem1
             // 
             this.usuáriosToolStripMenuItem1.Name = "usuáriosToolStripMenuItem1";
-            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
+            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.usuáriosToolStripMenuItem1.Text = "USUÁRIOS";
             this.usuáriosToolStripMenuItem1.Click += new System.EventHandler(this.usuáriosToolStripMenuItem1_Click);
             // 
             // pEDIDOSToolStripMenuItem
             // 
             this.pEDIDOSToolStripMenuItem.Name = "pEDIDOSToolStripMenuItem";
-            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pEDIDOSToolStripMenuItem.Text = "PEDIDOS";
             this.pEDIDOSToolStripMenuItem.Click += new System.EventHandler(this.pEDIDOSToolStripMenuItem_Click);
             // 
@@ -217,14 +201,14 @@
             this.vENDASToolStripMenuItem1});
             this.vENDASToolStripMenuItem.ForeColor = System.Drawing.Color.Black;
             this.vENDASToolStripMenuItem.Name = "vENDASToolStripMenuItem";
-            this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
-            this.vENDASToolStripMenuItem.Text = "VENDAS";
+            this.vENDASToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.vENDASToolStripMenuItem.Text = "CARGAS";
             // 
             // vENDASToolStripMenuItem1
             // 
             this.vENDASToolStripMenuItem1.Name = "vENDASToolStripMenuItem1";
-            this.vENDASToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
-            this.vENDASToolStripMenuItem1.Text = "VENDAS";
+            this.vENDASToolStripMenuItem1.Size = new System.Drawing.Size(239, 22);
+            this.vENDASToolStripMenuItem1.Text = "LANÇAMENTO DE PEDIDO";
             this.vENDASToolStripMenuItem1.Click += new System.EventHandler(this.vENDASToolStripMenuItem1_Click);
             // 
             // mOVIMENTAÇÃOToolStripMenuItem
@@ -250,6 +234,27 @@
             this.mATÉRIAPRIMAToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.mATÉRIAPRIMAToolStripMenuItem.Text = "MATÉRIA PRIMA";
             this.mATÉRIAPRIMAToolStripMenuItem.Click += new System.EventHandler(this.mATÉRIAPRIMAToolStripMenuItem_Click);
+            // 
+            // rELATÓRIOSToolStripMenuItem
+            // 
+            this.rELATÓRIOSToolStripMenuItem.Name = "rELATÓRIOSToolStripMenuItem";
+            this.rELATÓRIOSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.rELATÓRIOSToolStripMenuItem.Text = "RELATÓRIOS";
+            // 
+            // cONTROLETROCAToolStripMenuItem
+            // 
+            this.cONTROLETROCAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tROCADESCARTEToolStripMenuItem});
+            this.cONTROLETROCAToolStripMenuItem.Name = "cONTROLETROCAToolStripMenuItem";
+            this.cONTROLETROCAToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
+            this.cONTROLETROCAToolStripMenuItem.Text = "CONTROLE TROCA";
+            // 
+            // tROCADESCARTEToolStripMenuItem
+            // 
+            this.tROCADESCARTEToolStripMenuItem.Name = "tROCADESCARTEToolStripMenuItem";
+            this.tROCADESCARTEToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.tROCADESCARTEToolStripMenuItem.Text = "TROCA/DESCARTE";
+            this.tROCADESCARTEToolStripMenuItem.Click += new System.EventHandler(this.tROCADESCARTEToolStripMenuItem_Click);
             // 
             // cONFIGURAÇÃOToolStripMenuItem
             // 
@@ -323,27 +328,6 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
-            // rELATÓRIOSToolStripMenuItem
-            // 
-            this.rELATÓRIOSToolStripMenuItem.Name = "rELATÓRIOSToolStripMenuItem";
-            this.rELATÓRIOSToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
-            this.rELATÓRIOSToolStripMenuItem.Text = "RELATÓRIOS";
-            // 
-            // cONTROLETROCAToolStripMenuItem
-            // 
-            this.cONTROLETROCAToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tROCADESCARTEToolStripMenuItem});
-            this.cONTROLETROCAToolStripMenuItem.Name = "cONTROLETROCAToolStripMenuItem";
-            this.cONTROLETROCAToolStripMenuItem.Size = new System.Drawing.Size(138, 20);
-            this.cONTROLETROCAToolStripMenuItem.Text = "CONTROLE TROCA";
-            // 
-            // tROCADESCARTEToolStripMenuItem
-            // 
-            this.tROCADESCARTEToolStripMenuItem.Name = "tROCADESCARTEToolStripMenuItem";
-            this.tROCADESCARTEToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.tROCADESCARTEToolStripMenuItem.Text = "TROCA/DESCARTE";
-            this.tROCADESCARTEToolStripMenuItem.Click += new System.EventHandler(this.tROCADESCARTEToolStripMenuItem_Click);
-            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -377,7 +361,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMovimentacao;
-        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem cADASTROSToolStripMenuItem;

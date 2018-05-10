@@ -144,7 +144,9 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "SELECT cli_cod ,cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa FROM cliente";
+                String sql = "SELECT A.cli_cod_original 'Codigo', A.cli_nome_social 'Razao Social', A.cli_nome_fantasia 'Nome Fantasia', A.cli_endereco 'Endereco', A.cli_bairro 'Bairro', A.cli_numero 'Numero', A.cli_cep 'Cep', B.est_nome 'Estado', C.cid_nome 'Cidade',A.cli_tipo_pessoa 'Tipo Pessoa' " + 
+                   "FROM cliente AS A INNER JOIN estado AS B INNER JOIN cidade AS C ON A.est_cod = B.est_cod AND A.cid_cod = C.cid_cod " ;
+
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataAdapter da = new MySqlDataAdapter();
