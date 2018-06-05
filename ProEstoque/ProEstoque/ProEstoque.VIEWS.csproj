@@ -33,9 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -211,6 +214,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\ProEstoque.DAO.CidadeDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.ClienteDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.EstadoDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.MotivoDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.TipoProdutoDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.UnidadeMedidaDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.DAO.UsuarioDAO.datasource" />
+    <None Include="Properties\DataSources\ProEstoque.MODEL.Conexao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

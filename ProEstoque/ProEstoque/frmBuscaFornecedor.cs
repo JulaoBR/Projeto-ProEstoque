@@ -26,7 +26,7 @@ namespace ProEstoque
 
             try
             {
-                PreencheGrid(control.Select());
+                PreencheGrid(control.Select(txtCodFornecedor.Text, txtRazaoSocial.Text, txtFantasia.Text));
             }
             catch (Exception ex)
             {
@@ -49,7 +49,10 @@ namespace ProEstoque
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
+            gridFornecedor.DataSource = null;
+            gridFornecedor.Refresh();
+            gridFornecedor.ClearSelection();
+            gridFornecedor.AllowUserToAddRows = false;
         }
 
         private void PreencheGrid(DataTable dt)

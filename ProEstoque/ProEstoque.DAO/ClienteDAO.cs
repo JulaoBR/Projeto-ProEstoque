@@ -140,15 +140,18 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA GERAL
-        public DataTable Select()
+        public DataTable Select(string codCliente, string razaoSocial, string nomeFantasia)
         {
             try
             {
                 String sql = "SELECT A.cli_cod_original 'Codigo', A.cli_nome_social 'Razao Social', A.cli_nome_fantasia 'Nome Fantasia', A.cli_endereco 'Endereco', A.cli_bairro 'Bairro', A.cli_numero 'Numero', A.cli_cep 'Cep', B.est_nome 'Estado', C.cid_nome 'Cidade',A.cli_tipo_pessoa 'Tipo Pessoa' " + 
-                   "FROM cliente AS A INNER JOIN estado AS B INNER JOIN cidade AS C ON A.est_cod = B.est_cod AND A.cid_cod = C.cid_cod " ;
+                   "FROM cliente AS A INNER JOIN estado AS B INNER JOIN cidade AS C ON A.est_cod = B.est_cod AND A.cid_cod = C.cid_cod WHERE A.cli_nome_social LIKE @social AND A.cli_nome_fantasia LIKE @fantasia AND A.cli_cod_original LIKE @codCliente" ;
 
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@codCliente", "%" + codCliente + "%");
+                cmd.Parameters.AddWithValue("@social", "%" + razaoSocial + "%");
+                cmd.Parameters.AddWithValue("@fantasia", "%" + nomeFantasia + "%");
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();

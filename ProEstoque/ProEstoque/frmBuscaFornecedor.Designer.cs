@@ -148,8 +148,8 @@
             this.Text = "BUSCA DE FORNECEDORES";
             this.Load += new System.EventHandler(this.frmBuscaFornecedor_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmBuscaFornecedor_KeyDown);
-            this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.gridFornecedor, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridFornecedor)).EndInit();

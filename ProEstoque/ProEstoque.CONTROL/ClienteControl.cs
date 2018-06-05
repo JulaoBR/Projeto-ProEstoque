@@ -42,10 +42,10 @@ namespace ProEstoque.CONTROL
         }
 
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
-        public DataTable Select()
+        public DataTable Select(string codCliente, string nomeSocial, string nomeFantasia)
         {
             ClienteDAO dao = new ClienteDAO();
-            return dao.Select();
+            return dao.Select(codCliente, nomeSocial, nomeFantasia);
         }
 
         //RETORNA UM OBJETO DO TIPO UNIDADE DE MEDIDA
