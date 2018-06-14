@@ -7,6 +7,9 @@ namespace ProEstoque
 {
     public partial class frmBuscaFornecedor : ProEstoque.frmBusca
     {
+        //recebe o codigo do fornecedor/usuario
+        public int codigo = 0;
+
         public frmBuscaFornecedor()
         {
             InitializeComponent();
@@ -62,6 +65,22 @@ namespace ProEstoque
             gridFornecedor.DataSource = dt;
             gridFornecedor.ClearSelection();
             gridFornecedor.AllowUserToAddRows = false;
+        }
+
+        private void gridFornecedor_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    this.codigo = Convert.ToInt32(gridFornecedor.Rows[e.RowIndex].Cells[0].Value);
+                    this.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Sem dados para selecionar!!", "Operação Invalida!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

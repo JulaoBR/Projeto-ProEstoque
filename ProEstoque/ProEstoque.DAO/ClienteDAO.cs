@@ -104,7 +104,7 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "SELECT cli_cod ,cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa FROM cliente WHERE cli_cod = @id";
+                String sql = "SELECT cli_cod ,cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa FROM cliente WHERE cli_cod_original = @id";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -117,8 +117,8 @@ namespace ProEstoque.DAO
                 {
                     modelo.cli_cod = Convert.ToInt32(dr["cli_cod"]);
                     modelo.cli_cod_original = Convert.ToInt32(dr["cli_cod_original"]);
-                    modelo.est_nome = dr["est_nome"].ToString();
-                    modelo.cid_nome = dr["cid_nome"].ToString();
+                    modelo.est_cod = Convert.ToInt32(dr["est_cod"].ToString());
+                    modelo.cid_cod = Convert.ToInt32(dr["cid_cod"].ToString());
                     modelo.cli_nome_social = dr["cli_nome_social"].ToString();
                     modelo.cli_nome_fantasia = dr["cli_nome_fantasia"].ToString();
                     modelo.cli_endereco = dr["cli_endereco"].ToString();

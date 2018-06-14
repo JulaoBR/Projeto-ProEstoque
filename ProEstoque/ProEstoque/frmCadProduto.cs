@@ -1,5 +1,7 @@
 ﻿using ProEstoque.CONTROL;
+using ProEstoque.MODEL;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ProEstoque
@@ -8,16 +10,39 @@ namespace ProEstoque
     {
         // 0 = NOVO - 1 = EDITAR
         private int controle_opcao = -1;
+        private List<ClienteModel> listaCliente = new List<ClienteModel>();
 
         public frmCadProduto()
         {
             InitializeComponent();
+            gridProduto.AutoGenerateColumns = false;
         }
 
         private void btnBuscaFornecedor_Click(object sender, EventArgs e)
         {
-            frmBuscaFornecedor buscaFornecedor = new frmBuscaFornecedor();
-            buscaFornecedor.ShowDialog();
+            ClienteControl control = new ClienteControl();
+            ClienteModel model = new ClienteModel();
+            try
+            {
+                frmBuscaFornecedor buscaFornecedor = new frmBuscaFornecedor();
+                buscaFornecedor.ShowDialog();
+  
+                if (buscaFornecedor.codigo != 0)
+                {
+                    model = control.SelectByID(buscaFornecedor.codigo);
+
+                    txtCodFornecedor.Text = Convert.ToString(model.cli_cod_original);
+                    txtNomeFornecedor.Text = model.cli_nome_fantasia;
+                }
+                else
+                {
+                    LimpaCampo();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void frmCadProduto_Load(object sender, EventArgs e)
@@ -138,7 +163,39 @@ namespace ProEstoque
 
         private void btnAdicionarFornecedor_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtCodFornecedor.Text != "" && txtNomeFornecedor.Text != "")
+                {
+                    ClienteModel model = new ClienteModel();
+                    ProdutoControl control = new ProdutoControl();
 
+                    if (!control.VarificaCliente(listaCliente, Convert.ToInt32(txtCodFornecedor.Text)))
+                    {
+                        model.cli_cod_original = Convert.ToInt32(txtCodFornecedor.Text);
+                        model.cli_nome_fantasia = txtNomeFornecedor.Text;
+
+                        txtCodFornecedor.Clear();
+                        txtNomeFornecedor.Clear();
+
+                        listaCliente.Add(model);
+
+                        AtualizaGrid();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fornecedor ja esta na lista...", "Operação Invalida!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }                  
+                }
+                else
+                {
+                    MessageBox.Show("Não existe dados para serem adicionados...","Operação Invalida!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show("Erro: " + ex,"Atenção!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -202,8 +259,49 @@ namespace ProEstoque
             txtEstMinimo.Clear();
             txtId.Clear();
 
+            listaCliente.Clear();
+            AtualizaGrid();
+
             cbTipoProduto.SelectedIndex = -1;
             cbUnidadeMedida.SelectedIndex = -1;
+        }
+
+        private void AtualizaGrid()
+        {
+            gridProduto.DataSource = null;
+            gridProduto.DataSource = listaCliente;
+            gridProduto.ClearSelection();
+            gridProduto.AllowUserToAddRows = false;
+        }
+
+        private void gridProduto_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    int codigo = Convert.ToInt32(gridProduto.Rows[e.RowIndex].Cells[0].Value);
+
+                    foreach (var item in listaCliente)
+                    {
+                        if (codigo == item.cli_cod_original)
+                        {
+                            //Comando que questiona ao usuário se relamente deseja sair do programa
+                            DialogResult result = MessageBox.Show("Deseja remover este item?",
+                               "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                            if (result == DialogResult.Yes)
+                            {
+                                listaCliente.Remove(item);
+                                AtualizaGrid();
+                            }
+                        }
+                    }
+                }
+            }
+            catch
+            {
+              //tratamento sem necessidade
+            }
         }
     }
 }

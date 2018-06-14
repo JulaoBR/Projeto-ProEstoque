@@ -244,6 +244,7 @@ namespace ProEstoque
                 if (control.ValidarUsuario(Convert.ToInt32(txtCli_cod_original.Text)))
                 {
                     MessageBox.Show("Cliente/Fornecedor ja cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCli_cod_original.Clear();
                     txtCli_cod_original.Focus();
                     return;
                 }

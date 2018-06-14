@@ -44,6 +44,7 @@
     <Compile Include="ClienteControl.cs" />
     <Compile Include="EstadoControl.cs" />
     <Compile Include="MotivoControl.cs" />
+    <Compile Include="ProdutoControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="TipoProdutoControl.cs" />
     <Compile Include="UnidadeMedidaControl.cs" />
