@@ -51,7 +51,7 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "UPDATE usuario SET cli_cod_original = @codOriginal, est_cod = @estCod, cid_cod = @cidCod, cli_nome_social = @nomeSocial, cli_nome_fantasia = @nomeFantasia, cli_endereco = @endereco, cli_bairro = @bairro, cli_numero = @numero, cli_cep = @cep, cli_tipo_pessoa = @tipoPessoa WHERE cli_cod = @id ";
+                String sql = "UPDATE cliente SET cli_cod_original = @codOriginal, est_cod = @estCod, cid_cod = @cidCod, cli_nome_social = @nomeSocial, cli_nome_fantasia = @nomeFantasia, cli_endereco = @endereco, cli_bairro = @bairro, cli_numero = @numero, cli_cep = @cep, cli_tipo_pessoa = @tipoPessoa WHERE cli_cod = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", modelo.cli_cod);

@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -43,6 +41,8 @@
             this.txtEstMaximo = new System.Windows.Forms.TextBox();
             this.txtEstMinimo = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtCodOriginal = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txtPrazoValidade = new System.Windows.Forms.TextBox();
@@ -84,6 +84,7 @@
             // 
             this.btnSalvar.FlatAppearance.BorderSize = 0;
             this.btnSalvar.TabStop = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnEditar
             // 
@@ -183,7 +184,7 @@
             this.txtPesoLiquido.MaxLength = 20;
             this.txtPesoLiquido.Name = "txtPesoLiquido";
             this.txtPesoLiquido.Size = new System.Drawing.Size(86, 23);
-            this.txtPesoLiquido.TabIndex = 9;
+            this.txtPesoLiquido.TabIndex = 10;
             this.txtPesoLiquido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesoLiquido_KeyPress);
             // 
             // txtPesoBruto
@@ -195,7 +196,7 @@
             this.txtPesoBruto.MaxLength = 20;
             this.txtPesoBruto.Name = "txtPesoBruto";
             this.txtPesoBruto.Size = new System.Drawing.Size(86, 23);
-            this.txtPesoBruto.TabIndex = 8;
+            this.txtPesoBruto.TabIndex = 9;
             this.txtPesoBruto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesoBruto_KeyPress);
             // 
             // groupBox3
@@ -243,7 +244,7 @@
             this.txtEstMaximo.MaxLength = 20;
             this.txtEstMaximo.Name = "txtEstMaximo";
             this.txtEstMaximo.Size = new System.Drawing.Size(86, 23);
-            this.txtEstMaximo.TabIndex = 7;
+            this.txtEstMaximo.TabIndex = 8;
             this.txtEstMaximo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstMaximo_KeyPress);
             // 
             // txtEstMinimo
@@ -255,12 +256,14 @@
             this.txtEstMinimo.MaxLength = 20;
             this.txtEstMinimo.Name = "txtEstMinimo";
             this.txtEstMinimo.Size = new System.Drawing.Size(86, 23);
-            this.txtEstMinimo.TabIndex = 6;
+            this.txtEstMinimo.TabIndex = 7;
             this.txtEstMinimo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstMinimo_KeyPress);
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.txtCodOriginal);
             this.groupBox4.Controls.Add(this.checkBox1);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.txtPrazoValidade);
@@ -280,11 +283,34 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Dados do Produto";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(3, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Codigo do produto*:";
+            // 
+            // txtCodOriginal
+            // 
+            this.txtCodOriginal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.txtCodOriginal.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCodOriginal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodOriginal.Location = new System.Drawing.Point(140, 25);
+            this.txtCodOriginal.MaxLength = 4;
+            this.txtCodOriginal.Name = "txtCodOriginal";
+            this.txtCodOriginal.Size = new System.Drawing.Size(130, 23);
+            this.txtCodOriginal.TabIndex = 0;
+            this.txtCodOriginal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodOriginal_KeyPress);
+            this.txtCodOriginal.Leave += new System.EventHandler(this.textBox1_Leave);
+            // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(627, 18);
+            this.checkBox1.Location = new System.Drawing.Point(626, 54);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(108, 21);
             this.checkBox1.TabIndex = 11;
@@ -296,7 +322,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 75);
+            this.label15.Location = new System.Drawing.Point(6, 111);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(117, 17);
             this.label15.TabIndex = 10;
@@ -306,18 +332,18 @@
             // 
             this.txtPrazoValidade.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrazoValidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrazoValidade.Location = new System.Drawing.Point(6, 95);
+            this.txtPrazoValidade.Location = new System.Drawing.Point(5, 131);
             this.txtPrazoValidade.MaxLength = 4;
             this.txtPrazoValidade.Name = "txtPrazoValidade";
             this.txtPrazoValidade.Size = new System.Drawing.Size(130, 23);
-            this.txtPrazoValidade.TabIndex = 2;
+            this.txtPrazoValidade.TabIndex = 3;
             this.txtPrazoValidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrazoValidade_KeyPress);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(433, 22);
+            this.label14.Location = new System.Drawing.Point(432, 58);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(113, 17);
             this.label14.TabIndex = 7;
@@ -327,7 +353,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(165, 76);
+            this.label4.Location = new System.Drawing.Point(164, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(129, 17);
             this.label4.TabIndex = 6;
@@ -337,7 +363,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(497, 76);
+            this.label3.Location = new System.Drawing.Point(496, 112);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 17);
             this.label3.TabIndex = 5;
@@ -347,7 +373,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(7, 22);
+            this.label1.Location = new System.Drawing.Point(6, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 17);
             this.label1.TabIndex = 4;
@@ -357,28 +383,28 @@
             // 
             this.cbUnidadeMedida.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUnidadeMedida.FormattingEnabled = true;
-            this.cbUnidadeMedida.Location = new System.Drawing.Point(168, 94);
+            this.cbUnidadeMedida.Location = new System.Drawing.Point(167, 130);
             this.cbUnidadeMedida.Name = "cbUnidadeMedida";
             this.cbUnidadeMedida.Size = new System.Drawing.Size(235, 24);
-            this.cbUnidadeMedida.TabIndex = 3;
+            this.cbUnidadeMedida.TabIndex = 4;
             // 
             // cbTipoProduto
             // 
             this.cbTipoProduto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoProduto.FormattingEnabled = true;
-            this.cbTipoProduto.Location = new System.Drawing.Point(500, 95);
+            this.cbTipoProduto.Location = new System.Drawing.Point(499, 131);
             this.cbTipoProduto.Name = "cbTipoProduto";
             this.cbTipoProduto.Size = new System.Drawing.Size(235, 24);
-            this.cbTipoProduto.TabIndex = 4;
+            this.cbTipoProduto.TabIndex = 5;
             // 
             // txtCodigoBarra
             // 
             this.txtCodigoBarra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigoBarra.Location = new System.Drawing.Point(436, 41);
+            this.txtCodigoBarra.Location = new System.Drawing.Point(435, 77);
             this.txtCodigoBarra.MaxLength = 100;
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(299, 23);
-            this.txtCodigoBarra.TabIndex = 1;
+            this.txtCodigoBarra.TabIndex = 2;
             this.txtCodigoBarra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoBarra_KeyPress);
             // 
             // txtNomeProduto
@@ -386,11 +412,11 @@
             this.txtNomeProduto.BackColor = System.Drawing.Color.White;
             this.txtNomeProduto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeProduto.Location = new System.Drawing.Point(7, 41);
+            this.txtNomeProduto.Location = new System.Drawing.Point(6, 77);
             this.txtNomeProduto.MaxLength = 100;
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(418, 23);
-            this.txtNomeProduto.TabIndex = 0;
+            this.txtNomeProduto.TabIndex = 1;
             // 
             // groupBox5
             // 
@@ -425,28 +451,12 @@
             // 
             // gridProduto
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.gridProduto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gridProduto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.gridProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridProduto.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridProduto.Location = new System.Drawing.Point(11, 127);
             this.gridProduto.Name = "gridProduto";
             this.gridProduto.ReadOnly = true;
@@ -528,7 +538,7 @@
             this.txtCodFornecedor.MaxLength = 20;
             this.txtCodFornecedor.Name = "txtCodFornecedor";
             this.txtCodFornecedor.Size = new System.Drawing.Size(98, 23);
-            this.txtCodFornecedor.TabIndex = 5;
+            this.txtCodFornecedor.TabIndex = 6;
             this.txtCodFornecedor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodFornecedor_KeyPress);
             // 
             // frmCadProduto
@@ -592,5 +602,7 @@
         private System.Windows.Forms.Button btnAdicionarFornecedor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtCodOriginal;
     }
 }

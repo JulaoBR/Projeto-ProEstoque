@@ -22,20 +22,19 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "INSERT INTO cliente (cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa, cli_data_cadastro) VALUES (@codOriginal, @estCod, @cidCod, @nomeSocial, @nomeFantasia, @endereco, @bairro, @numero, @cep, @tipoPessoa, @dtCadastro)";
+                String sql = "INSERT INTO produto (pro_cod_original, tipo_cod, uni_cod, pro_descricao, pro_prazo_validade, pro_peso_liquido, pro_peso_bruto, pro_estoque_minimo, pro_estoque_maximo, pro_cod_barra) VALUES (@codOriginal, @tipoCod, @uniCod, @nomeProd, @prazoVal, @pesoLiq, @pesoBruto, @estMin, @estMax, @codBarra)";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@codOriginal", modelo.cli_cod_original);
-                cmd.Parameters.AddWithValue("@estCod", modelo.est_cod);
-                cmd.Parameters.AddWithValue("@cidCod", modelo.cid_cod);
-                cmd.Parameters.AddWithValue("@nomeSocial", modelo.cli_nome_social);
-                cmd.Parameters.AddWithValue("@nomeFantasia", modelo.cli_nome_fantasia);
-                cmd.Parameters.AddWithValue("@endereco", modelo.cli_endereco);
-                cmd.Parameters.AddWithValue("@bairro", modelo.cli_bairro);
-                cmd.Parameters.AddWithValue("@numero", modelo.cli_numero);
-                cmd.Parameters.AddWithValue("@cep", modelo.cli_cep);
-                cmd.Parameters.AddWithValue("@tipoPessoa", modelo.cli_tipo_pessoa);
-                cmd.Parameters.AddWithValue("@dtCadastro", modelo.cli_data_cadastro);
+                cmd.Parameters.AddWithValue("@codOriginal", modelo.pro_cod_original);
+                cmd.Parameters.AddWithValue("@tipoCod", modelo.tipo_cod);
+                cmd.Parameters.AddWithValue("@uniCod", modelo.uni_cod);
+                cmd.Parameters.AddWithValue("@nomeProd", modelo.pro_descricao);
+                cmd.Parameters.AddWithValue("@prazoVal", modelo.pro_prazo_validade);
+                cmd.Parameters.AddWithValue("@pesoLiq", modelo.pro_peso_liquido);
+                cmd.Parameters.AddWithValue("@pesoBruto", modelo.pro_peso_bruto);
+                cmd.Parameters.AddWithValue("@estMin", modelo.pro_estoque_minimo);
+                cmd.Parameters.AddWithValue("@estMax", modelo.pro_estoque_maximo);
+                cmd.Parameters.AddWithValue("@codBarra", modelo.pro_cod_barra);
 
                 cmd.ExecuteNonQuery();
             }
@@ -50,24 +49,24 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE UPDATE 
-        public void Update(ClienteModel modelo)
+        public void Update(ProdutoModel modelo)
         {
             try
             {
-                String sql = "UPDATE usuario SET cli_cod_original = @codOriginal, est_cod = @estCod, cid_cod = @cidCod, cli_nome_social = @nomeSocial, cli_nome_fantasia = @nomeFantasia, cli_endereco = @endereco, cli_bairro = @bairro, cli_numero = @numero, cli_cep = @cep, cli_tipo_pessoa = @tipoPessoa WHERE cli_cod = @id ";
+                String sql = "UPDATE produto SET pro_cod_original = @codOriginal, tipo_cod = @tipoCod, uni_cod = @uniCod, pro_descricao = @nomeProd, pro_prazo_validade = @prazoVal, pro_peso_liquido = @pesoLiq, pro_peso_bruto = @pesoBruto, pro_estoque_minimo = @estMin, pro_estoque_maximo = @proMax, pro_cod_barra = @codBarra WHERE pro_cod_original = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", modelo.cli_cod);
-                cmd.Parameters.AddWithValue("@codOriginal", modelo.cli_cod_original);
-                cmd.Parameters.AddWithValue("@estCod", modelo.est_cod);
-                cmd.Parameters.AddWithValue("@cidCod", modelo.cid_cod);
-                cmd.Parameters.AddWithValue("@nomeSocial", modelo.cli_nome_social);
-                cmd.Parameters.AddWithValue("@nomeFantasia", modelo.cli_nome_fantasia);
-                cmd.Parameters.AddWithValue("@endereco", modelo.cli_endereco);
-                cmd.Parameters.AddWithValue("@bairro", modelo.cli_bairro);
-                cmd.Parameters.AddWithValue("@numero", modelo.cli_numero);
-                cmd.Parameters.AddWithValue("@cep", modelo.cli_cep);
-                cmd.Parameters.AddWithValue("@tipoPessia", modelo.cli_tipo_pessoa);
+                cmd.Parameters.AddWithValue("@id", modelo.pro_cod);
+                cmd.Parameters.AddWithValue("@codOriginal", modelo.pro_cod_original);
+                cmd.Parameters.AddWithValue("@tipoCod", modelo.tipo_cod);
+                cmd.Parameters.AddWithValue("@uniCod", modelo.uni_cod);
+                cmd.Parameters.AddWithValue("@nomeProd", modelo.pro_descricao);
+                cmd.Parameters.AddWithValue("@prazoVal", modelo.pro_prazo_validade);
+                cmd.Parameters.AddWithValue("@pesoLiq", modelo.pro_peso_liquido);
+                cmd.Parameters.AddWithValue("@pesoBruto", modelo.pro_peso_bruto);
+                cmd.Parameters.AddWithValue("@estMin", modelo.pro_estoque_minimo);
+                cmd.Parameters.AddWithValue("@estMax", modelo.pro_estoque_maximo);
+                cmd.Parameters.AddWithValue("@codBarra", modelo.pro_cod_barra);
 
                 cmd.ExecuteNonQuery();
             }
@@ -82,14 +81,14 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE DELETE
-        public void Delete(int cli_cod)
+        public void Delete(int pro_cod)
         {
             try
             {
-                String sql = "DELETE FROM cliente WHERE cli_cod = @id ";
+                String sql = "DELETE FROM produto WHERE pro_cod_original = @id ";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", cli_cod);
+                cmd.Parameters.AddWithValue("@id", pro_cod);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -103,32 +102,32 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA POR ID
-        public ClienteModel SelectByID(int id)
+        public ProdutoModel SelectByID(int id)
         {
             try
             {
-                String sql = "SELECT cli_cod ,cli_cod_original, est_cod, cid_cod, cli_nome_social, cli_nome_fantasia, cli_endereco, cli_bairro, cli_numero, cli_cep, cli_tipo_pessoa FROM cliente WHERE cli_cod_original = @id";
+                String sql = "SELECT pro_cod ,pro_cod_original, tipo_cod, uni_cod, pro_descricao, pro_prazo_validade, pro_peso_liquido, pro_peso_bruto, pro_estoque_minimo, pro_estoque_maximo, pro_cod_barra FROM produto WHERE pro_cod_original = @id";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@id", id);
                 MySqlDataReader dr;
 
-                ClienteModel modelo = new ClienteModel();
+                ProdutoModel modelo = new ProdutoModel();
                 dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
                 while (dr.Read())
                 {
-                    modelo.cli_cod = Convert.ToInt32(dr["cli_cod"]);
-                    modelo.cli_cod_original = Convert.ToInt32(dr["cli_cod_original"]);
-                    modelo.est_cod = Convert.ToInt32(dr["est_cod"].ToString());
-                    modelo.cid_cod = Convert.ToInt32(dr["cid_cod"].ToString());
-                    modelo.cli_nome_social = dr["cli_nome_social"].ToString();
-                    modelo.cli_nome_fantasia = dr["cli_nome_fantasia"].ToString();
-                    modelo.cli_endereco = dr["cli_endereco"].ToString();
-                    modelo.cli_bairro = dr["cli_bairro"].ToString();
-                    modelo.cli_numero = Convert.ToInt32(dr["cli_numero"]);
-                    modelo.cli_cep = dr["cli_cep"].ToString();
-                    modelo.cli_tipo_pessoa = dr["cli_tipo_pessoa"].ToString();
+                    modelo.pro_cod = Convert.ToInt32(dr["pro_cod"]);
+                    modelo.pro_cod_original = Convert.ToInt32(dr["pro_cod_orinal"]);
+                    modelo.tipo_cod = Convert.ToInt32(dr["tipo_cod"]);
+                    modelo.uni_cod = Convert.ToInt32(dr["uni_cod"]);
+                    modelo.pro_descricao = dr["pro_descricao"].ToString();
+                    modelo.pro_prazo_validade = Convert.ToInt32(dr["pro_prazo_validade"].ToString());
+                    modelo.pro_peso_liquido = Convert.ToDecimal(dr["pro_peso_liquido"].ToString());
+                    modelo.pro_peso_bruto = Convert.ToDecimal(dr["pro_peso_bruto"]);
+                    modelo.pro_estoque_minimo = Convert.ToDecimal(dr["pro_estoque_minimo"]);
+                    modelo.pro_estoque_maximo = Convert.ToDecimal(dr["pro_estoque_maximo"]);
+                    modelo.pro_cod_barra = dr["pro_cod_barra"].ToString();                   
                 }
                 return modelo;
             }
@@ -143,18 +142,18 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA GERAL
-        public DataTable Select(string codCliente, string razaoSocial, string nomeFantasia)
+        public DataTable Select(string codProduto, string descricao, string tipoProd)
         {
             try
             {
-                String sql = "SELECT A.cli_cod_original 'Codigo', A.cli_nome_social 'Razao Social', A.cli_nome_fantasia 'Nome Fantasia', A.cli_endereco 'Endereco', A.cli_bairro 'Bairro', A.cli_numero 'Numero', A.cli_cep 'Cep', B.est_nome 'Estado', C.cid_nome 'Cidade',A.cli_tipo_pessoa 'Tipo Pessoa' " +
-                   "FROM cliente AS A INNER JOIN estado AS B INNER JOIN cidade AS C ON A.est_cod = B.est_cod AND A.cid_cod = C.cid_cod WHERE A.cli_nome_social LIKE @social AND A.cli_nome_fantasia LIKE @fantasia AND A.cli_cod_original LIKE @codCliente";
+                String sql = "SELECT A.pro_cod_original 'Codigo', A.pro_descricao 'Descrição', B.tipo_descricao 'Tipo Produto', C.uni_descricao 'Uni. Medida', A.pro_prazo_validade 'Prazo Val', A.pro_peso_liquido 'Peso Liq', A.pro_peso_bruto 'Peso Bruto', A.pro_estoque_minimo 'Est. Min', A.pro_estoque_maximo 'Est. Max', A.pro_cod_barra 'Codigo Barras'" +
+                   "FROM produto AS A INNER JOIN tipo_produto AS B INNER JOIN unidade_medida AS C ON A.tipo_cod = B.tipo_cod AND A.uni_cod = C.uni_cod WHERE A.pro_descricao LIKE @descricao AND A.pro_cod_original LIKE @codProduto AND B.tipo_descricao LIKE tipoProd";
 
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@codCliente", "%" + codCliente + "%");
-                cmd.Parameters.AddWithValue("@social", "%" + razaoSocial + "%");
-                cmd.Parameters.AddWithValue("@fantasia", "%" + nomeFantasia + "%");
+                cmd.Parameters.AddWithValue("@codProduto", "%" + codProduto + "%");
+                cmd.Parameters.AddWithValue("@descricao", "%" + descricao + "%");
+                cmd.Parameters.AddWithValue("@tipoProd", "%" + tipoProd + "%");
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();
@@ -163,6 +162,30 @@ namespace ProEstoque.DAO
             }
             catch (Exception ex)
             {
+                throw ex;
+            }
+            finally
+            {
+                Conexao.fechar();
+            }
+        }
+
+        //METODO PARA VALIDAR 
+        public object ValidaProduto(int cli_cod_original)
+        {
+            try
+            {
+                MySqlConnection con = Conexao.conectar();
+                String sql = "SELECT pro_cod_original FROM produto WHERE pro_cod_original=@codOriginal";
+                MySqlCommand cmd = new MySqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@codOriginal", cli_cod_original);
+
+                return cmd.ExecuteScalar();
+
+            }
+            catch (Exception ex)
+            {
+                return null;
                 throw ex;
             }
             finally

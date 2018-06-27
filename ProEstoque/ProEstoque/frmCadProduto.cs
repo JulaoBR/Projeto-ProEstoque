@@ -11,6 +11,7 @@ namespace ProEstoque
         // 0 = NOVO - 1 = EDITAR
         private int controle_opcao = -1;
         private List<ClienteModel> listaCliente = new List<ClienteModel>();
+        private ProdutoModel model;
 
         public frmCadProduto()
         {
@@ -146,6 +147,14 @@ namespace ProEstoque
         }
 
         private void txtPesoLiquido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCodOriginal_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && e.KeyChar != (char)8)
             {
@@ -302,6 +311,56 @@ namespace ProEstoque
             {
               //tratamento sem necessidade
             }
+        }
+
+        //verifica se ja esta cadastrado o produto
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            ProdutoControl control = new ProdutoControl();
+            try
+            {
+                if (control.ValidarProduto(Convert.ToInt32(txtCodOriginal.Text)))
+                {
+                    MessageBox.Show("Cliente/Fornecedor ja cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtCodOriginal.Clear();
+                    txtCodOriginal.Focus();
+                    return;
+                }
+            }
+            catch
+            {
+                //SEM MENSAGEM DE TRATAMENTO
+                return;
+            }
+        }
+
+        private void PreencheObjetoProduto()
+        {
+            try
+            {
+                model = new ProdutoModel();
+
+                model.pro_cod_original = Convert.ToInt32(txtCodOriginal.Text);
+                model.pro_descricao = txtNomeProduto.Text;
+                model.pro_cod_barra = txtCodigoBarra.Text;
+                model.pro_prazo_validade = Convert.ToInt32(txtPrazoValidade.Text);
+                model.tipo_cod = Convert.ToInt32(cbTipoProduto.SelectedValue);
+                model.uni_cod = Convert.ToInt32(cbUnidadeMedida.SelectedValue);
+                model.pro_peso_liquido = Convert.ToDecimal(txtPesoLiquido.Text);
+                model.pro_peso_bruto = Convert.ToDecimal(txtPesoBruto.Text);
+                model.pro_estoque_minimo = Convert.ToDecimal(txtEstMinimo.Text);
+                model.pro_estoque_maximo = Convert.ToDecimal(txtEstMaximo.Text);
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            PreencheObjetoProduto();
         }
     }
 }
