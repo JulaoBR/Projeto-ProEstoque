@@ -1,0 +1,24 @@
+//site oficial GIT
+https://git-scm.com/book/pt-br/v1/Ramifica%C3%A7%C3%A3o-Branching-no-Git-B%C3%A1sico-de-Branch-e-Merge
+
+//store-procedures
+https://www.devmedia.com.br/como-criar-um-sistema-de-cadastro-em-csharp-com-stored-procedures/32004
+
+//cria a branch iss53
+$ git branch iss53
+
+//faz o ponteiro apontar pra nova branch iss53
+$ git checkout iss53
+
+//faz apontar para o diretorio principal master
+$ git checkout master
+
+//faz um merge (junta os arquivos do branch com a pasta original)
+$ git merge iss53
+
+//exclui o branch
+git branch -d iss53
+
+
+//======================================================
+branch = TelaCadProduto
