@@ -18,7 +18,7 @@ namespace ProEstoque.CONTROL
 
 
         //METODDO DE INSERIR
-        public int Inserir(ProdutoModel modelo)
+        public int Inserir(ProdutoModel modelo, List<ClienteModel> listaFornecedor)
         {
             ProdutoDAO dao = new ProdutoDAO();
             try
