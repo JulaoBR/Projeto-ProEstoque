@@ -1,6 +1,9 @@
 //site oficial GIT
 https://git-scm.com/book/pt-br/v1/Ramifica%C3%A7%C3%A3o-Branching-no-Git-B%C3%A1sico-de-Branch-e-Merge
 
+//
+https://www.devmedia.com.br/stored-procedures-no-mysql/29030
+
 //store-procedures
 https://www.devmedia.com.br/como-criar-um-sistema-de-cadastro-em-csharp-com-stored-procedures/32004
 
