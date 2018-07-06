@@ -109,6 +109,12 @@ namespace ProEstoque
             troca.ShowDialog();
         }
 
+        private void fORNECEDORToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCadFornecedor cadFornecedor = new frmCadFornecedor();
+            cadFornecedor.ShowDialog();
+        }
+
         private void cONFIGURAÇÕESToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmConfiguracaoADM confg = new frmConfiguracaoADM();

@@ -25,11 +25,11 @@ namespace ProEstoque
 
         private void frmBuscaFornecedor_Load(object sender, EventArgs e)
         {
-            ClienteControl control = new ClienteControl();
+            FornecedorControl control = new FornecedorControl(txtCodFornecedor.Text, txtRazaoSocial.Text, txtFantasia.Text);
 
             try
             {
-                PreencheGrid(control.Select(txtCodFornecedor.Text, txtRazaoSocial.Text, txtFantasia.Text));
+                PreencheGrid(control.Select());
             }
             catch (Exception ex)
             {
@@ -71,15 +71,14 @@ namespace ProEstoque
         {
             try
             {
-                if (e.RowIndex >= 0)
-                {
-                    this.codigo = Convert.ToInt32(gridFornecedor.Rows[e.RowIndex].Cells[0].Value);
-                    this.Close();
-                }
+
+                codigo = Convert.ToInt32(gridFornecedor.CurrentRow.Cells[0].Value.ToString());
+
+                this.Close();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Sem dados para selecionar!!", "Operação Invalida!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Selecione um cliente\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

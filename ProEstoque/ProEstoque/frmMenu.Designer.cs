@@ -57,6 +57,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.fORNECEDORToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -159,6 +160,7 @@
             this.cADASTROSToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.cADASTROSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuáriosToolStripMenuItem,
+            this.fORNECEDORToolStripMenuItem,
             this.produtosToolStripMenuItem,
             this.usuáriosToolStripMenuItem1,
             this.pEDIDOSToolStripMenuItem});
@@ -170,28 +172,28 @@
             // usuáriosToolStripMenuItem
             // 
             this.usuáriosToolStripMenuItem.Name = "usuáriosToolStripMenuItem";
-            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuáriosToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.usuáriosToolStripMenuItem.Text = "CLIENTES";
             this.usuáriosToolStripMenuItem.Click += new System.EventHandler(this.usuáriosToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
-            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.produtosToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.produtosToolStripMenuItem.Text = "PRODUTOS";
             this.produtosToolStripMenuItem.Click += new System.EventHandler(this.produtosToolStripMenuItem_Click);
             // 
             // usuáriosToolStripMenuItem1
             // 
             this.usuáriosToolStripMenuItem1.Name = "usuáriosToolStripMenuItem1";
-            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.usuáriosToolStripMenuItem1.Size = new System.Drawing.Size(163, 22);
             this.usuáriosToolStripMenuItem1.Text = "USUÁRIOS";
             this.usuáriosToolStripMenuItem1.Click += new System.EventHandler(this.usuáriosToolStripMenuItem1_Click);
             // 
             // pEDIDOSToolStripMenuItem
             // 
             this.pEDIDOSToolStripMenuItem.Name = "pEDIDOSToolStripMenuItem";
-            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pEDIDOSToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
             this.pEDIDOSToolStripMenuItem.Text = "PEDIDOS";
             this.pEDIDOSToolStripMenuItem.Click += new System.EventHandler(this.pEDIDOSToolStripMenuItem_Click);
             // 
@@ -328,6 +330,13 @@
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(82, 17);
             this.toolStripStatusLabel2.Text = "JULIO CESAR";
             // 
+            // fORNECEDORToolStripMenuItem
+            // 
+            this.fORNECEDORToolStripMenuItem.Name = "fORNECEDORToolStripMenuItem";
+            this.fORNECEDORToolStripMenuItem.Size = new System.Drawing.Size(163, 22);
+            this.fORNECEDORToolStripMenuItem.Text = "FORNECEDOR";
+            this.fORNECEDORToolStripMenuItem.Click += new System.EventHandler(this.fORNECEDORToolStripMenuItem_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
@@ -386,6 +395,7 @@
         private System.Windows.Forms.ToolStripMenuItem rELATÓRIOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cONTROLETROCAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tROCADESCARTEToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fORNECEDORToolStripMenuItem;
     }
 }
 

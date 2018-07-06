@@ -97,11 +97,6 @@
             this.btnExcluir.TabStop = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // txtId
-            // 
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.TabStop = false;
-            // 
             // txtDataAtual
             // 
             this.txtDataAtual.TabStop = false;

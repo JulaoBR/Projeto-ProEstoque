@@ -9,7 +9,6 @@ namespace ProEstoque.MODEL
     public class ProdutoModel
     {
         public int pro_cod { get; set; }
-        public int pro_cod_original { get; set; }
         public int tipo_cod { get; set; }
         public int uni_cod { get; set; }
         public string pro_descricao { get; set; }

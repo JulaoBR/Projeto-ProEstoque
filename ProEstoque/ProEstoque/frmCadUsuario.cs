@@ -97,7 +97,6 @@ namespace ProEstoque
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
 
-            txtId.Clear();
             txtNomeUsuario.Clear();
             txtTelefoneUsuario.Clear();
             txtLoginUsuario.Clear();

@@ -10,7 +10,7 @@ namespace ProEstoque
     {
         // 0 = NOVO - 1 = EDITAR
         private int controle_opcao = -1;
-        private List<ClienteModel> listaCliente = new List<ClienteModel>();
+        private List<ClienteModel> listaFornecedor = new List<ClienteModel>();
         private ProdutoModel model;
 
         public frmCadProduto()
@@ -21,8 +21,8 @@ namespace ProEstoque
 
         private void btnBuscaFornecedor_Click(object sender, EventArgs e)
         {
-            ClienteControl control = new ClienteControl();
-            ClienteModel model = new ClienteModel();
+            FornecedorControl control = new FornecedorControl();
+            FornecedorModel model = new FornecedorModel();
             try
             {
                 frmBuscaFornecedor buscaFornecedor = new frmBuscaFornecedor();
@@ -32,12 +32,8 @@ namespace ProEstoque
                 {
                     model = control.SelectByID(buscaFornecedor.codigo);
 
-                    txtCodFornecedor.Text = Convert.ToString(model.cli_cod_original);
-                    txtNomeFornecedor.Text = model.cli_nome_fantasia;
-                }
-                else
-                {
-                    LimpaCampo();
+                    txtCodFornecedor.Text = Convert.ToString(model.for_cod);
+                    txtNomeFornecedor.Text = model.for_razao_social;
                 }
             }
             catch (Exception ex)
@@ -89,13 +85,7 @@ namespace ProEstoque
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //Comando que questiona ao usuário se relamente deseja sair do programa
-            DialogResult result = MessageBox.Show("Deseja excluir o item selecionado?",
-               "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
 
-            }
         }
 
         private void txtPrazoValidade_KeyPress(object sender, KeyPressEventArgs e)
@@ -179,7 +169,7 @@ namespace ProEstoque
                     ClienteModel model = new ClienteModel();
                     ProdutoControl control = new ProdutoControl();
 
-                    if (!control.VarificaCliente(listaCliente, Convert.ToInt32(txtCodFornecedor.Text)))
+                    if (!control.VarificaCliente(listaFornecedor, Convert.ToInt32(txtCodFornecedor.Text)))
                     {
                         model.cli_cod_original = Convert.ToInt32(txtCodFornecedor.Text);
                         model.cli_nome_fantasia = txtNomeFornecedor.Text;
@@ -187,9 +177,11 @@ namespace ProEstoque
                         txtCodFornecedor.Clear();
                         txtNomeFornecedor.Clear();
 
-                        listaCliente.Add(model);
+                        listaFornecedor.Add(model);
 
                         AtualizaGrid();
+
+                        txtEstMinimo.Focus();
                     }
                     else
                     {
@@ -219,7 +211,7 @@ namespace ProEstoque
             groupBox4.Enabled = true;
             groupBox5.Enabled = true;
 
-            txtNomeProduto.Focus();
+            txtCodOriginal.Focus();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -266,9 +258,9 @@ namespace ProEstoque
             txtPesoLiquido.Clear();
             txtEstMaximo.Clear();
             txtEstMinimo.Clear();
-            txtId.Clear();
+            txtCodOriginal.Clear();
 
-            listaCliente.Clear();
+            listaFornecedor.Clear();
             AtualizaGrid();
 
             cbTipoProduto.SelectedIndex = -1;
@@ -278,7 +270,7 @@ namespace ProEstoque
         private void AtualizaGrid()
         {
             gridProduto.DataSource = null;
-            gridProduto.DataSource = listaCliente;
+            gridProduto.DataSource = listaFornecedor;
             gridProduto.ClearSelection();
             gridProduto.AllowUserToAddRows = false;
         }
@@ -291,7 +283,7 @@ namespace ProEstoque
                 {
                     int codigo = Convert.ToInt32(gridProduto.Rows[e.RowIndex].Cells[0].Value);
 
-                    foreach (var item in listaCliente)
+                    foreach (var item in listaFornecedor)
                     {
                         if (codigo == item.cli_cod_original)
                         {
@@ -300,7 +292,7 @@ namespace ProEstoque
                                "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.Yes)
                             {
-                                listaCliente.Remove(item);
+                                listaFornecedor.Remove(item);
                                 AtualizaGrid();
                             }
                         }
@@ -340,7 +332,7 @@ namespace ProEstoque
             {
                 model = new ProdutoModel();
 
-                model.pro_cod_original = Convert.ToInt32(txtCodOriginal.Text);
+                model.pro_cod = Convert.ToInt32(txtCodOriginal.Text);
                 model.pro_descricao = txtNomeProduto.Text;
                 model.pro_cod_barra = txtCodigoBarra.Text;
                 model.pro_prazo_validade = Convert.ToInt32(txtPrazoValidade.Text);
@@ -360,7 +352,57 @@ namespace ProEstoque
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            PreencheObjetoProduto();
+            try
+            {
+                ProdutoControl control = new ProdutoControl();
+
+                PreencheObjetoProduto();
+
+                if (listaFornecedor.Count == 0)
+                {                 
+                    DialogResult result = MessageBox.Show("Não a fornecedores selecionados para este produto, deseja salvar?",
+                       "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.Yes)
+                    {
+                        control.Inserir(model, listaFornecedor);
+                        LimpaCampo();
+                    }
+                    else
+                    {
+                        txtCodFornecedor.Focus();
+                    }
+                }
+                else
+                {
+                    control.Inserir(model, listaFornecedor);
+                    LimpaCampo();
+                }
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+        private void txtCodFornecedor_Leave(object sender, EventArgs e)
+        {
+            ClienteControl control = new ClienteControl();
+            ClienteModel model = new ClienteModel();
+            try
+            {
+                if (txtCodFornecedor.Text != string.Empty)
+                {
+                    model = control.SelectByID(Convert.ToInt32(txtCodFornecedor.Text));
+
+                    txtCodFornecedor.Text = Convert.ToString(model.cli_cod);
+                    txtNomeFornecedor.Text = model.cli_nome_fantasia;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

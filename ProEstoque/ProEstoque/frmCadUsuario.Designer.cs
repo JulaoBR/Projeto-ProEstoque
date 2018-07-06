@@ -89,14 +89,6 @@
             this.btnExcluir.TabStop = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(45, 11);
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(640, 64);
-            // 
             // btnCancelar
             // 
             this.btnCancelar.FlatAppearance.BorderSize = 0;
@@ -204,7 +196,6 @@
             this.groupBox1.Controls.Add(this.txtNomeUsuario);
             this.groupBox1.Controls.Add(this.txtSenhaUsuario);
             this.groupBox1.Controls.Add(this.txtTelefoneUsuario);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(10, 65);
@@ -214,7 +205,6 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dados Usuarios";
             this.groupBox1.Controls.SetChildIndex(this.label3, 0);
-            this.groupBox1.Controls.SetChildIndex(this.label2, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtTelefoneUsuario, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtSenhaUsuario, 0);
             this.groupBox1.Controls.SetChildIndex(this.txtNomeUsuario, 0);

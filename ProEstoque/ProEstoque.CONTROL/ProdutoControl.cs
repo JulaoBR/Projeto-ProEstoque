@@ -18,16 +18,17 @@ namespace ProEstoque.CONTROL
 
 
         //METODDO DE INSERIR
-        public int Inserir(ProdutoModel modelo)
+        public int Inserir(ProdutoModel modelo, List<ClienteModel> listaFornecedor)
         {
             ProdutoDAO dao = new ProdutoDAO();
             try
             {
-                if (modelo.pro_cod_original == 0 || modelo.pro_descricao == string.Empty)
+                if (modelo.pro_cod == 0 || modelo.pro_descricao == string.Empty)
                     //RETORNO DE 1 OBJETO NAO COMPLETO
                     return 0;
 
                 dao.Insert(modelo);
+
                 //RETORNO DE 2 OK
                 return 2;
             }

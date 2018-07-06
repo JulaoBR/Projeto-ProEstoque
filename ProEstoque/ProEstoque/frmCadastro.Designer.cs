@@ -30,9 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.txtDataAtual = new System.Windows.Forms.DateTimePicker();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
@@ -60,23 +58,11 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.txtDataAtual);
-            this.panel3.Controls.Add(this.txtId);
             this.panel3.Location = new System.Drawing.Point(3, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(745, 47);
             this.panel3.TabIndex = 8;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 16);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Id :";
             // 
             // txtDataAtual
             // 
@@ -85,15 +71,6 @@
             this.txtDataAtual.Name = "txtDataAtual";
             this.txtDataAtual.Size = new System.Drawing.Size(278, 22);
             this.txtDataAtual.TabIndex = 0;
-            // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(38, 11);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(98, 22);
-            this.txtId.TabIndex = 7;
-            this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnNovo
             // 
@@ -203,7 +180,6 @@
             this.Text = "frmCadastro";
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -213,14 +189,12 @@
         private System.Windows.Forms.Panel panel2;
         protected System.Windows.Forms.Button btnNovo;
         protected System.Windows.Forms.Button btnSalvar;
-        protected System.Windows.Forms.Button btnEditar;
-        protected System.Windows.Forms.Panel panel1;
         protected System.Windows.Forms.Button btnListar;
-        protected System.Windows.Forms.Button btnExcluir;
-        public System.Windows.Forms.TextBox txtId;
-        public System.Windows.Forms.Label label2;
         public System.Windows.Forms.DateTimePicker txtDataAtual;
         protected System.Windows.Forms.Button btnCancelar;
         public System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.Button btnEditar;
+        public System.Windows.Forms.Button btnExcluir;
+        public System.Windows.Forms.Panel panel1;
     }
 }

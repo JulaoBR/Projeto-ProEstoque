@@ -56,6 +56,12 @@
     <Compile Include="frmBusca.Designer.cs">
       <DependentUpon>frmBusca.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmBuscaCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBuscaCliente.Designer.cs">
+      <DependentUpon>frmBuscaCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBuscaEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="frmCadCliente.Designer.cs">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCadFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCadFornecedor.Designer.cs">
+      <DependentUpon>frmCadFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="frmCadPedido.cs">
       <SubType>Form</SubType>
@@ -157,6 +169,9 @@
     <EmbeddedResource Include="frmBusca.resx">
       <DependentUpon>frmBusca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBuscaCliente.resx">
+      <DependentUpon>frmBuscaCliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmBuscaEstoque.resx">
       <DependentUpon>frmBuscaEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadCliente.resx">
       <DependentUpon>frmCadCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCadFornecedor.resx">
+      <DependentUpon>frmCadFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCadPedido.resx">
       <DependentUpon>frmCadPedido.cs</DependentUpon>

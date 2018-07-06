@@ -69,7 +69,7 @@ namespace ProEstoque
             try
             {
                 if(controle_operacao == 1)
-                    modelo.cli_cod = Convert.ToInt32(txtId.Text);
+                    modelo.cli_cod = Convert.ToInt32(txtCli_cod_original.Text);
                 if (txtCli_cod_original.Text != "")
                     modelo.cli_cod_original = Convert.ToInt32(txtCli_cod_original.Text);
                 modelo.cli_nome_social = txtNomeCliente.Text;
@@ -147,7 +147,6 @@ namespace ProEstoque
             btnNovo.Enabled = true;
             btnEditar.Enabled = true;
 
-            txtId.Clear();
             txtNomeCliente.Clear();
             txtNomeFantasia.Clear();
             txtEndereco.Clear();

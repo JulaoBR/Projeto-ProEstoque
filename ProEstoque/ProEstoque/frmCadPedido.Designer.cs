@@ -110,7 +110,6 @@
             // 
             // txtId
             // 
-            this.txtId.TabStop = false;
             // 
             // txtDataAtual
             // 
