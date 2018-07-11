@@ -78,8 +78,18 @@ namespace ProEstoque
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Selecione um cliente\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecione um Fornecedor\n" + ex.Message, "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void txtRazaoSocial_TextChanged(object sender, EventArgs e)
+        {
+            frmBuscaFornecedor_Load(sender, e);
+        }
+
+        private void txtFantasia_TextChanged(object sender, EventArgs e)
+        {
+            frmBuscaFornecedor_Load(sender, e);
         }
     }
 }

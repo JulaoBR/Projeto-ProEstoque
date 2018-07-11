@@ -171,7 +171,7 @@ namespace ProEstoque
 
                     if (!control.VarificaCliente(listaFornecedor, Convert.ToInt32(txtCodFornecedor.Text)))
                     {
-                        model.cli_cod_original = Convert.ToInt32(txtCodFornecedor.Text);
+                        model.cli_cod = Convert.ToInt32(txtCodFornecedor.Text);
                         model.cli_nome_fantasia = txtNomeFornecedor.Text;
 
                         txtCodFornecedor.Clear();
@@ -285,7 +285,7 @@ namespace ProEstoque
 
                     foreach (var item in listaFornecedor)
                     {
-                        if (codigo == item.cli_cod_original)
+                        if (codigo == item.cli_cod)
                         {
                             //Comando que questiona ao usuário se relamente deseja sair do programa
                             DialogResult result = MessageBox.Show("Deseja remover este item?",

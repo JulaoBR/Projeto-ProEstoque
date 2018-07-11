@@ -67,18 +67,14 @@ namespace ProEstoque
             ClienteModel modelo = new ClienteModel();
 
             try
-            {
-                if(controle_operacao == 1)
-                    modelo.cli_cod = Convert.ToInt32(txtCli_cod_original.Text);
-                if (txtCli_cod_original.Text != "")
-                    modelo.cli_cod_original = Convert.ToInt32(txtCli_cod_original.Text);
+            {               
+                modelo.cli_cod = Convert.ToInt32(txtCli_cod_original.Text);               
                 modelo.cli_nome_social = txtNomeCliente.Text;
                 modelo.cli_nome_fantasia = txtNomeFantasia.Text;
                 modelo.cli_endereco = txtEndereco.Text;
                 modelo.cli_bairro = txtBairro.Text;
                 modelo.cli_cep = txtCep.Text;
-                if(txtNumero.Text != "")
-                    modelo.cli_numero = Convert.ToInt32(txtNumero.Text);
+                modelo.cli_numero = txtNumero.Text;
                 modelo.est_cod = Convert.ToInt32(cbEstado.SelectedValue);
                 modelo.cid_cod = Convert.ToInt32(cbCidade.SelectedValue);
                 modelo.cli_data_cadastro = Convert.ToDateTime(txtDataAtual.Text);
@@ -99,6 +95,7 @@ namespace ProEstoque
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
+            LimpaCampos();
             controle_operacao = 0;
 
             btnNovo.Enabled = false;
@@ -123,12 +120,57 @@ namespace ProEstoque
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            LimpaCampos();
+            ClienteControl control = new ClienteControl();
+
+            if (control.Excluir(txtCli_cod_original.Text))
+            {
+                MessageBox.Show("Cadastro excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpaCampos();
+            }
+            else
+            {
+                MessageBox.Show("Falha ao tentar excluir o cadastro!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
         }
 
         private void btnListar_Click(object sender, EventArgs e)
-        {
+        {          
+            try
+            {
+                LimpaCampos();
 
+                ClienteModel model = new ClienteModel();
+                ClienteControl control = new ClienteControl();
+
+                frmBuscaCliente busCliente = new frmBuscaCliente();
+                busCliente.ShowDialog();
+
+                if (busCliente.codigo != 0)
+                {
+                    model = control.SelectByID(busCliente.codigo);
+
+                    txtCli_cod_original.Text = Convert.ToString(model.cli_cod);
+                    txtNomeCliente.Text = model.cli_nome_social;
+                    txtNomeFantasia.Text = model.cli_nome_fantasia;
+                    txtEndereco.Text = model.cli_endereco;
+                    txtNumero.Text = model.cli_numero;
+                    txtBairro.Text = model.cli_bairro;
+                    txtCep.Text = model.cli_cep;
+
+                    cbCidade.SelectedValue = model.cid_cod;
+                    cbEstado.SelectedValue = model.est_cod;
+
+                    if (model.cli_tipo_pessoa.Equals("FISICA"))
+                        rbPessoaFisica.Checked = true;
+                    else
+                        rbPessoaJuridica.Checked = true;                    
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -164,12 +206,12 @@ namespace ProEstoque
 
         private void SalvaCliente(ClienteModel modelo)
         {
-            ClienteControl control = new ClienteControl();
+            ClienteControl control = new ClienteControl(modelo);
 
             switch (controle_operacao)
             {
                 case 0:
-                    int aux = control.Inserir(modelo);
+                    int aux = control.Inserir();
                     switch (aux)
                     {
                         case 0:
@@ -189,7 +231,7 @@ namespace ProEstoque
                     break;
                 case 1:
 
-                    int aux2 = control.Update(modelo);
+                    int aux2 = control.Update();
                     switch (aux2)
                     {
                         case 0:

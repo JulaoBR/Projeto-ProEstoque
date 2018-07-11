@@ -39,7 +39,7 @@ namespace ProEstoque.CONTROL
             FornecedorDAO dao = new FornecedorDAO(modelo);
             try
             {
-                if (modelo.for_cod == 0 || modelo.for_razao_social == "" )
+                if (modelo.for_razao_social == "" )
                     //RETORNO DE 1 OBJETO NAO COMPLETO
                     return 0;
 

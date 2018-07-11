@@ -8,14 +8,30 @@ namespace ProEstoque.DAO
     public class ClienteDAO
     {
         private MySqlConnection con = null;
+        private ClienteModel modelo = new ClienteModel();
+        private string codCliente;
+        private string razaoSocial;
+        private string apelido;
 
         public ClienteDAO()
         {
 
         }
 
+        public ClienteDAO(ClienteModel model)
+        {
+            this.modelo = model;
+        }
+
+        public ClienteDAO(string codCliente, string razaoSocial, string apelido)
+        {
+            this.codCliente = codCliente;
+            this.razaoSocial = razaoSocial;
+            this.apelido = apelido;
+        }
+
         //METODO DE INSERT
-        public void Insert(ClienteModel modelo)
+        public void Insert()
         {
             try
             {
@@ -47,7 +63,7 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE UPDATE 
-        public void Update(ClienteModel modelo)
+        public void Update()
         {
             try
             {
@@ -63,7 +79,7 @@ namespace ProEstoque.DAO
                 cmd.Parameters.AddWithValue("@bairro", modelo.cli_bairro);
                 cmd.Parameters.AddWithValue("@numero", modelo.cli_numero);
                 cmd.Parameters.AddWithValue("@cep", modelo.cli_cep);
-                cmd.Parameters.AddWithValue("@tipoPessia", modelo.cli_tipo_pessoa);
+                cmd.Parameters.AddWithValue("@tipoPessoa", modelo.cli_tipo_pessoa);
 
                 cmd.ExecuteNonQuery();
             }
@@ -121,7 +137,7 @@ namespace ProEstoque.DAO
                     modelo.cli_nome_fantasia = dr["cli_nome_fantasia"].ToString();
                     modelo.cli_endereco = dr["cli_endereco"].ToString();
                     modelo.cli_bairro = dr["cli_bairro"].ToString();
-                    modelo.cli_numero = Convert.ToInt32(dr["cli_numero"]);
+                    modelo.cli_numero = dr["cli_numero"].ToString();
                     modelo.cli_cep = dr["cli_cep"].ToString();
                     modelo.cli_tipo_pessoa = dr["cli_tipo_pessoa"].ToString();
                 }
@@ -138,7 +154,7 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA GERAL
-        public DataTable Select(string codCliente, string razaoSocial, string nomeFantasia)
+        public DataTable Select()
         {
             try
             {
@@ -149,7 +165,7 @@ namespace ProEstoque.DAO
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@codCliente", "%" + codCliente + "%");
                 cmd.Parameters.AddWithValue("@social", "%" + razaoSocial + "%");
-                cmd.Parameters.AddWithValue("@fantasia", "%" + nomeFantasia + "%");
+                cmd.Parameters.AddWithValue("@fantasia", "%" + apelido + "%");
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();

@@ -80,7 +80,7 @@ namespace ProEstoque.CONTROL
         {
             foreach (var item in listaCliente)
             {
-                if (codigo != item.cli_cod_original)
+                if (codigo != item.cli_cod)
                 {
                     return false;
                 }

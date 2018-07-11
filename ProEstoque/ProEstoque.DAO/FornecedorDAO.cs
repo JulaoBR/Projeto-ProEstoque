@@ -39,7 +39,7 @@ namespace ProEstoque.DAO
         {
             try
             {
-                String sql = "INSERT INTO fornecedor (for_razao_social, for_apelido, for_cnpj, for_data_cadastro) VALUES (@cod, @razaoSocial, @apelido, @cnpj, @dataCad )";
+                String sql = "INSERT INTO fornecedor (for_razao_social, for_apelido, for_cnpj, for_data_cadastro) VALUES (@razaoSocial, @apelido, @cnpj, @dataCad )";
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@razaoSocial", modelo.for_razao_social);

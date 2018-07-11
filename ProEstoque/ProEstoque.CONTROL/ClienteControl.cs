@@ -7,23 +7,39 @@ namespace ProEstoque.CONTROL
 {
     public class ClienteControl
     {
+        private ClienteModel modelo = new ClienteModel();
+        private string codCliente;
+        private string razaoSocial;
+        private string apelido;
 
         public ClienteControl()
         {
 
         }
 
-        //METODDO DE INSERIR
-        public int Inserir(ClienteModel modelo)
+        public ClienteControl(ClienteModel model)
         {
-            ClienteDAO dao = new ClienteDAO();
+            this.modelo = model;
+        }
+
+        public ClienteControl(string codCliente, string razaoSocial, string apelido)
+        {
+            this.codCliente = codCliente;
+            this.razaoSocial = razaoSocial;
+            this.apelido = apelido;
+        }
+
+        //METODDO DE INSERIR
+        public int Inserir()
+        {      
             try
             {
-                if (modelo.cli_cod_original == 0 || modelo.cli_nome_social == "" ||modelo.cli_nome_fantasia == "")
+                ClienteDAO dao = new ClienteDAO(modelo);
+                if (modelo.cli_cod == 0 || modelo.cli_nome_social == "" ||modelo.cli_nome_fantasia == "" || modelo.cid_cod == 0  || modelo.est_cod == 0)
                     //RETORNO DE 1 OBJETO NAO COMPLETO
                     return 0;
 
-                dao.Insert(modelo);
+                dao.Insert();
                 //RETORNO DE 2 OK
                 return 2;
             }
@@ -34,18 +50,33 @@ namespace ProEstoque.CONTROL
             }                                  
         }
 
-        public int Update(ClienteModel modelo)
+        public int Update()
         {
-            ClienteDAO dao = new ClienteDAO();
+            try
+            {
+                ClienteDAO dao = new ClienteDAO(modelo);
 
-            return 0;
+                if (modelo.cli_cod == 0 || modelo.cli_nome_social == "" || modelo.cli_nome_fantasia == "" || modelo.cid_cod == 0 || modelo.est_cod == 0)
+                    //RETORNO DE 1 OBJETO NAO COMPLETO
+                    return 0;
+
+                dao.Update();
+                //RETORNO DE 2 OK
+                return 2;
+
+            }
+            catch
+            {
+                return 3;
+            }
+            
         }
 
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
-        public DataTable Select(string codCliente, string nomeSocial, string nomeFantasia)
+        public DataTable Select()
         {
-            ClienteDAO dao = new ClienteDAO();
-            return dao.Select(codCliente, nomeSocial, nomeFantasia);
+            ClienteDAO dao = new ClienteDAO(codCliente, razaoSocial, apelido);
+            return dao.Select();
         }
 
         //RETORNA UM OBJETO DO TIPO UNIDADE DE MEDIDA
