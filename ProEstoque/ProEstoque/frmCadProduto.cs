@@ -229,7 +229,20 @@ namespace ProEstoque
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                frmBuscaProduto busProduto = new frmBuscaProduto();
+                busProduto.ShowDialog();
 
+                if (busProduto.codigo != 0)
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -313,7 +326,7 @@ namespace ProEstoque
             {
                 if (control.ValidarProduto(Convert.ToInt32(txtCodOriginal.Text)))
                 {
-                    MessageBox.Show("Cliente/Fornecedor ja cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Produto ja cadastrado!", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtCodOriginal.Clear();
                     txtCodOriginal.Focus();
                     return;
@@ -354,7 +367,7 @@ namespace ProEstoque
         {
             try
             {
-                ProdutoControl control = new ProdutoControl();
+                ProdutoControl control = new ProdutoControl(model, listaFornecedor);
 
                 PreencheObjetoProduto();
 
@@ -364,7 +377,7 @@ namespace ProEstoque
                        "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        control.Inserir(model, listaFornecedor);
+                        control.Inserir();
                         LimpaCampo();
                     }
                     else
@@ -374,7 +387,7 @@ namespace ProEstoque
                 }
                 else
                 {
-                    control.Inserir(model, listaFornecedor);
+                    control.Inserir();
                     LimpaCampo();
                 }
             }

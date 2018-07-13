@@ -15,7 +15,7 @@ namespace ProEstoque
     public partial class frmCadFornecedor : ProEstoque.frmCadastro
     {
         // 0 = NOVO - 1 = EDITAR
-        private int controle_opcao = -1;
+        private int controle_operacao = -1;
         private FornecedorModel modelo = new FornecedorModel();
 
         public frmCadFornecedor()
@@ -25,10 +25,12 @@ namespace ProEstoque
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            controle_opcao = 0;
+            LimpaCampo();
+            controle_operacao = 0;
 
             btnNovo.Enabled = false;
             btnEditar.Enabled = false;
+            btnSalvar.Enabled = true;
 
             groupBox1.Enabled = true;
 
@@ -37,10 +39,11 @@ namespace ProEstoque
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            controle_opcao = 1;
+            controle_operacao = 1;
 
             btnNovo.Enabled = false;
             btnEditar.Enabled = false;
+            btnSalvar.Enabled = true;
 
             groupBox1.Enabled = true;
 
@@ -50,29 +53,47 @@ namespace ProEstoque
         {
             try
             {
+                LimpaCampo();
+
+                FornecedorControl control = new FornecedorControl();
+                FornecedorModel modelo = new FornecedorModel();
+
                 frmBuscaFornecedor busFornecedor = new frmBuscaFornecedor();
                 busFornecedor.ShowDialog();
 
                 if (busFornecedor.codigo != 0)
                 {
-                    
+                    modelo = control.SelectByID(busFornecedor.codigo);
+
+                    txtCodFornecedor.Text = Convert.ToString(modelo.for_cod);
+                    txtApelido.Text = modelo.for_apelido;
+                    txtRazaoSocial.Text = modelo.for_razao_social;
+                    txtCnpj.Text = modelo.for_cnpj;
+                    txtDataAtual.Text = Convert.ToString(modelo.for_data_cadastro);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-
+                MessageBox.Show("ERRO: " + ex, "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            //Comando que questiona ao usuário se relamente deseja sair do programa
-            DialogResult result = MessageBox.Show("Deseja excluir o item selecionado?",
-               "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
+            FornecedorControl control = new FornecedorControl();
 
+            if (MessageBox.Show("Deseja realmente excluir este cadastro?", "Excluir cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (control.Excluir(txtCodFornecedor.Text))
+                {
+                    MessageBox.Show("Cadastro excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpaCampo();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao tentar excluir o cadastro!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
         }
 
@@ -89,7 +110,7 @@ namespace ProEstoque
                 PreencheModelo();
 
                 FornecedorControl control = new FornecedorControl(modelo);
-                control.Inserir();
+                SalvaFornecedor();
 
                 LimpaCampo();
             }
@@ -99,12 +120,61 @@ namespace ProEstoque
             }
         }
 
+        private void SalvaFornecedor()
+        {
+            FornecedorControl control = new FornecedorControl(modelo);
+
+            switch (controle_operacao)
+            {
+                case 0:
+                    int aux = control.Inserir();
+                    switch (aux)
+                    {
+                        case 0:
+                            MessageBox.Show("Verifique todos os campos obrigatorios", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                        case 1:
+                            MessageBox.Show("Item ja cadastrado no banco de dados", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                        case 2:
+                            MessageBox.Show("Operação realizada com sucesso", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpaCampo();
+                            break;
+                        default:
+                            MessageBox.Show("Erro na operação", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                    }
+                    break;
+                case 1:
+
+                    int aux2 = control.Update();
+                    switch (aux2)
+                    {
+                        case 0:
+                            MessageBox.Show("Verifique todos os campos obrigatorios", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                        case 2:
+                            MessageBox.Show("Operação realizada com sucesso", "INFORMAÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LimpaCampo();
+                            break;
+                        default:
+                            MessageBox.Show("Erro na operação", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            break;
+                    }
+                    break;
+
+                default:
+                    MessageBox.Show("Selecione as opções de NOVO ou EDITAR", "ATENÇÃO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    break;
+            }
+        }
+
         private void PreencheModelo()
         {
             try
             {
                 //verifica se esta selecionado a opção de editar
-                if (controle_opcao == 1) 
+                if (controle_operacao == 1) 
                     modelo.for_cod = Convert.ToInt32(txtCodFornecedor.Text);
 
                 modelo.for_razao_social = txtRazaoSocial.Text;
@@ -125,12 +195,15 @@ namespace ProEstoque
 
         private void LimpaCampo()
         {
-            controle_opcao = -1;
+            controle_operacao = -1;
+
+            txtDataAtual.Text = DateTime.Now.ToString();
 
             groupBox1.Enabled = false;
 
             btnNovo.Enabled = true;
             btnEditar.Enabled = true;
+            btnSalvar.Enabled = false;
 
             txtCodFornecedor.Clear();
             txtApelido.Clear();

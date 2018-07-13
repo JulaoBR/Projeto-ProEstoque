@@ -13,12 +13,31 @@ namespace ProEstoque.DAO
     {
         private MySqlConnection con = null;
 
+        ProdutoModel modelo = new ProdutoModel();
+        private List<ClienteModel> listaFornecedor = new List<ClienteModel>();
+        private string codProduto;
+        private string descricao;
+        private string tipoProduto;
+
         public ProdutoDAO()
         {
 
         }
 
-        public void Insert(ProdutoModel modelo)
+        public ProdutoDAO(ProdutoModel modelo, List<ClienteModel> listaFornecedor)
+        {
+            this.modelo = modelo;
+            this.listaFornecedor = listaFornecedor;
+        }
+
+        public ProdutoDAO(string codProduto, string descricao, string tipoProduto)
+        {
+            this.codProduto = codProduto;
+            this.descricao = descricao;
+            this.tipoProduto = tipoProduto;
+        }
+
+        public void Insert()
         {
             try
             {
@@ -70,7 +89,7 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE UPDATE 
-        public void Update(ProdutoModel modelo)
+        public void Update()
         {
             try
             {
@@ -162,18 +181,18 @@ namespace ProEstoque.DAO
         }
 
         //METODO DE BUSCA GERAL
-        public DataTable Select(string codProduto, string descricao, string tipoProd)
+        public DataTable Select()
         {
             try
             {
-                String sql = "SELECT A.pro_cod 'Codigo', A.pro_descricao 'Descrição', B.tipo_descricao 'Tipo Produto', C.uni_descricao 'Uni. Medida', A.pro_prazo_validade 'Prazo Val', A.pro_peso_liquido 'Peso Liq', A.pro_peso_bruto 'Peso Bruto', A.pro_estoque_minimo 'Est. Min', A.pro_estoque_maximo 'Est. Max', A.pro_cod_barra 'Codigo Barras'" +
-                   "FROM produto AS A INNER JOIN tipo_produto AS B INNER JOIN unidade_medida AS C ON A.tipo_cod = B.tipo_cod AND A.uni_cod = C.uni_cod WHERE A.pro_descricao LIKE @descricao AND A.pro_cod LIKE @codProduto AND B.tipo_descricao LIKE tipoProd";
+                String sql = "SELECT A.pro_cod 'Codigo', A.pro_descricao 'Descricao', B.tipo_descricao 'Tipo Produto', C.uni_descricao 'Uni. Medida', A.pro_prazo_validade 'Prazo Val', A.pro_peso_liquido 'Peso Liq', A.pro_peso_bruto 'Peso Bruto', A.pro_estoque_minimo 'Est. Min', A.pro_estoque_maximo 'Est. Max', A.pro_cod_barra 'Codigo Barras'" +
+                   "FROM produto AS A INNER JOIN tipo_produto AS B INNER JOIN unidade_medida AS C ON A.tipo_cod = B.tipo_cod AND A.uni_cod = C.uni_cod WHERE A.pro_descricao LIKE @descricao AND A.pro_cod LIKE @codProduto AND B.tipo_descricao LIKE @tipoProd";
 
                 con = Conexao.conectar();
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@codProduto", "%" + codProduto + "%");
                 cmd.Parameters.AddWithValue("@descricao", "%" + descricao + "%");
-                cmd.Parameters.AddWithValue("@tipoProd", "%" + tipoProd + "%");
+                cmd.Parameters.AddWithValue("@tipoProd", "%" + tipoProduto + "%");
                 MySqlDataAdapter da = new MySqlDataAdapter();
                 da.SelectCommand = cmd;
                 DataTable dt = new DataTable();

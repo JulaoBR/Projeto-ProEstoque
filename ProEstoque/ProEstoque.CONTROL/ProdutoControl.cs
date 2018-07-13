@@ -11,24 +11,42 @@ namespace ProEstoque.CONTROL
 {
     public class ProdutoControl
     {
+        ProdutoModel modelo = new ProdutoModel();
+        private List<ClienteModel> listaFornecedor = new List<ClienteModel>();
+        private string codProduto;
+        private string descricao;
+        private string tipoProduto;
+
         public ProdutoControl()
         {
 
         }
 
+        public ProdutoControl(ProdutoModel modelo, List<ClienteModel> listaFornecedor)
+        {
+            this.modelo = modelo;
+            this.listaFornecedor = listaFornecedor;
+        }
+
+        public ProdutoControl(string codProduto, string descricao, string tipoProduto)
+        {
+            this.codProduto = codProduto;
+            this.descricao = descricao;
+            this.tipoProduto = tipoProduto;
+        }
+
 
         //METODDO DE INSERIR
-        public int Inserir(ProdutoModel modelo, List<ClienteModel> listaFornecedor)
+        public int Inserir()
         {
-            ProdutoDAO dao = new ProdutoDAO();
+            ProdutoDAO dao = new ProdutoDAO(modelo, listaFornecedor);
             try
             {
                 if (modelo.pro_cod == 0 || modelo.pro_descricao == string.Empty)
                     //RETORNO DE 1 OBJETO NAO COMPLETO
                     return 0;
 
-                dao.Insert(modelo);
-
+                dao.Insert();
                 //RETORNO DE 2 OK
                 return 2;
             }
@@ -39,7 +57,7 @@ namespace ProEstoque.CONTROL
             }
         }
 
-        public int Update(ProdutoModel modelo)
+        public int Update()
         {
             ProdutoDAO dao = new ProdutoDAO();
 
@@ -47,10 +65,10 @@ namespace ProEstoque.CONTROL
         }
 
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
-        public DataTable Select(string codProduto, string descricao, string tipoProd)
+        public DataTable Select()
         {
-            ProdutoDAO dao = new ProdutoDAO();
-            return dao.Select(codProduto, descricao, tipoProd);
+            ProdutoDAO dao = new ProdutoDAO(codProduto, descricao, tipoProduto);
+            return dao.Select();
         }
 
         //RETORNA UM OBJETO DO TIPO UNIDADE DE MEDIDA

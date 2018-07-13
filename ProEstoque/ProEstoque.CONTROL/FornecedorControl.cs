@@ -43,6 +43,9 @@ namespace ProEstoque.CONTROL
                     //RETORNO DE 1 OBJETO NAO COMPLETO
                     return 0;
 
+                if (ValidarFornecedor())
+                    return 1;
+
                 dao.Insert();
                 //RETORNO DE 2 OK
                 return 2;
@@ -54,12 +57,23 @@ namespace ProEstoque.CONTROL
             }
         }
 
-        //public int Update(ClienteModel modelo)
-        //{
-        //    FornecedorDAO dao = new FornecedorDAO();
+        public int Update()
+        {
+            FornecedorDAO dao = new FornecedorDAO(modelo);
+            try
+            {
+                if (modelo.for_cod == 0)
+                    return 0;
 
-        //    return 0;
-        //}
+                dao.Update();
+                return 2;
+            }
+            catch
+            {
+                //RETORNO DE 3 ERRO NA OPERAÇÃO
+                return 3;
+            }            
+        }
 
         //METODO DE BUSCA TOTAL, TODOS OS DADOS DA TABELA
         public DataTable Select()
@@ -75,29 +89,29 @@ namespace ProEstoque.CONTROL
             return dao.SelectByID(id);
         }
 
-        //public bool Excluir(string codigo)
-        //{
-        //    FornecedorDAO dao = new FornecedorDAO();
+        public bool Excluir(string codigo)
+        {
+            FornecedorDAO dao = new FornecedorDAO();
 
-        //    if (codigo != string.Empty)
-        //    {
-        //        dao.Delete(Convert.ToInt32(codigo));
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
+            if (codigo != string.Empty)
+            {
+                dao.Delete(Convert.ToInt32(codigo));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
-        //public bool ValidarUsuario(int codigo)
-        //{
-        //    FornecedorDAO dao = new FornecedorDAO();
-        //    if (dao.ValidaFornecdor(codigo) != null)
-        //        //RETORNO DE 0 OBJETO JA EXISTE
-        //        return true;
+        public bool ValidarFornecedor()
+        {
+            FornecedorDAO dao = new FornecedorDAO(modelo);
+            if (dao.ValidaFornecdor() != null)
+                //RETORNO DE 0 OBJETO JA EXISTE
+                return true;
 
-        //    return false;
-        //}
+            return false;
+        }
     }
 }

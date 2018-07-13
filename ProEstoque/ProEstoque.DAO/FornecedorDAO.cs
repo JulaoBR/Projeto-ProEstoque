@@ -170,14 +170,14 @@ namespace ProEstoque.DAO
         }
 
         //METODO PARA VALIDAR 
-        public object ValidaFornecdor(int for_cod)
+        public object ValidaFornecdor()
         {
             try
             {
                 MySqlConnection con = Conexao.conectar();
-                String sql = "SELECT for_cod FROM fornecedor WHERE for_cod=@codOriginal";
+                String sql = "SELECT for_razao_social FROM fornecedor WHERE for_razao_social = @social";
                 MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@codOriginal", for_cod);
+                cmd.Parameters.AddWithValue("@social", modelo.for_razao_social);
 
                 return cmd.ExecuteScalar();
 

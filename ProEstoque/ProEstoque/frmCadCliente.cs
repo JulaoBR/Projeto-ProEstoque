@@ -100,6 +100,7 @@ namespace ProEstoque
 
             btnNovo.Enabled = false;
             btnEditar.Enabled = false;
+            btnSalvar.Enabled = true;
                    
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
@@ -113,6 +114,7 @@ namespace ProEstoque
 
             btnNovo.Enabled = false;
             btnEditar.Enabled = false;
+            btnSalvar.Enabled = true;
 
             groupBox1.Enabled = true;
             groupBox2.Enabled = true;
@@ -122,16 +124,18 @@ namespace ProEstoque
         {
             ClienteControl control = new ClienteControl();
 
-            if (control.Excluir(txtCli_cod_original.Text))
+            if (MessageBox.Show("Deseja realmente excluir este cadastro?", "Excluir cadastro", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                MessageBox.Show("Cadastro excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpaCampos();
-            }
-            else
-            {
-                MessageBox.Show("Falha ao tentar excluir o cadastro!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            
+                if (control.Excluir(txtCli_cod_original.Text))
+                {
+                    MessageBox.Show("Cadastro excluido com sucesso!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LimpaCampos();
+                }
+                else
+                {
+                    MessageBox.Show("Falha ao tentar excluir o cadastro!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }                   
         }
 
         private void btnListar_Click(object sender, EventArgs e)
@@ -157,9 +161,10 @@ namespace ProEstoque
                     txtNumero.Text = model.cli_numero;
                     txtBairro.Text = model.cli_bairro;
                     txtCep.Text = model.cli_cep;
+                    txtDataAtual.Text = Convert.ToString(model.cli_data_cadastro);
 
-                    cbCidade.SelectedValue = model.cid_cod;
                     cbEstado.SelectedValue = model.est_cod;
+                    cbCidade.SelectedValue = model.cid_cod;                
 
                     if (model.cli_tipo_pessoa.Equals("FISICA"))
                         rbPessoaFisica.Checked = true;
@@ -183,11 +188,14 @@ namespace ProEstoque
         {
             controle_operacao = -1;
 
+            txtDataAtual.Text = DateTime.Now.ToString();
+
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
 
             btnNovo.Enabled = true;
             btnEditar.Enabled = true;
+            btnSalvar.Enabled = false;
 
             txtNomeCliente.Clear();
             txtNomeFantasia.Clear();
